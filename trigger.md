@@ -13,7 +13,7 @@ runtime = acquire.Runtime()
 
 ## Configure Camera
 
-All camera settings can be captured by an instance of the `Properties` class, which will be associated will a given camera acquisition. The settings can be stored in a dictionary (e.g: `Properties.dict()`). These settings can be saved to a json files to be subsequently loaded, (e.g. ` Properties(**json.load('acquire.json'))` ). 
+All camera settings can be captured by an instance of the `Properties` class, which will be associated will a given camera acquisition. The settings can be stored in a dictionary (e.g: `Properties.dict()`). These settings can be saved to a JSON file to be subsequently loaded, (e.g. ` Properties(**json.load('acquire.json'))` ). 
 
 The current configuration settings can be checked and assigned to an instance of the `Properties` class with:
 ```
