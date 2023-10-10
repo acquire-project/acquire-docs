@@ -14,7 +14,7 @@ runtime = acquire.Runtime()
 
 ## Configure Camera
 
-All camera settings can be captured by an instance of the `Properties` class, which will be associated will a given camera acquisition. The settings can be stored in a dictionary (e.g: `Properties.dict()`). These settings can be saved to a JSON file to be subsequently loaded, (e.g. ` Properties(**json.load('acquire.json'))` ), using the [json library](https://docs.python.org/3/library/json.html#).
+All camera settings can be captured by an instance of the `Properties` class, which will be associated with a given camera acquisition. The settings can be stored in a dictionary (e.g: `Properties.dict()`). These settings can be saved to a JSON file to be subsequently loaded, (e.g. ` Properties(**json.load('acquire.json'))` ), using the [json library](https://docs.python.org/3/library/json.html#).
 
 ```python
 props = runtime.get_configuration()
@@ -48,7 +48,7 @@ p.video[0].camera.settings.pixel_type = acquire.SampleType.U16 # sets the pixel 
 p.video[0].max_frame_count = 10 # finite acquisition of 10 frames. Use 0 for infinite acquisition.
 ```
 
-Triggers can also be set in the `CameraProperties` object. You can construct a `Trigger` from a JSON file (e.g. `acquire.Trigger(**json.loads(open('trigger.json')))` ), using the [json library](https://docs.python.org/3/library/json.html#). 
+Triggers can also be set in the `CameraProperties` object. The parameters can be stored in a dictionary (e.g: `Trigger.dict()`). You can construct a `Trigger` from a JSON file (e.g. `acquire.Trigger(**json.loads(open('trigger.json')))` ), using the [json library](https://docs.python.org/3/library/json.html#). 
 
 ```python
 trig = acquire.Trigger()
@@ -58,15 +58,13 @@ with open("/path/to/trigger.json", "w") as f:
     json.dump(trig.dict(), f)
 ```
 
-In this example, we'll only use output triggers.
-
-By default, the camera's internal triggering is used, but you may explicitly disable external input triggers using:
+In this example, we'll only utilize output triggers. By default, the camera's internal triggering is used, but you may explicitly disable external input triggers using:
 
 ```python
 p.video[0].camera.settings.input_triggers = acquire.InputTriggers() # default: disabled
 ```
 
-Output triggers can be set to begin exposure, start a new frame, and wait before acquiring. We can enable an exposure trigger to start on the rising edge with:
+Output triggers can be set to begin exposure, start a new frame, or wait before acquiring. We can enable an exposure trigger to start on the rising edge with:
 
 ```python
 p.video[0].camera.settings.output_triggers.exposure = acquire.Trigger(
@@ -76,7 +74,7 @@ p.video[0].camera.settings.output_triggers.exposure = acquire.Trigger(
 
 ## Select Storage
 
-`Storage` objects have identifiers which specify the file type (e.g. Zarr or tif) and settings described by an instance of the `StorageProperties` class. We can set the file type to Zarr and set the file name to "out" with:
+`Storage` objects have identifiers which specify the file type (e.g. Zarr or tiff) and settings described by an instance of the `StorageProperties` class. We can set the file type to Zarr and set the file name to "out" with:
 
 ```python
 p.video[0].storage.identifier = runtime.device_manager().select(acquire.DeviceKind.Storage,'zarr') 
@@ -84,7 +82,7 @@ p.video[0].storage.settings.filename="out.zarr"
 ```
 
 ## Save configuration
-None of these settings will be updated in until you call the `set_configuration` method. This method reads what the current configuration settings are on the device.
+None of these settings will be updated in the `Properties` object until you call the `set_configuration` method. This method reads what the current configuration settings are on the device.
 
 We'll set the configuration with:
 
