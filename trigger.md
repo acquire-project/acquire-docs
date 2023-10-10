@@ -3,7 +3,7 @@ Acquire (`acquire-imaging` [on PyPI](https://pypi.org/project/acquire-imaging/))
 
 This tutorial shows an example of setting up triggered acquisition of a finite number of frames with one of Acquire's supported devices and saving the data to a Zarr file.
 
-## Initialize Acquisitoin 
+## Initialize Acquisition
 
 To start, we'll import `Acquire` and create an acquisition `Runtime` object, which initializes the driver adaptors needed for the supported cameras.
 ```
