@@ -48,7 +48,7 @@ p.video[0].camera.settings.pixel_type = acquire.SampleType.U16 # sets the pixel 
 p.video[0].max_frame_count = 10 # finite acquisition of 10 frames. Use 0 for infinite acquisition.
 ```
 
-Triggers can also be set in the `CameraProperties` object. You can construct a `Trigger` from a json file (e.g. `acquire.Trigger(**json.loads(open('trigger.json')))` ), using the [json library](https://docs.python.org/3/library/json.html#). 
+Triggers can also be set in the `CameraProperties` object. You can construct a `Trigger` from a JSON file (e.g. `acquire.Trigger(**json.loads(open('trigger.json')))` ), using the [json library](https://docs.python.org/3/library/json.html#). 
 
 ```python
 trig = acquire.Trigger()
