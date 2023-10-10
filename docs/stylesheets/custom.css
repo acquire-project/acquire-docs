@@ -1,0 +1,41 @@
+.md-header {
+    background-color: black;
+}
+
+.md-tabs {
+    background-color: black;
+}
+
+.md-header__button.md-logo {
+    display: none;
+}
+
+[dir="ltr"] .md-header__title {
+    margin-left: 0.6rem;
+}
+
+.md-search__form {
+    background-color: white;
+}
+
+.md-search__form:hover {
+    background-color: white;
+}
+
+.md-header .md-search__input::placeholder {
+    color: #767676;
+}
+
+.md-search__icon[for="__search"] {
+    color: #767676;
+}
+
+.md-footer {
+    background-color:#EFF2FC;
+    color: black;
+}
+
+.md-footer-meta {
+    background-color: black;
+    color: white;
+}

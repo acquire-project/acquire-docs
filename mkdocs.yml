@@ -1,1 +1,24 @@
-site_name: My Docs
+site_name: Acquire imaging documentation
+repo_url: https://github.com/acquire-project
+
+theme:
+  name: material
+  features:
+    - navigation.tabs
+    - navigation.footer
+  custom_dir: overrides
+
+extra_css:
+  - stylesheets/custom.css
+
+nav:
+  - Home: index.md
+  - Get Started: get_started.md
+  - API Reference: api_reference.md
+  - Tutorials: tutorials.md
+  - For contributors: for_contributors.md
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://acquire-project.zulipchat.com
