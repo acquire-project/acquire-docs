@@ -121,7 +121,7 @@ In order to configure which release of each driver to use, you can set the value
   "acquire-driver-hdcam": "0.1.0",
   "acquire-driver-egrabber": "0.1.0",
   "acquire-driver-zarr": "0.1.0",
-  "acquire-driver-spinnaker": "0.1.0",
+  "acquire-driver-spinnaker": "0.1.0"
 }
 ```
 
