@@ -64,7 +64,7 @@ We'll set the configuration with:
 p = runtime.set_configuration(p)
 ```
 
-You can optionally print out these settings using the `Rich` python library to save for your records with:
+You can optionally print out these settings using the [Rich](https://rich.readthedocs.io/en/stable/introduction.html) python library to save for your records with:
 ```
 from rich.pretty import pprint
 pprint(p.dict())
