@@ -30,7 +30,7 @@ manager = runtime.device_manager()
 `DeviceManager` objects have `device` methods which lists the identifiers for discovered devices. You can iterate over this list to determine which cameras were recognized.
 
 ```python
-for device in acquire.Runtime().device_manager().devices():
+for device in manager.devices():
     print(device)
 ```
 All identified cameras will be listed, and in the case of this tutorial, no cameras were connected to the machine, so only simulated cameras were found. Note that any storage devices will also print.
