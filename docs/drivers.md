@@ -33,9 +33,9 @@ manager = runtime.device_manager()
 for device in manager.devices():
     print(device)
 ```
-All identified cameras will be listed, and in the case of this tutorial, no cameras were connected to the machine, so only simulated cameras were found. Note that any storage devices will also print.
+The output of this code is below. All identified cameras will be listed, and in the case of this tutorial, no cameras were connected to the machine, so only simulated cameras were found. Note that any storage devices will also print.
 
-```python
+```
 <DeviceIdentifier Camera "simulated: uniform random">
 <DeviceIdentifier Camera "simulated: radial sin">
 <DeviceIdentifier Camera "simulated: empty">
@@ -52,7 +52,7 @@ All identified cameras will be listed, and in the case of this tutorial, no came
 
 For cameras that weren't discovered you will see an error like:
 
-```python
+```
 ERROR acquire.runtime 2023-10-20 19:03:17,917 runtime.rs:40 C:\actions-runner\_work\acquire-driver-hdcam\acquire-driver-hdcam\src\acquire-core-libs\src\acquire-device-hal\device\hal\loader.c:114 - driver_load(): Failed to load driver at "acquire-driver-hdcam".
 ```
 
