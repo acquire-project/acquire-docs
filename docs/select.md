@@ -18,9 +18,9 @@ for device in manager.devices():
     print(device)
 ```
 
-All identified devices will be listed, and in the case of this tutorial, no cameras were connected to the machine, so only simulated cameras were found. Note that discovered storage devices will also print.
+The output of the above code is below. All identified devices will be listed, and in the case of this tutorial, no cameras were connected to the machine, so only simulated cameras were found. Note that discovered storage devices will also print.
 
-```python
+```
 <DeviceIdentifier Camera "simulated: uniform random">
 <DeviceIdentifier Camera "simulated: radial sin">
 <DeviceIdentifier Camera "simulated: empty">
@@ -34,8 +34,8 @@ All identified devices will be listed, and in the case of this tutorial, no came
 <DeviceIdentifier Storage "ZarrBlosc1ZstdByteShuffle">
 <DeviceIdentifier Storage "ZarrBlosc1Lz4ByteShuffle">
 ```
-
 The order of those printed devices matters. Below are two examples of how the `select` method works. In the first, without a specific device name provided, `select` will choose the first device of the specified kind in the list of discovered devices. In the second example, a specific device name is provided, so `select` will grab that device if it was discovered by `Runtime`.
+
 ```python
 # specify that the device should be a camera and not a storage device
 kind = acquire.DeviceKind.Camera
@@ -50,6 +50,7 @@ specific = manager.select(kind, "simulated: empty")
 print(selected)
 print(specific)
 ```
+The output of the code is below:
 ```
 <DeviceIdentifier Camera "simulated: uniform random">
 <DeviceIdentifier Camera "simulated: empty">
@@ -66,7 +67,7 @@ selected = manager.select_one_of(kind, ["Hamamatsu_DCAMSDK4_v22126552", "simulat
 # print which camera was selected
 print(selected)
 ```
-The Hamamatsu camera was not discovered by `Runtime`, so `select_one_of` iterates until it finds a device discovered by `Runtime`. In this case, the next item in the list is a simulated camera that was discovered by `Runtime`.
+The output of the code is below. The Hamamatsu camera was not discovered by `Runtime`, so `select_one_of` iterates until it finds a device discovered by `Runtime`. In this case, the next item in the list is a simulated camera that was discovered by `Runtime`.
 ```
 <DeviceIdentifier Camera "simulated: radial sin">
 ```
