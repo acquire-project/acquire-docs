@@ -50,6 +50,8 @@ time.sleep(0.5)
 # grab the packet of data available on disk for video stream 0. This is an AvailableData object.
 available_data = runtime.get_available_data(0) 
 ```
+Once `get_available_data` is called the `Availabledata` object will be locked into memory, so the camera will timeout if `Availabledata`t isn’t released once it returns to that part of the RAM that contains `Availabledata`.
+
 There may not be data available, in which case our variable `available_data` would be a NoneType. To avoid errors associated with this circumstance, we'll only grab data if `available_data` is not a NoneType.
 
 ```python
@@ -60,7 +62,7 @@ if available_data != None:
     video_frames = list(available_data.frames())
 
 else:         
-    # delete the available_data variable if there is no data in the packet
+    # delete the available_data variable if there is no data in the packet to free up RAM
     del available_data
 
 ```
@@ -87,7 +89,7 @@ Output:
 ```
 (768, 1024)
 ``` 
-Finally, delete the `available_data` to free up disk space and stop runtime. 
+Finally, delete the `available_data` to free up disk space. 
 
 ```python  
 # delete the available_data to free up disk space
