@@ -35,6 +35,8 @@ config.video[0].max_frame_count = 100 # collect 100 frames
 # Update the configuration with the chosen parameters 
 config = runtime.set_configuration(config) 
 ```
+## Working with `AvailableData` objects
+
 During Acquisition, the `AvailableData` object is the streaming interface, and this class has an `frames` method which iterates over the `VideoFrame` objects in `AvailableData`. Once we start acquisition, we'll utilize this iterator method to list the frames. 
 
 ```python
