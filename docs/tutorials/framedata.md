@@ -86,7 +86,8 @@ Output:
 
 To grab the desired NDArray image data from `first_frame`, we'll slice the array as shown:
 ```python
-image = first_frame[0][:, :, 0]
+image = image.squeeze()
+
 
 print(image.shape)
 ```
