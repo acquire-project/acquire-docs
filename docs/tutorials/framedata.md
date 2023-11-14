@@ -95,7 +95,8 @@ Output:
 ```
 (768, 1024)
 ``` 
-Finally, delete the `available_data` to free up disk space. 
+Finally, delete the `available_data` to unlock the region in the circular buffer. 
+
 
 ```python  
 # delete the available_data to free up disk space
