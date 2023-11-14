@@ -71,7 +71,8 @@ else:
     del available_data
 
 ```
-`video_frames` is a list with each element being an instance of the `VideoFrame` class. `VideoFrame` has a `data` method which provides the frame as an `NDArray`. The shape of this NDArray is (#describe shape in words)
+`video_frames` is a list with each element being an instance of the `VideoFrame` class. `VideoFrame` has a `data` method which provides the frame as an `NDArray`. The shape of this NDArray corresponds to the image dimensions used internally by Acquire. Since we have a single channel, both the first and the last dimensions will be 1. The interior dimensions will be height and width, respectively.
+
 
 ```python
 # grab the first VideoStream object in frames and convert it to an NDArray
