@@ -3,9 +3,9 @@
 acquire-python is a python package that provides a multi-camera video streaming
 library focusing on performant microscopy.
 
-```{note}
-This is an early stage project. If you find it interesting please reach out!
-```
+!!! note
+
+    This is an early stage project. If you find it interesting please reach out!
 
 Support for:
 
@@ -110,6 +110,7 @@ and binaries from the following Acquire drivers:
 - [acquire-driver-hdcam](https://github.com/acquire-project/acquire-driver-hdcam)
 - [acquire-driver-egrabber](https://github.com/acquire-project/acquire-driver-egrabber)
 - [acquire-driver-zarr](https://github.com/acquire-project/acquire-driver-zarr)
+- [acquire-driver-spinnaker](https://github.com/acquire-project/acquire-driver-spinnaker)
 
 The build script will automatically try to fetch the binaries from GitHub releases.
 In order to configure which release of each driver to use, you can set the value in `drivers.json`:
@@ -119,7 +120,8 @@ In order to configure which release of each driver to use, you can set the value
   "acquire-driver-common": "0.1.0",
   "acquire-driver-hdcam": "0.1.0",
   "acquire-driver-egrabber": "0.1.0",
-  "acquire-driver-zarr": "0.1.0"
+  "acquire-driver-zarr": "0.1.0",
+  "acquire-driver-spinnaker": "0.1.0"
 }
 ```
 

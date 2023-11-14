@@ -77,12 +77,37 @@
     <!-- Further information -->
     <div class="md-footer-meta md-typeset">
         <div class="md-footer-meta__inner md-grid">
-            {% include "partials/copyright.html" %}
-            {% include "partials/czi.html" %}
-            <!-- Social links -->
-            {% if config.extra.social %}
-            {% include "partials/social.html" %}
-            {% endif %}
+            <div class="md-footer-meta__inner-social">
+                <div class="md-footer-meta__inner-social links">
+                    <a class="md-source" href="https://github.com/acquire-project/acquire-python" data-md-component="source" title="Go to repository">
+                        <img alt="GitHub Logo" src="../assets/images/Icon-Github.svg" style="padding-right: 8px; color: #ffffffb3;">
+                        GitHub Repository
+                    </a>
+                    <a class="md-source" href="https://acquire-imaging.zulipchat.com" data-md-component="source" title="Go to Zulip chat">
+                        <img alt="Zulip Logo" src="../assets/images/Icon-Zulip.svg" style="padding-right: 8px; color: #ffffffb3;">
+                        Zulip chat
+                    </a>
+                    <a class="md-source" href="https://pypi.org/project/acquire/" data-md-component="source" title="Go to PyPI">
+                        <img alt="PyPI Logo" src="../assets/images/Icon-PyPi.svg" style="padding-right: 8px; color: #ffffffb3;">
+                        PyPi
+                    </a>
+                </div>
+                <div class="md-footer-meta__inner-social czi">
+                    <div class="md-copyright">
+                        Acquire is a service of the <a href="https://chanzuckerberg.com/">Chan Zuckerberg Initiative.</a>
+                    </div>
+                    <div class="vl"></div>
+                    <div class="md-copyright">
+                        <a href="https://chanzuckerberg.com/science/programs-resources/imaging/">
+                            <img alt="Chan Zuckerberg Initiative logo" src="../assets/images/CZI_Logotype.svg">
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="md-footer-meta__inner-social">
+                {% include "partials/copyright.html" %}
+            </div>
         </div>
     </div>
 </footer>

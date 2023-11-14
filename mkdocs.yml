@@ -5,7 +5,9 @@ theme:
   name: material
   features:
     - navigation.tabs
+    - navigation.tabs.sticky
     - navigation.footer
+    - content.code.copy
   custom_dir: overrides
 
 extra_css:
@@ -15,10 +17,21 @@ nav:
   - Home: index.md
   - Get Started: get_started.md
   - API Reference: api_reference.md
-  - Tutorials: tutorials.md
+  - Tutorials:
+    - tutorials/tutorials.md
+    - tutorials/trigger.md
   - For contributors: for_contributors.md
 
-extra:
-  social:
-    - icon: fontawesome/brands/github
-      link: https://acquire-project.zulipchat.com
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+
+
