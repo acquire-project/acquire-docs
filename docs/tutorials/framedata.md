@@ -41,7 +41,8 @@ During Acquisition, the `AvailableData` object is the streaming interface, and t
 
 
 ```python
-# To increase the likelihood of `AvailableData` containing data, we'll utilize the time python package to introduce a delay before we create our `Availabledata` object
+# To increase the likelihood of `AvailableData` containing data, we'll utilize the time python package to introduce a delay before we create our `AvailableData` object
+
 import time
 
 # start acquisition
