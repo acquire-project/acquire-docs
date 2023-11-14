@@ -21,12 +21,10 @@ nav:
     - tutorials/tutorials.md
     - tutorials/trigger.md
     - tutorials/framedata.md
+    - tutorials/select.md
+    - tutorials/props_json.md
+    - tutorials/trig_json.md
   - For contributors: for_contributors.md
-
-extra:
-  social:
-    - icon: fontawesome/brands/github
-      link: https://acquire-project.zulipchat.com
 
 markdown_extensions:
   - pymdownx.highlight:
