@@ -54,7 +54,8 @@ time.sleep(0.5)
 # grab the packet of data available on disk for video stream 0. This is an AvailableData object.
 available_data = runtime.get_available_data(0) 
 ```
-Once `get_available_data` is called the `Availabledata` object will be locked into memory, so the camera will timeout if `Availabledata`t isn’t released once it returns to that part of the RAM that contains `Availabledata`.
+Once `get_available_data()` is called the `AvailableData` object will be locked into memory, so the circular buffer that stores the available data will overflow if `AvailableData` isn’t released.
+
 
 There may not be data available, in which case our variable `available_data` would be a NoneType. To avoid errors associated with this circumstance, we'll only grab data if `available_data` is not a NoneType.
 
