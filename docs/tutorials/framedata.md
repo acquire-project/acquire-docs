@@ -60,7 +60,8 @@ There may not be data available, in which case our variable `available_data` wou
 
 ```python
 # NoneType if there is no available data. We can only grab frames if data is available.
-if available_data != None:
+if available_data is not None:
+
        
     # frames is an iterator over available_data, so we'll use this iterator to make a list of the frames
     video_frames = list(available_data.frames())
