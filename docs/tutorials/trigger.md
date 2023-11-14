@@ -14,7 +14,7 @@ runtime = acquire.Runtime()
 
 ## Configure Camera
 
-All camera settings can be captured by an instance of the `Properties` class, which will be associated with a given camera acquisition. The settings can be stored in a dictionary (e.g: `Properties.dict()`). These settings can be saved to a JSON file to be subsequently loaded, (e.g. ` Properties(**json.load('acquire.json'))` ), using the [json library](https://docs.python.org/3/library/json.html#).
+All camera settings can be captured by an instance of the `Properties` class, which will be associated with a given camera acquisition. The settings can be stored in a dictionary (e.g: `Properties.dict()`). These settings can be saved to a JSON file to be subsequently loaded, (e.g. ` Properties(**json.load(open('acquire.json')))` ), using the [json library](https://docs.python.org/3/library/json.html#).
 
 ```python
 props = runtime.get_configuration()
@@ -48,7 +48,7 @@ props.video[0].camera.settings.pixel_type = acquire.SampleType.U16 # sets the pi
 props.video[0].max_frame_count = 10 # finite acquisition of 10 frames. Use 0 for infinite acquisition.
 ```
 
-Triggers can also be set in the `CameraProperties` object. The parameters can be stored in a dictionary (e.g: `Trigger.dict()`). You can construct a `Trigger` from a JSON file (e.g. `acquire.Trigger(**json.loads(open('trigger.json')))` ), using the [json library](https://docs.python.org/3/library/json.html#). 
+Triggers can also be set in the `CameraProperties` object. The parameters can be stored in a dictionary (e.g: `Trigger.dict()`). You can construct a `Trigger` from a JSON file (e.g.  `acquire.Trigger(**json.loads(open('trigger.json')))` ), using the [json library](https://docs.python.org/3/library/json.html#). 
 
 ```python
 trig = acquire.Trigger()
