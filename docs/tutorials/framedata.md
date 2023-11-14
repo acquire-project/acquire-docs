@@ -37,7 +37,8 @@ config = runtime.set_configuration(config)
 ```
 ## Working with `AvailableData` objects
 
-During Acquisition, the `AvailableData` object is the streaming interface, and this class has an `frames` method which iterates over the `VideoFrame` objects in `AvailableData`. Once we start acquisition, we'll utilize this iterator method to list the frames. 
+During Acquisition, the `AvailableData` object is the streaming interface, and this class has a `frames` method which iterates over the `VideoFrame` objects in `AvailableData`. Once we start acquisition, we'll utilize this iterator method to list the frames. 
+
 
 ```python
 # To increase the likelihood of `AvailableData` containing data, we'll utilize the time python package to introduce a delay before we create our `Availabledata` object
