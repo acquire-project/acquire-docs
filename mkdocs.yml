@@ -20,6 +20,7 @@ nav:
   - Tutorials:
     - tutorials/tutorials.md
     - tutorials/trigger.md
+    - tutorials/framedata.md
   - For contributors: for_contributors.md
 
 extra:
