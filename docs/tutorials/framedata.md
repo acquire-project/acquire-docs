@@ -57,7 +57,8 @@ available_data = runtime.get_available_data(0)
 Once `get_available_data()` is called the `AvailableData` object will be locked into memory, so the circular buffer that stores the available data will overflow if `AvailableData` isn’t released.
 
 
-There may not be data available, in which case our variable `available_data` would be a NoneType. To avoid errors associated with this circumstance, we'll only grab data if `available_data` is not a NoneType.
+There may not be data available, in which case our variable `available_data` would be `None`. To avoid errors associated with this circumstance, we'll only grab data if `available_data` is not `None`.
+
 
 ```python
 # NoneType if there is no available data. We can only grab frames if data is available.
