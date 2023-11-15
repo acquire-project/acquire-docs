@@ -173,22 +173,21 @@ config.video[1].max_frame_count = 150 # collect 150 frames
 config = runtime.set_configuration(config)
 ```
 
----
-**NOTE**
+!!! note
 
-If you run this tutorial multiple times, you can clear output from previous runs with:
+    If you run this tutorial multiple times, you can clear output from previous runs with:
 
-```python
-import os
-import shutil
+    ```python
+    import os
+    import shutil
 
-if config.video[0].storage.settings.filename in os.listdir("."):
-    shutil.rmtree(config.video[0].storage.settings.filename)
-    
-if config.video[1].storage.settings.filename in os.listdir("."):
-    shutil.rmtree(config.video[1].storage.settings.filename)
-```
----
+    if config.video[0].storage.settings.filename in os.listdir("."):
+        shutil.rmtree(config.video[0].storage.settings.filename)
+
+    if config.video[1].storage.settings.filename in os.listdir("."):
+        shutil.rmtree(config.video[1].storage.settings.filename)
+    ```
+
 ## Acquire Data
 
 To start aquiring data:
