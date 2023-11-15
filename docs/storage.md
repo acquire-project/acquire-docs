@@ -43,8 +43,7 @@ The output of that script will be:
 
 `Acquire` supports streaming data to [bigtiff](http://bigtiff.org/) and [Zarr V2](https://zarr.readthedocs.io/en/stable/spec/v2.html). 
 
-Zarr has additional capabilities relative to the basic storage devices, namely _chunking_, _compression_, and _multiscale storage_. To compress while streaming, you can use one of the `ZarrBlosc1*` devices. Compression is done via [Blosc](https://www.blosc.org/pages/blosc-in-depth/).
-Supported codecs are _lz4_ and _zstd_, available with **ZarrBlosc1Lz4ByteShuffle** and **ZarrBlosc1ZstdByteShuffle** devices, respectively. For a comparison of these codecs, please refer to the [Blosc docs](https://www.blosc.org/). To enable _chunking_ and/or _multiscale storage_, set those attributes in an instance of the `ChunkingProperties` and `StorageProperties` classes, respectively. You can learn more about the Zarr capabilities in `Acquire` [here](https://github.com/acquire-project/acquire-driver-zarr).
+Zarr has additional capabilities relative to the basic storage devices, namely _chunking_, _compression_, and _multiscale storage_. You can learn more about the Zarr capabilities in `Acquire` [here](https://github.com/acquire-project/acquire-driver-zarr).
 
 ## Select the Storage Device and Specify where to Store the Data
 
