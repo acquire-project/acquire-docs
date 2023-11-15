@@ -50,7 +50,7 @@ The output of this code is below. All identified cameras will be listed, and in 
 <DeviceIdentifier Storage "ZarrBlosc1Lz4ByteShuffle">
 ```
 
-For cameras that weren't discovered you will see an error like:
+For cameras that weren't discovered you will see an error like the one below. These errors will not affect performance and can be ignored.
 
 ```
 ERROR acquire.runtime 2023-10-20 19:03:17,917 runtime.rs:40 C:\actions-runner\_work\acquire-driver-hdcam\acquire-driver-hdcam\src\acquire-core-libs\src\acquire-device-hal\device\hal\loader.c:114 - driver_load(): Failed to load driver at "acquire-driver-hdcam".
