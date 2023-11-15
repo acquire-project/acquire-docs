@@ -153,3 +153,30 @@ html .md-footer-meta.md-typeset a {
 .md-footer__title:hover {
     color: var(--md-accent-fg-color);
 }
+
+.mdx-container {
+    background-color: #F8F8F8;
+    color: black;
+}
+
+.mdx-hero__content{
+    padding-top: 1.5rem;
+    padding-left: 13rem;
+    padding-bottom: 1rem;
+}
+
+.mdx-hero__content h1 {
+    line-height: 1;
+    margin-bottom: 0;
+}
+
+.mdx-hero__content p {
+    line-height: 1.5;
+    font-size: 0.75rem;
+}
+
+.md-typeset .md-button--primary {
+    background-color: var(--md-accent-fg-color);
+    border-color: var(--md-accent-fg-color);
+    color: var(--md-accent-bg-color);
+}

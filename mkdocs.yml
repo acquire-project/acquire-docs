@@ -1,4 +1,4 @@
-site_name: Acquire imaging documentation
+site_name: Acquire Docs
 repo_url: https://github.com/acquire-project
 
 theme:
@@ -24,6 +24,7 @@ nav:
     - tutorials/select.md
     - tutorials/props_json.md
     - tutorials/trig_json.md
+    - tutorials/drivers.md
   - For contributors: for_contributors.md
 
 markdown_extensions:
@@ -38,4 +39,7 @@ markdown_extensions:
   - pymdownx.details
   - pymdownx.superfences
 
-
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://acquire-project.zulipchat.com
