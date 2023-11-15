@@ -15,7 +15,13 @@ nav:
   - Home: index.md
   - Get Started: get_started.md
   - API Reference: api_reference.md
-  - Tutorials: tutorials.md
+  - Tutorials:
+    - tutorials/tutorials.md
+    - tutorials/trigger.md
+    - tutorials/select.md
+    - tutorials/props_json.md
+    - tutorials/trig_json.md
+    - tutorials/drivers.md
   - For contributors: for_contributors.md
 
 extra:
