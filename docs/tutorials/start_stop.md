@@ -1,6 +1,6 @@
 # Multiple Acquisitions
 
-This tutorial will provide an example of starting, stopping, and restarting acquisition, or streaming from a video source. 
+This tutorial will provide an example of starting, stopping, and restarting acquisition, or streaming from a video source.
 
 ## Configure Streaming
 
@@ -16,14 +16,14 @@ runtime = acquire.Runtime()
 # Choose Video Source and Storage Device
 config = acquire.setup(runtime, "simulated: radial sin", "Tiff")
 
-# Specify settings    
+# Specify settings
 config.video[0].storage.settings.filename == "out.tif"
 config.video[0].camera.settings.shape = (192, 108)
 config.video[0].camera.settings.exposure_time_us = 10e4
 config.video[0].max_frame_count = 10
 
-# Update the configuration with the chosen parameters 
-config = runtime.set_configuration(config) 
+# Update the configuration with the chosen parameters
+config = runtime.set_configuration(config)
 ```
 
 ## Start, Stop, and Restart Acquisition
@@ -32,7 +32,7 @@ During Acquisition, the `AvailableData` object is the streaming interface. Upon 
 
 To understand how acquisition works, we'll start, stop, and repeat acquisition and print the `DeviceState`, which can be `Armed`, `AwaitingConfiguration`, `Closed`, or `Running`, as well as print the `AvailableData` object throughout the process.
 
-If acquisition has ended, all of the objects are deleted, including `AvailableData` objects, so those will be `None` when not acquiring data. In addition, if enough time hasn't elapsed since acquisition started, `AvailableData` will also be `None`. We'll utilize the `time` python package to introduce time delays to account for these facts. 
+If acquisition has ended, all of the objects are deleted, including `AvailableData` objects, so those will be `None` when not acquiring data. In addition, if enough time hasn't elapsed since acquisition started, `AvailableData` will also be `None`. We'll utilize the `time` python package to introduce time delays to account for these facts.
 
 ```python
 # package used to introduce time delays
@@ -82,9 +82,11 @@ DeviceState.Armed
 <builtins.AvailableData object at 0x00000218D685E3D0>
 ```
 1. The first time we print is immediately after starting acquisition, so no time has elapsed for data collection as compared to the camera exposure time, so while the camera is running, `Running`, there is no data available.
-   
+
 3. The next print happens after waiting 0.5 seconds, so acquisition is still runnning and now there is acquired data available.
-   
+
 5. The subsequent print is following calling `runtime.stop()` which waits until the specified max number of frames is collected and then terminates acquisition. Thus, the device is no longer running and there is no available data, since all objects were deleted by calling the `stop` method. The device is in an `Armed` state ready for the next acquisition.
-   
+
 7. The final print occurs after waiting 5 seconds following the start of acquisition. This waiting period is longer than the 1 second acqusition time (0.1 seconds/frame and 10 frames), so the device is no longer collecting data. However, `runtime.stop()` hasn't been called, so the `AvailableData` object has not yet been deleted.
+
+[Download this tutorial as a Python script](start_stop.py){ .md-button .md-button-center }

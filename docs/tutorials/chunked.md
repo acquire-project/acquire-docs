@@ -17,10 +17,10 @@ runtime = acquire.Runtime()
 dm = runtime.device_manager()
 
 # Grab the current configuration
-config = runtime.get_configuration() 
+config = runtime.get_configuration()
 
 # Select the radial sine simulated camera as the video source
-config.video[0].camera.identifier = dm.select(acquire.DeviceKind.Camera, "simulated: radial sin") 
+config.video[0].camera.identifier = dm.select(acquire.DeviceKind.Camera, "simulated: radial sin")
 
 # Set the storage to Zarr to take advantage of chunking
 config.video[0].storage.identifier = dm.select(acquire.DeviceKind.Storage, "Zarr")
@@ -43,7 +43,7 @@ config.video[0].storage.settings.filename = "out.zarr"
 Below we'll configure the chunking specific settings and update all settings with the `set_configuration` method.
 
 ```python
-# Chunk size may need to be optimized for each acquisition. 
+# Chunk size may need to be optimized for each acquisition.
 # See Zarr documentation for further guidance:
 # https://zarr.readthedocs.io/en/stable/tutorial.html#chunk-optimizations
 config.video[0].storage.settings.chunking.max_bytes_per_chunk = 32 * 2**20 # 32 MB
@@ -86,3 +86,5 @@ The output will be:
 <zarr.core.Array '/0' (10, 1, 1080, 1920) uint8>
 ```
 As expected, we have only 1 top level directory, corresponding to the single array in the group. We would expect more than 1 array only if we were writing [multiscale data](multiscale.md). The overall array shape is (10, 1, 1080, 1920), corresponding to 10 frames, 1 channel, and a height and width of 1080 and 1920, respectively, per frame.
+
+[Download this tutorial as a Python script](chunked.py){ .md-button .md-button-center }

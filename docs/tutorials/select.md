@@ -5,7 +5,7 @@ This tutorial illustrates the difference between the `select` and `select_one_of
 To start, instantiate `Runtime` and `DeviceManager` objects and subsequently print the discovered devices.
 
 ```python
-import acquire 
+import acquire
 
 # Instantiate a Runtime object
 runtime = acquire.Runtime()
@@ -73,3 +73,5 @@ The output of the code is below. The Hamamatsu camera was not discovered by `Run
 ```
 <DeviceIdentifier Camera "simulated: radial sin">
 ```
+
+[Download this tutorial as a Python script](select.py){ .md-button .md-button-center }

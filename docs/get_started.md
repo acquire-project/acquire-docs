@@ -2,7 +2,7 @@
 
 Acquire (`acquire-imaging` [on PyPI](https://pypi.org/project/acquire-imaging/)) is a Python package providing a multi-camera video streaming library focused on performant microscopy, with support for up to two simultaneous, independent, video streams.
 
-This tutorial covers Acquire installation and shows an example of using Acquire with its provided simulated cameras to demonstrate the acquisition process. 
+This tutorial covers Acquire installation and shows an example of using Acquire with its provided simulated cameras to demonstrate the acquisition process.
 
 ## Installation
 

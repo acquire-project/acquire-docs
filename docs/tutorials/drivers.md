@@ -18,7 +18,7 @@ Acquire provides the following simulated cameras:
 Acquire will only identify cameras whose drivers are present on your machine. The `DeviceManager` class manages selection of cameras and storage. We can create a `DeviceManager` object using the following:
 
 ```python
-import acquire 
+import acquire
 
 # Instantiate a Runtime object
 runtime = acquire.Runtime()
@@ -33,6 +33,7 @@ dm = runtime.device_manager()
 for device in dm.devices():
     print(device)
 ```
+
 The output of this code is below. All discovered devices, both cameras and storage devices, will be listed. In this tutorial, no cameras were connected to the machine, so only simulated cameras were found. Note that the storage devices also printed.
 
 ```
@@ -54,3 +55,4 @@ For cameras that weren't discovered you will see an error like the one below. Th
 ERROR acquire.runtime 2023-10-20 19:03:17,917 runtime.rs:40 C:\actions-runner\_work\acquire-driver-hdcam\acquire-driver-hdcam\src\acquire-core-libs\src\acquire-device-hal\device\hal\loader.c:114 - driver_load(): Failed to load driver at "acquire-driver-hdcam".
 ```
 
+[Download this tutorial as a Python script](drivers.py){ .md-button .md-button-center }

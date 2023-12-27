@@ -1,2 +1,4 @@
 mkdocs-material
 mkdocs-include-markdown-plugin
+jupytext
+pre-commit

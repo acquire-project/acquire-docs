@@ -17,10 +17,10 @@ runtime = acquire.Runtime()
 dm = runtime.device_manager()
 
 # Grab the current configuration
-config = runtime.get_configuration() 
+config = runtime.get_configuration()
 
 # Select the radial sine simulated camera as the video source
-config.video[0].camera.identifier = dm.select(acquire.DeviceKind.Camera, "simulated: radial sin") 
+config.video[0].camera.identifier = dm.select(acquire.DeviceKind.Camera, "simulated: radial sin")
 
 # Set the storage to Zarr to have the option to save multiscale data
 config.video[0].storage.identifier = dm.select(acquire.DeviceKind.Storage, "Zarr")
@@ -47,7 +47,7 @@ config.video[0].storage.settings.filename = "out.zarr"
 To complete configuration, we'll configure the multiscale specific settings and update all settings with the `set_configuration` method.
 
 ```python
-# Chunk size may need to be optimized for each acquisition. 
+# Chunk size may need to be optimized for each acquisition.
 # See Zarr documentation for further guidance:
 # https://zarr.readthedocs.io/en/stable/tutorial.html#chunk-optimizations
 config.video[0].storage.settings.chunking.max_bytes_per_chunk = 16 * 2**20 # 16 MB
@@ -60,10 +60,11 @@ config.video[0].storage.settings.chunking.tile.height = (config.video[0].camera.
 # turn on multiscale mode
 config.video[0].storage.settings.enable_multiscale = True
 
-# Update the configuration with the chosen parameters 
-config = runtime.set_configuration(config) 
+# Update the configuration with the chosen parameters
+config = runtime.set_configuration(config)
 ```
 ## Collect and Inspect the Data
+
 ```python
 
 # collect data
@@ -85,12 +86,17 @@ With multiscale mode enabled, an image pyramid will be formed by rescaling the d
 ```python
 group["0"], group["1"], group["2"]
 ```
+
 The output will be:
+
 ```
 (<zarr.core.Array '/0' (10, 1, 1080, 1920) uint8>,
  <zarr.core.Array '/1' (5, 1, 540, 960) uint8>,
  <zarr.core.Array '/2' (2, 1, 270, 480) uint8>)
 ```
+
 Here, the `"0"` directory contains the full-resolution array of frames of size 1920 x 1080, with a single channel, saving all 10 frames.
 The `"1"` directory contains the first rescaled array of frames of size 960 x 540, averaging every two frames, taking the frame count from 10 to 5.
 The `"2"` directory contains a further rescaled array of frames of size 480 x 270, averaging every four frames, taking the frame count from 10 to 2. Notice that both the frame width and frame height are now smaller than the chunk width and chunk height of 640 and 360, respectively, so this should be the last array in the group.
+
+[Download this tutorial as a Python script](multiscale.py){ .md-button .md-button-center }

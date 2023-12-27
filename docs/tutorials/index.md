@@ -5,4 +5,3 @@ examples of using the API. Please submit an [issue on Github](https://github.com
 request a tutorial, or if you are also interested in contributing to a tutorial
 to this documentation please visit our
 [contribution guide](../for_contributors/index.md).
-

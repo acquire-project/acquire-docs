@@ -19,10 +19,10 @@ runtime = acquire.Runtime()
 dm = runtime.device_manager()
 
 # Grab the current configuration
-config = runtime.get_configuration() 
+config = runtime.get_configuration()
 
 # Select the radial sine simulated camera as the video source
-config.video[0].camera.identifier = dm.select(acquire.DeviceKind.Camera, "simulated: radial sin") 
+config.video[0].camera.identifier = dm.select(acquire.DeviceKind.Camera, "simulated: radial sin")
 
 # Set the storage to ZarrBlosc1ZstdByteShuffle to avoid saving the data
 config.video[0].storage.identifier = dm.select(acquire.DeviceKind.Storage, "ZarrBlosc1ZstdByteShuffle")
@@ -38,9 +38,10 @@ config.video[0].max_frame_count = 100 # collect 100 frames
 # Set the output file to out.zarr
 config.video[0].storage.settings.filename = "out.zarr"
 
-# Update the configuration with the chosen parameters 
-config = runtime.set_configuration(config) 
+# Update the configuration with the chosen parameters
+config = runtime.set_configuration(config)
 ```
+
 ## Inspect Acquired Data
 
 Now that the configuration is set to utilize the `ZarrBlosc1ZstdByteShuffle` storage device, we can acquire data, which will be compressed before it is stored to `out.zarr`. Since we did not specify the size of chunks, the data will be saved as a single chunk that is the size of the image data. You may specify chunk sizes using the `TileShape` class. For example, using `acquire.StorageProperties.chunking.tile.width` to set the width of the chunks.
@@ -50,7 +51,9 @@ Now that the configuration is set to utilize the `ZarrBlosc1ZstdByteShuffle` sto
 runtime.start()
 runtime.stop()
 ```
-We'll use the [Zarr Python package](https://zarr.readthedocs.io/en/stable/) to read the data in `out.zarr` file. 
+
+We'll use the [Zarr Python package](https://zarr.readthedocs.io/en/stable/) to read the data in `out.zarr` file.
+
 ```python
 # We'll utilize the Zarr python package to read the data
 import zarr
@@ -72,9 +75,13 @@ print(data.compressor.shuffle)
 ```
 
 Output:
+
 ```
 zstd
 1
 1
 ```
+
 As expected, the data was compressed using the `zstd` codec.
+
+[Download this tutorial as a Python script](compressed.py){ .md-button .md-button-center }

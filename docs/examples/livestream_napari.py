@@ -9,7 +9,7 @@ runtime = acquire.Runtime()
 dm = runtime.device_manager()
 
 # Grab the current configuration
-config = runtime.get_configuration() 
+config = runtime.get_configuration()
 
 # Select the uniform random camera as the video source
 config.video[0].camera.identifier = dm.select(acquire.DeviceKind.Camera, ".*random.*")
@@ -25,8 +25,8 @@ config.video[0].camera.settings.shape = (300, 200)
 # Set the max frame count to 100 frames
 config.video[0].max_frame_count = 100
 
-# Update the configuration with the chosen parameters 
-config = runtime.set_configuration(config) 
+# Update the configuration with the chosen parameters
+config = runtime.set_configuration(config)
 
 # import napari and open a viewer to stream the data
 import napari
@@ -73,7 +73,7 @@ def do_acquisition():
 
     stream = 1
     # loop to continue to update the data in napari while acquisition is running
-    while is_not_done():  
+    while is_not_done():
         if (frame := next_frame()) is not None:
             yield frame, stream_id
         time.sleep(0.1)

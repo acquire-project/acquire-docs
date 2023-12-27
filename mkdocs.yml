@@ -36,7 +36,7 @@ nav:
     - tutorials/drivers.md
     - tutorials/storage.md
     - tutorials/compressed.md
-  - For contributors: 
+  - For contributors:
     - for_contributors/index.md
     - for_contributors/docs_contribution_quickstart.md
 
@@ -57,6 +57,8 @@ markdown_extensions:
           - overrides/.icons
   - toc:
       permalink: true
+  - attr_list
+
 
 plugins:
   - include-markdown

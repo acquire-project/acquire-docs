@@ -5,3 +5,5 @@ The below script can be used to livestream data to the [napari viewer](https://n
 ~~~python
 {% include "../examples/livestream_napari.py" %}
 ~~~
+
+[Download this tutorial as a Python script](livestream.py){ .md-button .md-button-center }

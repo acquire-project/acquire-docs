@@ -55,3 +55,4 @@ You can load the trigger attributes in the JSON file to a `Trigger` object as sh
 trig = acquire.Trigger(**json.load(open('sample_trig.json')))
 ```
 
+[Download this tutorial as a Python script](trig_json.py){ .md-button .md-button-center }
