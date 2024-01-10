@@ -16,7 +16,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.2">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.3">
     
     
       
@@ -1002,7 +1002,7 @@
 
 
 <h1 id="multiple-acquisitions">Multiple Acquisitions<a class="headerlink" href="#multiple-acquisitions" title="Permanent link">&para;</a></h1>
-<p>This tutorial will provide an example of starting, stopping, and restarting acquisition, or streaming from a video source. </p>
+<p>This tutorial will provide an example of starting, stopping, and restarting acquisition, or streaming from a video source.</p>
 <h2 id="configure-streaming">Configure Streaming<a class="headerlink" href="#configure-streaming" title="Permanent link">&para;</a></h2>
 <p>To start, we'll create a <code>Runtime</code> object and configure the streaming process. To do this, we'll utilize the setup method. More information on that method is detailed in <a href="https://acquire-project.github.io/acquire-docs/tutorials/setup">this tutorial</a>.</p>
 <div class="language-python highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">import</span> <span class="nn">acquire</span>
@@ -1014,19 +1014,19 @@
 </span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="c1"># Choose Video Source and Storage Device</span>
 </span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="n">config</span> <span class="o">=</span> <span class="n">acquire</span><span class="o">.</span><span class="n">setup</span><span class="p">(</span><span class="n">runtime</span><span class="p">,</span> <span class="s2">&quot;simulated: radial sin&quot;</span><span class="p">,</span> <span class="s2">&quot;Tiff&quot;</span><span class="p">)</span>
 </span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>
-</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="c1"># Specify settings    </span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="c1"># Specify settings</span>
 </span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="n">config</span><span class="o">.</span><span class="n">video</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">storage</span><span class="o">.</span><span class="n">settings</span><span class="o">.</span><span class="n">filename</span> <span class="o">==</span> <span class="s2">&quot;out.tif&quot;</span>
 </span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="n">config</span><span class="o">.</span><span class="n">video</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">camera</span><span class="o">.</span><span class="n">settings</span><span class="o">.</span><span class="n">shape</span> <span class="o">=</span> <span class="p">(</span><span class="mi">192</span><span class="p">,</span> <span class="mi">108</span><span class="p">)</span>
 </span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="n">config</span><span class="o">.</span><span class="n">video</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">camera</span><span class="o">.</span><span class="n">settings</span><span class="o">.</span><span class="n">exposure_time_us</span> <span class="o">=</span> <span class="mf">10e4</span>
 </span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="n">config</span><span class="o">.</span><span class="n">video</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">max_frame_count</span> <span class="o">=</span> <span class="mi">10</span>
 </span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>
-</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="c1"># Update the configuration with the chosen parameters </span>
-</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="n">config</span> <span class="o">=</span> <span class="n">runtime</span><span class="o">.</span><span class="n">set_configuration</span><span class="p">(</span><span class="n">config</span><span class="p">)</span> 
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="c1"># Update the configuration with the chosen parameters</span>
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="n">config</span> <span class="o">=</span> <span class="n">runtime</span><span class="o">.</span><span class="n">set_configuration</span><span class="p">(</span><span class="n">config</span><span class="p">)</span>
 </span></code></pre></div>
 <h2 id="start-stop-and-restart-acquisition">Start, Stop, and Restart Acquisition<a class="headerlink" href="#start-stop-and-restart-acquisition" title="Permanent link">&para;</a></h2>
 <p>During Acquisition, the <code>AvailableData</code> object is the streaming interface. Upon shutdown, <code>Runtime</code> deletes all of the objects created during acquisition to free up resources, and you must stop acquisition by calling <code>runtime.stop()</code> to shutdown after the max frames is collected or <code>runtime.abort()</code> to shutdown immediately) between acquisitions. Otherwise, an exception will be raised.</p>
 <p>To understand how acquisition works, we'll start, stop, and repeat acquisition and print the <code>DeviceState</code>, which can be <code>Armed</code>, <code>AwaitingConfiguration</code>, <code>Closed</code>, or <code>Running</code>, as well as print the <code>AvailableData</code> object throughout the process.</p>
-<p>If acquisition has ended, all of the objects are deleted, including <code>AvailableData</code> objects, so those will be <code>None</code> when not acquiring data. In addition, if enough time hasn't elapsed since acquisition started, <code>AvailableData</code> will also be <code>None</code>. We'll utilize the <code>time</code> python package to introduce time delays to account for these facts. </p>
+<p>If acquisition has ended, all of the objects are deleted, including <code>AvailableData</code> objects, so those will be <code>None</code> when not acquiring data. In addition, if enough time hasn't elapsed since acquisition started, <code>AvailableData</code> will also be <code>None</code>. We'll utilize the <code>time</code> python package to introduce time delays to account for these facts.</p>
 <div class="language-python highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1"># package used to introduce time delays</span>
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="kn">import</span> <span class="nn">time</span>
 </span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>
@@ -1082,6 +1082,7 @@
 <p>The final print occurs after waiting 5 seconds following the start of acquisition. This waiting period is longer than the 1 second acqusition time (0.1 seconds/frame and 10 frames), so the device is no longer collecting data. However, <code>runtime.stop()</code> hasn't been called, so the <code>AvailableData</code> object has not yet been deleted.</p>
 </li>
 </ol>
+<p><a class="md-button md-button-center" href="../start_stop.py">Download this tutorial as a Python script</a></p>
 
 
 

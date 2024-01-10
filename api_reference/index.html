@@ -16,7 +16,7 @@
       
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.2">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.3">
     
     
       
@@ -1489,7 +1489,7 @@
 <p>Call <code>get_frame_count()</code> to query the number of frames in an <code>AvailableData</code> object.</p>
 </li>
 <li>
-<p>The <code>__iter__</code> method enables <code>AvailableData</code> objects to be iterated. </p>
+<p>The <code>__iter__</code> method enables <code>AvailableData</code> objects to be iterated.</p>
 </li>
 </ul>
 <h2 id="class-camera">Class <code>Camera</code><a class="headerlink" href="#class-camera" title="Permanent link">&para;</a></h2>
@@ -1671,7 +1671,7 @@
 </span></code></pre></div>
 <ul>
 <li>
-<p><code>Camera</code>: Enum-type class variable of <code>DeviceKind</code> that specifies a device is a camera. </p>
+<p><code>Camera</code>: Enum-type class variable of <code>DeviceKind</code> that specifies a device is a camera.</p>
 </li>
 <li>
 <p><code>NONE</code>: Enum-type class variable of <code>DeviceKind</code> for if a device's kind is unavailable.</p>
@@ -1717,7 +1717,7 @@
 </span></code></pre></div>
 <ul>
 <li>
-<p>Call <code>devices</code> to list the <code>DeviceIdentifier</code> of each available device. </p>
+<p>Call <code>devices</code> to list the <code>DeviceIdentifier</code> of each available device.</p>
 </li>
 <li>
 <p>Call <code>select</code> to choose the first available device of a given type or to select a specific device by name.</p>
@@ -1757,7 +1757,7 @@
 </span></code></pre></div>
 <ul>
 <li>
-<p><code>Closed</code>: Enum-type class variable of <code>DeviceState</code> that species when a device is not ready for configuration. </p>
+<p><code>Closed</code>: Enum-type class variable of <code>DeviceState</code> that species when a device is not ready for configuration.</p>
 </li>
 <li>
 <p><code>AwaitingConfiguration</code>: Enum-type class variable of <code>DeviceState</code> that species when a device is ready for configuration.</p>
@@ -1798,7 +1798,7 @@
 </span></code></pre></div>
 <ul>
 <li>
-<p><code>Backward</code>: Enum-type class variable of <code>Direction</code> that species when data is streamed backward. </p>
+<p><code>Backward</code>: Enum-type class variable of <code>Direction</code> that species when data is streamed backward.</p>
 </li>
 <li>
 <p><code>Forward</code>: Enum-type class variable of <code>Direction</code> that species when data is streamed forward.</p>
@@ -1944,7 +1944,7 @@
 </span></code></pre></div>
 <ul>
 <li>
-<p>Call <code>device_manager()</code> to return the <code>DeviceManager</code> object associated with this <code>Runtime</code> instance. </p>
+<p>Call <code>device_manager()</code> to return the <code>DeviceManager</code> object associated with this <code>Runtime</code> instance.</p>
 </li>
 <li>
 <p>Call <code>get_available_data</code> with a specific <code>stream_id</code>, 0 or 1, to return the <code>AvailableData</code> associated with the 1st or 2nd video source, respectively.</p>
@@ -2261,7 +2261,7 @@
 </span></code></pre></div>
 <ul>
 <li>
-<p><code>Falling</code>: Enum-type class variable of <code>TriggerEdge</code> that defines the falling edge of the trigger. </p>
+<p><code>Falling</code>: Enum-type class variable of <code>TriggerEdge</code> that defines the falling edge of the trigger.</p>
 </li>
 <li>
 <p><code>NotApplicable</code>: Enum-type class variable of <code>TriggerEdge</code> that defines if a trigger does not have a rising or falling edge.</p>
@@ -2281,10 +2281,10 @@
 </span></code></pre></div>
 <ul>
 <li>
-<p>Call <code>data()</code> to create an NDArray of the <code>VideoFrame</code> data. </p>
+<p>Call <code>data()</code> to create an NDArray of the <code>VideoFrame</code> data.</p>
 </li>
 <li>
-<p>Call <code>metadata()</code> to create a <code>VideoFrameMetadata</code> object containing the metadata of <code>VideoFrame</code>. </p>
+<p>Call <code>metadata()</code> to create a <code>VideoFrameMetadata</code> object containing the metadata of <code>VideoFrame</code>.</p>
 </li>
 </ul>
 <h2 id="class-videoframemetadata">Class <code>VideoFrameMetadata</code><a class="headerlink" href="#class-videoframemetadata" title="Permanent link">&para;</a></h2>

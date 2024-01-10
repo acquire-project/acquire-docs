@@ -16,7 +16,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.2">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.3">
     
     
       
@@ -943,7 +943,7 @@
 <li><strong>simulated: empty</strong> - Produces no data, leaving a blank image. This camera simulates acquiring as fast as possible.</li>
 </ul>
 <p>Acquire will only identify cameras whose drivers are present on your machine. The <code>DeviceManager</code> class manages selection of cameras and storage. We can create a <code>DeviceManager</code> object using the following:</p>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">import</span> <span class="nn">acquire</span> 
+<div class="language-python highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">import</span> <span class="nn">acquire</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="c1"># Instantiate a Runtime object</span>
 </span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="n">runtime</span> <span class="o">=</span> <span class="n">acquire</span><span class="o">.</span><span class="n">Runtime</span><span class="p">()</span>
@@ -952,10 +952,10 @@
 </span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="n">dm</span> <span class="o">=</span> <span class="n">runtime</span><span class="o">.</span><span class="n">device_manager</span><span class="p">()</span>
 </span></code></pre></div>
 <p><code>DeviceManager</code> objects have <code>device</code> methods which lists the identifiers for discovered devices. You can iterate over this list to determine which cameras were discovered.</p>
-<p><div class="language-python highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">for</span> <span class="n">device</span> <span class="ow">in</span> <span class="n">dm</span><span class="o">.</span><span class="n">devices</span><span class="p">():</span>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">for</span> <span class="n">device</span> <span class="ow">in</span> <span class="n">dm</span><span class="o">.</span><span class="n">devices</span><span class="p">():</span>
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>    <span class="nb">print</span><span class="p">(</span><span class="n">device</span><span class="p">)</span>
 </span></code></pre></div>
-The output of this code is below. All discovered devices, both cameras and storage devices, will be listed. In this tutorial, no cameras were connected to the machine, so only simulated cameras were found. Note that the storage devices also printed.</p>
+<p>The output of this code is below. All discovered devices, both cameras and storage devices, will be listed. In this tutorial, no cameras were connected to the machine, so only simulated cameras were found. Note that the storage devices also printed.</p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>&lt;DeviceIdentifier Camera &quot;simulated: uniform random&quot;&gt;
 </span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>&lt;DeviceIdentifier Camera &quot;simulated: radial sin&quot;&gt;
 </span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>&lt;DeviceIdentifier Camera &quot;simulated: empty&quot;&gt;
@@ -970,6 +970,7 @@ The output of this code is below. All discovered devices, both cameras and stora
 <p>For cameras that weren't discovered you will see an error like the one below. These errors will not affect performance and can be ignored.</p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>ERROR acquire.runtime 2023-10-20 19:03:17,917 runtime.rs:40 C:\actions-runner\_work\acquire-driver-hdcam\acquire-driver-hdcam\src\acquire-core-libs\src\acquire-device-hal\device\hal\loader.c:114 - driver_load(): Failed to load driver at &quot;acquire-driver-hdcam&quot;.
 </span></code></pre></div>
+<p><a class="md-button md-button-center" href="../drivers.py">Download this tutorial as a Python script</a></p>
 
 
 

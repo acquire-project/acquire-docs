@@ -16,7 +16,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.2">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.3">
     
     
       
@@ -930,7 +930,7 @@
 <h1 id="device-selection">Device Selection<a class="headerlink" href="#device-selection" title="Permanent link">&para;</a></h1>
 <p>This tutorial illustrates the difference between the <code>select</code> and <code>select_one_of</code> methods in the <code>DeviceManager</code> class. <code>select</code> chooses the first discovered device of a specific kind, camera or storage device. You can also, optionally, select a specific device by passing the device name as a string to <code>select</code>. Whereas, <code>select_one_of</code> requires that you specify both the kind of device to select and a list of possible device names. <code>select_one_of</code> will iterate through the list and select the first device in the list of names that is discovered on your machine.</p>
 <p>To start, instantiate <code>Runtime</code> and <code>DeviceManager</code> objects and subsequently print the discovered devices.</p>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">import</span> <span class="nn">acquire</span> 
+<div class="language-python highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">import</span> <span class="nn">acquire</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="c1"># Instantiate a Runtime object</span>
 </span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="n">runtime</span> <span class="o">=</span> <span class="n">acquire</span><span class="o">.</span><span class="n">Runtime</span><span class="p">()</span>
@@ -986,6 +986,7 @@ The output of the code is below:
 The output of the code is below. The Hamamatsu camera was not discovered by <code>Runtime</code>, so <code>select_one_of</code> iterates until it finds a device discovered by <code>Runtime</code>. In this case, the next item in the list is a simulated camera that was discovered by <code>Runtime</code>.
 <div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>&lt;DeviceIdentifier Camera &quot;simulated: radial sin&quot;&gt;
 </span></code></pre></div></p>
+<p><a class="md-button md-button-center" href="../select.py">Download this tutorial as a Python script</a></p>
 
 
 

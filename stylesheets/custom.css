@@ -253,3 +253,11 @@ li.md-source__fact {
 .md-header__ellipsis a:hover {
     color: white;
 }
+
+a.md-button-center {
+    display: flex !important;
+    justify-content: center;
+    max-width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
