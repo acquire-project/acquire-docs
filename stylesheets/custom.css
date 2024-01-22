@@ -18,6 +18,12 @@ html {
     display: none;
 }
 
+@media screen and (max-width: 76.2344em) {
+    .md-nav--primary .md-nav__title .md-logo {
+        display: none;
+    }
+}
+
 [dir="ltr"] .md-header__title {
     margin-left: 0.6rem;
 }
