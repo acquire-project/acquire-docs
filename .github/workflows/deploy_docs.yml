@@ -35,11 +35,12 @@ jobs:
         run: |
           mkdocs build
 
-      - name: Deploy Docs
+      - name: Deploy docs
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           # external_repository: acquire/acquire-docs.github.io
           publish_dir: site
           publish_branch: gh-pages
+          destination_dir: dev
           # cname: acquire.org

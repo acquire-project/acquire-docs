@@ -26,6 +26,7 @@ html {
 
 [dir="ltr"] .md-header__title {
     margin-left: 0.6rem;
+    display: flex;
 }
 
 .md-search__form {
@@ -266,4 +267,33 @@ a.md-button-center {
     max-width: fit-content;
     margin-left: auto;
     margin-right: auto;
+}
+
+#version-selector {
+    padding: 0 10px;
+}
+
+#version-selector>select {
+    width: auto;
+    height: auto;
+    background-color: var(--md-primary-fg-color);
+    color: var(--md-accent-bg-color);
+    margin: 2px;
+    border: none;
+    font-weight: 700;
+    font-size: 0.625rem;
+}
+
+#version-selector>select:hover {
+    text-decoration: underline;
+}
+
+.container>#version-selector {
+    flex-grow: 1;
+}
+
+@media (min-width: 992px) {
+    .container>#version-selector {
+        flex-grow: 0;
+    }
 }

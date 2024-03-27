@@ -40,8 +40,11 @@
 
         <!-- Header title -->
         <div class="md-header__title" data-md-component="header-title">
-            <div class="md-header__ellipsis">
+            <div class="md-header__ellipsis" id="site-title">
                 <a href="{{ config.extra.homepage | d(nav.homepage.url, true) | url }}">{{ config.site_name }}</a>
+            </div>
+            <div class="md-header__version" id="version-selector">
+                <!-- Version switcher -->
             </div>
         </div>
 

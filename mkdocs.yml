@@ -1,5 +1,6 @@
 site_name: Acquire Docs
-repo_url: https://github.com/acquire-project
+repo_url: https://github.com/acquire-project/
+site_url: https://acquire-project.github.io/acquire-docs/
 
 theme:
   name: material
@@ -15,6 +16,9 @@ theme:
 
 extra_css:
   - stylesheets/custom.css
+
+extra_javascript:
+  - javascripts/version-select.js
 
 nav:
   - Home: index.md
@@ -39,6 +43,7 @@ nav:
   - For contributors:
     - for_contributors/index.md
     - for_contributors/docs_contribution_quickstart.md
+    - for_contributors/update_version.md
 
 markdown_extensions:
   - pymdownx.highlight:
@@ -63,3 +68,4 @@ markdown_extensions:
 plugins:
   - include-markdown
   - search
+  - mike
