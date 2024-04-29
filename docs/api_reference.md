@@ -302,25 +302,25 @@ class DeviceState:
     Running: ClassVar[DeviceState]
 
     def __eq__(self, other: object) -> bool:
-        """Checks if two DeviceState objects are equal."""
+    """Checks if two DeviceState objects are equal."""
 
     def __ge__(self, other: object) -> bool:
-        """Checks if this DeviceState is greater than or equal to another."""
+    """Checks if this DeviceState is greater than or equal to another."""
 
     def __gt__(self, other: object) -> bool:
-        """Checks if this DeviceState is greater than another."""
+    """Checks if this DeviceState is greater than another."""
 
     def __int__(self) -> int:
-        """Converts the DeviceState to an integer."""
+    """Converts the DeviceState to an integer."""
 
     def __le__(self, other: object) -> bool:
-        """Checks if this DeviceState is less than or equal to another."""
+    """Checks if this DeviceState is less than or equal to another."""
 
     def __lt__(self, other: object) -> bool:
-        """Checks if this DeviceState is less than another."""
+    """Checks if this DeviceState is less than another."""
 
     def __ne__(self, other: object) -> bool:
-        """Checks if two DeviceState objects are not equal."""
+    """Checks if two DeviceState objects are not equal."""
 ```
 
 - `Closed`: Enum-type class variable of `DeviceState` that species when a device is not ready for configuration.
@@ -342,9 +342,9 @@ class DigitalLineCapabilities:
     """Returns a dictionary of the DigitalLineCapabilities attributes."""
 ```
 
-- line_count:
+- line_count: Integer.
 
-- names:
+- names: Tuple of strings.
 
 - The `dict` method creates a dictionary of a `DigitalLineCapabilities` object's attributes.
 
@@ -532,9 +532,9 @@ class Property:
 
 - `writable`: A boolean indicating whether the propetry can be overwritten.
 
-- `low`: float
+- `low`: Floating point number.
 
-- `high`: float
+- `high`: Floating point number.
 
 - `kind`: An instance of the `PropertyType` class.
 
@@ -874,9 +874,9 @@ class StorageDimension:
 
 - `kind`: An instance of the `DimensionType` specifying if the storage dimension is space, channel, time, or a different physical dimension.
   
-- `array_size_px`: int
+- `array_size_px`: Integer.
 
-- `chunk_size_px`: int
+- `chunk_size_px`: Integer.
 
 - `shard_size_chunks`: Integer number of chunks per shard. Shards enable aggregating multiple chunks into a single file.
 
@@ -1020,9 +1020,9 @@ class TriggerInputOutputCapabilities:
     """Returns a dictionary of the TriggerInputOutputCapabilities attributes."""
 ```
 
-- `input`: 
+- `input`: Integer.
 
-- `output`:
+- `output`: Integer.
 
 - The `dict` method creates a dictionary of a `TriggerInputOutputCapabilities` object's attributes.
 
