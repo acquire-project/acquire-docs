@@ -9,13 +9,13 @@ The `AvailableData` class represents the collection of frames that have been cap
 ```python
 class AvailableData:
     def frames(self) -> Iterator[VideoFrame]:
-        """Returns an iterator over the video frames in the available data."""
+    """Returns an iterator over the video frames in the available data."""
 
     def get_frame_count(self) -> int:
-        """Returns the total number of video frames in the available data."""
+    """Returns the total number of video frames in the available data."""
 
     def __iter__(self) -> Iterator[VideoFrame]:
-        """Returns an iterator over the video frames in the available data."""
+    """Returns an iterator over the video frames in the available data."""
 ```
 
 - The `frames` method provides an iterator over these frames.
@@ -29,9 +29,12 @@ class AvailableData:
 ```python
 class AvailableDataContext:
     def __enter__(self) -> AvailableData: ...
+    """ """
+
     def __exit__(
         self, exc_type: Any, exc_value: Any, traceback: Any
     ) -> None: ...
+    """ """
 ```
 
 ## Class `Camera`
@@ -71,6 +74,7 @@ class CameraCapabilities:
     triggers: TriggerCapabilities
 
     def dict(self) -> Dict[str, Any]: ...
+    """Returns a dictionary of the CameraCapabilities attributes."""
 ```
 
 - `exposure_time_us`: An instance of the `Property` class.
@@ -143,7 +147,10 @@ class Capabilities:
     video: Tuple[VideoStreamCapabilities, VideoStreamCapabilities]
 
     def __init__(self, *args: None, **kwargs: Any) -> None: ...
+    """Initializes a Capabilities object with optional arguments."""
+
     def dict(self) -> Dict[str, Any]: ...
+    """Returns a dictionary of the Capabilities attributes."""
 ```
 
 - `video`: A tuple containing two `VideoStreamCapabilities` instances since `Acquire` supports simultaneous streaming from 2 video sources. 
@@ -171,22 +178,22 @@ class DeviceIdentifier:
     Useful when a DeviceIdentifier is not needed."""
 
     def __eq__(self, other: object) -> bool:
-        """Checks if two DeviceIdentifier objects are equal."""
+    """Checks if two DeviceIdentifier objects are equal."""
 
     def __ge__(self, other: object) -> bool:
-        """Checks if this DeviceIdentifier is greater than or equal to another."""
+    """Checks if this DeviceIdentifier is greater than or equal to another."""
 
     def __gt__(self, other: object) -> bool:
-        """Checks if this DeviceIdentifier is greater than another."""
+    """Checks if this DeviceIdentifier is greater than another."""
 
     def __le__(self, other: object) -> bool:
-        """Checks if this DeviceIdentifier is less than or equal to another."""
+    """Checks if this DeviceIdentifier is less than or equal to another."""
 
     def __lt__(self, other: object) -> bool:
-        """Checks if this DeviceIdentifier is less than another."""
+    """Checks if this DeviceIdentifier is less than another."""
 
     def __ne__(self, other: object) -> bool:
-        """Checks if two DeviceIdentifier objects are not equal."""
+    """Checks if two DeviceIdentifier objects are not equal."""
 ```
 
 - `id`: A tuple (driver_id, device_id) containing two Uint8 integers that serve to identify each driver and device uniquely for a given run.
@@ -203,35 +210,35 @@ The `DeviceKind` class represents the types of devices in a given system.
 
 ```python
 class DeviceKind:
-    Camera: ClassVar[DeviceKind] = DeviceKind.Camera
-    NONE: ClassVar[DeviceKind] = DeviceKind.NONE
-    Signals: ClassVar[DeviceKind] = DeviceKind.Signals
-    StageAxis: ClassVar[DeviceKind] = DeviceKind.StageAxis
-    Storage: ClassVar[DeviceKind] = DeviceKind.Storage
+    Camera: ClassVar[DeviceKind]
+    NONE: ClassVar[DeviceKind]
+    Signals: ClassVar[DeviceKind]
+    StageAxis: ClassVar[DeviceKind]
+    Storage: ClassVar[DeviceKind]
 
     def __init__(self, *args: None, **kwargs: Any) -> None:
-        """Initializes the DeviceKind class."""
+    """Initializes the DeviceKind class."""
 
     def __eq__(self, other: object) -> bool:
-        """Checks if two DeviceKind objects are equal."""
+    """Checks if two DeviceKind objects are equal."""
 
     def __ge__(self, other: object) -> bool:
-        """Checks if this DeviceKind is greater than or equal to another."""
+    """Checks if this DeviceKind is greater than or equal to another."""
 
     def __gt__(self, other: object) -> bool:
-        """Checks if this DeviceKind is greater than another."""
+    """Checks if this DeviceKind is greater than another."""
 
     def __int__(self) -> int:
-        """Converts the DeviceKind to an integer."""
+    """Converts the DeviceKind to an integer."""
 
     def __le__(self, other: object) -> bool:
-        """Checks if this DeviceKind is less than or equal to another."""
+    """Checks if this DeviceKind is less than or equal to another."""
 
     def __lt__(self, other: object) -> bool:
-        """Checks if this DeviceKind is less than another."""
+    """Checks if this DeviceKind is less than another."""
 
     def __ne__(self, other: object) -> bool:
-        """Checks if two DeviceKind objects are not equal."""
+    """Checks if two DeviceKind objects are not equal."""
 ```
 
 - `Camera`: Enum-type class variable of `DeviceKind` that specifies a device is a camera.
@@ -251,30 +258,30 @@ The `DeviceManager` class manages selection of available devices in the system. 
 ```python
 class DeviceManager:
     def devices(self) -> List[DeviceIdentifier]:
-        """Returns a list of all available device identifiers."""
+    """Returns a list of all available device identifiers."""
 
     @overload
     def select(self, kind: DeviceKind, name: Optional[str]) -> Optional[DeviceIdentifier]:
-        """Selects a specified device.
+    """Selects a specified device.
 
-        Args:
-            kind (DeviceKind): The type of device to select.
-            name (Optional[str]): The name of the device to select. Regular expressions supported.
+    Args:
+        kind (DeviceKind): The type of device to select.
+        name (Optional[str]): The name of the device to select. Regular expressions supported.
 
-        Returns:
-            Optional[DeviceIdentifier]: The selected device identifier, or None if the specified device is not available.
-        """
+    Returns:
+        Optional[DeviceIdentifier]: The selected device identifier, or None if the specified device is not available.
+    """
 
     def select_one_of(self, kind: DeviceKind, names: List[str]) -> Optional[DeviceIdentifier]:
-        """Selects the first device in the list of devices that is of one of the specified kinds.
+    """Selects the first device in the list of devices that is of one of the specified kinds.
 
-        Args:
-            kind (DeviceKind): The type of device to select.
-            names (List[str]): A list of device names to choose from. Regular expressions supported.
+    Args:
+        kind (DeviceKind): The type of device to select.
+        names (List[str]): A list of device names to choose from. Regular expressions supported.
 
-        Returns:
-            Optional[DeviceIdentifier]: The selected device identifier, or None if none of the specified devices are available.
-        """
+    Returns:
+        Optional[DeviceIdentifier]: The selected device identifier, or None if none of the specified devices are available.
+    """
 ```
 
 - Call `devices` to list the `DeviceIdentifier` of each available device.
@@ -289,10 +296,10 @@ The `DeviceState` class represents the acquisition status of a device.
 
 ```python
 class DeviceState:
-    Closed: ClassVar[DeviceState] = DeviceState.Closed
-    AwaitingConfiguration: ClassVar[DeviceState] = DeviceState.AwaitingConfiguration
-    Armed: ClassVar[DeviceState] = DeviceState.Armed
-    Running: ClassVar[DeviceState] = DeviceState.Running
+    Closed: ClassVar[DeviceState]
+    AwaitingConfiguration: ClassVar[DeviceState]
+    Armed: ClassVar[DeviceState]
+    Running: ClassVar[DeviceState]
 
     def __eq__(self, other: object) -> bool:
         """Checks if two DeviceState objects are equal."""
@@ -332,6 +339,7 @@ class DigitalLineCapabilities:
     names: Tuple[str, str, str, str, str, str, str, str]
 
     def dict(self) -> Dict[str, Any]: ...
+    """Returns a dictionary of the DigitalLineCapabilities attributes."""
 ```
 
 - line_count:
@@ -356,25 +364,25 @@ class DimensionType:
     """Initializes a DimensionType object with optional arguments."""
 
     def __eq__(self, other: object) -> bool:
-        """Checks if two DimensionType objects are equal."""
+    """Checks if two DimensionType objects are equal."""
 
     def __ge__(self, other: object) -> bool:
-        """Checks if this DimensionType is greater than or equal to another."""
+    """Checks if this DimensionType is greater than or equal to another."""
 
     def __gt__(self, other: object) -> bool:
-        """Checks if this DimensionType is greater than another."""
+    """Checks if this DimensionType is greater than another."""
 
     def __int__(self) -> int:
-        """Converts the DimensionType to an integer."""
+    """Converts the DimensionType to an integer."""
 
     def __le__(self, other: object) -> bool:
-        """Checks if this DimensionType is less than or equal to another."""
+    """Checks if this DimensionType is less than or equal to another."""
 
     def __lt__(self, other: object) -> bool:
-        """Checks if this DimensionType is less than another."""
+    """Checks if this DimensionType is less than another."""
 
     def __ne__(self, other: object) -> bool:
-        """Checks if two DimensionType objects are not equal."""
+    """Checks if two DimensionType objects are not equal."""
 ```
 
 - `Space`: Enum-type class variable of `DimensionType` that indicates a spatial dimension.
@@ -391,29 +399,29 @@ The `Direction` class represents the direction that data is read for streaming.
 
 ```python
 class Direction:
-    Backward: ClassVar[Direction] = Direction.Backward
-    Forward: ClassVar[Direction] = Direction.Forward
+    Backward: ClassVar[Direction]
+    Forward: ClassVar[Direction]
 
     def __eq__(self, other: object) -> bool:
-        """Checks if two Direction objects are equal."""
+    """Checks if two Direction objects are equal."""
 
     def __ge__(self, other: object) -> bool:
-        """Checks if this Direction is greater than or equal to another."""
+    """Checks if this Direction is greater than or equal to another."""
 
     def __gt__(self, other: object) -> bool:
-        """Checks if this Direction is greater than another."""
+    """Checks if this Direction is greater than another."""
 
     def __int__(self) -> int:
-        """Converts the Direction to an integer."""
+    """Converts the Direction to an integer."""
 
     def __le__(self, other: object) -> bool:
-        """Checks if this Direction is less than or equal to another."""
+    """Checks if this Direction is less than or equal to another."""
 
     def __lt__(self, other: object) -> bool:
-        """Checks if this Direction is less than another."""
+    """Checks if this Direction is less than another."""
 
     def __ne__(self, other: object) -> bool:
-        """Checks if two Direction objects are not equal."""
+    """Checks if two Direction objects are not equal."""
 ```
 
 - `Backward`: Enum-type class variable of `Direction` that species when data is streamed backward.
@@ -450,6 +458,7 @@ class OffsetShapeCapabilities:
     y: Property
 
     def dict(self) -> Dict[str, Any]: ...
+    """Returns a dictionary of the OffsetShapeCapabilities attributes."""
 ```
 
 - `x`: An instance of the `Property` class
@@ -515,7 +524,10 @@ class Property:
     kind: PropertyType
 
     def __init__(self, *args: None, **kwargs: Any) -> None: ...
+    """Initializes a Property object with optional arguments."""
+
     def dict(self) -> Dict[str, Any]: ...
+    """Returns a dictionary of the Property attributes."""
 ```
 
 - `writable`: A boolean indicating whether the propetry can be overwritten.
@@ -538,25 +550,25 @@ class PropertyType:
     String: ClassVar[PropertyType]
 
     def __eq__(self, other: object) -> bool:
-        """Checks if two PropertyType objects are equal."""
+    """Checks if two PropertyType objects are equal."""
 
     def __ge__(self, other: object) -> bool:
-        """Checks if this PropertyType is greater than or equal to another."""
+    """Checks if this PropertyType is greater than or equal to another."""
 
     def __gt__(self, other: object) -> bool:
-        """Checks if this PropertyType is greater than another."""
+    """Checks if this PropertyType is greater than another."""
 
     def __int__(self) -> int:
-        """Converts the PropertyType to an integer."""
+    """Converts the PropertyType to an integer."""
 
     def __le__(self, other: object) -> bool:
-        """Checks if this PropertyType is less than or equal to another."""
+    """Checks if this PropertyType is less than or equal to another."""
 
     def __lt__(self, other: object) -> bool:
-        """Checks if this PropertyType is less than another."""
+    """Checks if this PropertyType is less than another."""
 
     def __ne__(self, other: object) -> bool:
-        """Checks if two PropertyType objects are not equal."""
+    """Checks if two PropertyType objects are not equal."""
 ```
 
 - `FixedPrecision`: Enum-type class variable of `PropertyType` that indicates fixed precision values.
@@ -593,51 +605,51 @@ The `Runtime` class coordinates the devices with the storage disc including sele
 ```python
 class Runtime:
     def __init__(self, *args: None, **kwargs: Any) -> None:
-        """Initializes the Runtime object with optional arguments."""
+    """Initializes the Runtime object with optional arguments."""
 
     def device_manager(self) -> DeviceManager:
-        """Returns the DeviceManager instance associated with this Runtime."""
+    """Returns the DeviceManager instance associated with this Runtime."""
 
     def get_available_data(self, stream_id: int) -> AvailableDataContext:
-        """Returns the AvailableDataContext instance for the given stream ID.
+    """Returns the AvailableDataContext instance for the given stream ID.
 
-        Args:
-            stream_id (int): The ID of the stream for which available data is requested.
+    Args:
+        stream_id (int): The ID of the stream for which available data is requested.
 
-        Returns:
-            AvailableData: The AvailableData instance for the given VideoStream ID.
-        """
+    Returns:
+        AvailableData: The AvailableData instance for the given VideoStream ID.
+    """
 
     def get_configuration(self) -> Properties:
-        """Returns the current configuration properties of the runtime."""
+    """Returns the current configuration properties of the runtime."""
 
     def get_capabilities(self) -> Capabilities: ...
     """Returns the current capabilites of the runtime as an instance of Capabilities."""
 
     def get_state(self) -> DeviceState:
-        """Returns the current state of the device."""
+    """Returns the current state of the device."""
 
     def set_configuration(self, properties: Properties) -> Properties:
-        """Applies the provided configuration properties to the runtime.
+    """Applies the provided configuration properties to the runtime.
 
-        Args:
-            properties (Properties): The properties to be set.
+    Args:
+        properties (Properties): The properties to be set.
 
-        Returns:
-            Properties: The updated configuration properties.
-        """
+    Returns:
+        Properties: The updated configuration properties.
+    """
 
     def start(self) -> None:
-        """Starts the runtime, allowing it to collect data."""
+    """Starts the runtime, allowing it to collect data."""
 
     def execute_trigger(self, stream_id: int) -> None:
-        """Executes a trigger for the given stream ID."""
+    """Executes a trigger for the given stream ID."""
 
     def stop(self) -> None:
-        """Stops the runtime, ending data collection after the max number of frames is collected."""
+    """Stops the runtime, ending data collection after the max number of frames is collected."""
 
     def abort(self) -> None:
-        """Aborts the runtime, terminating it immediately."""
+    """Aborts the runtime, terminating it immediately."""
 ```
 
 - Call `device_manager()` to return the `DeviceManager` object associated with this `Runtime` instance.
@@ -688,35 +700,35 @@ The `SampleType` class defines the type of the values in the streamed data.
 
 ```python
 class SampleType:
-    F32: ClassVar[SampleType] = SampleType.F32
-    I16: ClassVar[SampleType] = SampleType.I16
-    I8: ClassVar[SampleType] = SampleType.I8
-    U16: ClassVar[SampleType] = SampleType.U16
-    U8: ClassVar[SampleType] = SampleType.U8
-    U10: ClassVar[SampleType] = SampleType.U10
-    U12: ClassVar[SampleType] = SampleType.U12
-    U14: ClassVar[SampleType] = SampleType.U14
+    F32: ClassVar[SampleType]
+    I16: ClassVar[SampleType]
+    I8: ClassVar[SampleType]
+    U16: ClassVar[SampleType]
+    U8: ClassVar[SampleType]
+    U10: ClassVar[SampleType]
+    U12: ClassVar[SampleType]
+    U14: ClassVar[SampleType]
 
     def __eq__(self, other: object) -> bool:
-        """Checks if two SampleType objects are equal."""
+    """Checks if two SampleType objects are equal."""
 
     def __ge__(self, other: object) -> bool:
-        """Checks if this SampleType is greater than or equal to another."""
+    """Checks if this SampleType is greater than or equal to another."""
 
     def __gt__(self, other: object) -> bool:
-        """Checks if this SampleType is greater than another."""
+    """Checks if this SampleType is greater than another."""
 
     def __int__(self) -> int:
-        """Converts the SampleType to an integer."""
+    """Converts the SampleType to an integer."""
 
     def __le__(self, other: object) -> bool:
-        """Checks if this SampleType is less than or equal to another."""
+    """Checks if this SampleType is less than or equal to another."""
 
     def __lt__(self, other: object) -> bool:
-        """Checks if this SampleType is less than another."""
+    """Checks if this SampleType is less than another."""
 
     def __ne__(self, other: object) -> bool:
-        """Checks if two SampleType objects are not equal."""
+    """Checks if two SampleType objects are not equal."""
 ```
 
 - `F32`: Enum-type class variable of `SampleType` that specifies values of 32-bit floating point type.
@@ -741,29 +753,29 @@ The `SignalIOKind` class defines the signal type, input or output, for a trigger
 
 ```python
 class SignalIOKind:
-    Input: ClassVar[SignalIOKind] = SignalIOKind.Input
-    Output: ClassVar[SignalIOKind] = SignalIOKind.Output
+    Input: ClassVar[SignalIOKind]
+    Output: ClassVar[SignalIOKind]
 
     def __eq__(self, other: object) -> bool:
-        """Checks if two SignalIOKind objects are equal."""
+    """Checks if two SignalIOKind objects are equal."""
 
     def __ge__(self, other: object) -> bool:
-        """Checks if this SignalIOKind is greater than or equal to another."""
+    """Checks if this SignalIOKind is greater than or equal to another."""
 
     def __gt__(self, other: object) -> bool:
-        """Checks if this SignalIOKind is greater than another."""
+    """Checks if this SignalIOKind is greater than another."""
 
     def __int__(self) -> int:
-        """Converts the SignalIOKind to an integer."""
+    """Converts the SignalIOKind to an integer."""
 
     def __le__(self, other: object) -> bool:
-        """Checks if this SignalIOKind is less than or equal to another."""
+    """Checks if this SignalIOKind is less than or equal to another."""
 
     def __lt__(self, other: object) -> bool:
-        """Checks if this SignalIOKind is less than another."""
+    """Checks if this SignalIOKind is less than another."""
 
     def __ne__(self, other: object) -> bool:
-        """Checks if two SignalIOKind objects are not equal."""
+    """Checks if two SignalIOKind objects are not equal."""
 ```
 
 - `Input`: Enum-type class variable of `SignalIOKind` that specifies signal coming in to the device.
@@ -776,29 +788,29 @@ The `SignalType` class specifies whether a signal is analog or digital.
 
 ```python
 class SignalType:
-    Analog: ClassVar[SignalType] = SignalType.Analog
-    Digital: ClassVar[SignalType] = SignalType.Digital
+    Analog: ClassVar[SignalType]
+    Digital: ClassVar[SignalType]
 
     def __eq__(self, other: object) -> bool:
-        """Checks if two SignalType objects are equal."""
+    """Checks if two SignalType objects are equal."""
 
     def __ge__(self, other: object) -> bool:
-        """Checks if this SignalType is greater than or equal to another."""
+    """Checks if this SignalType is greater than or equal to another."""
 
     def __gt__(self, other: object) -> bool:
-        """Checks if this SignalType is greater than another."""
+    """Checks if this SignalType is greater than another."""
 
     def __int__(self) -> int:
-        """Converts the SignalType to an integer."""
+    """Converts the SignalType to an integer."""
 
-   def __le__(self, other: object) -> bool:
-        """Checks if this SignalType is less than or equal to another."""
+    def __le__(self, other: object) -> bool:
+    """Checks if this SignalType is less than or equal to another."""
 
     def __lt__(self, other: object) -> bool:
-        """Checks if this SignalType is less than another."""
+    """Checks if this SignalType is less than another."""
 
     def __ne__(self, other: object) -> bool:
-        """Checks if two SignalType objects are not equal."""
+    """Checks if two SignalType objects are not equal."""
 ```
 
 - `Analog`: Enum-type class variable of `SignalType` that specifies a signal is analog.
@@ -833,6 +845,7 @@ class StorageCapabilities:
     multiscale_is_supported: bool
 
     def dict(self) -> Dict[str, Any]: ...
+    """Returns a dictionary of the StorageCapabilities attributes."""
 ```
 
 - `chunking_is_supported`: A boolean indicating whether chunking is supported for zarr storage.
@@ -843,7 +856,7 @@ class StorageCapabilities:
 
 - The `dict` method creates a dictionary of a `StorageCapabilities` object's attributes.
 
-## Class `StorageDimensions`
+## Class `StorageDimension`
 
 ```python
 class StorageDimension:
@@ -854,6 +867,7 @@ class StorageDimension:
     shard_size_chunks: int
 
     def dict(self) -> Dict[str, Any]: ...
+    """Returns a dictionary of the StorageDimension attributes."""
 ```
 
 - `name`: A string representing the name or label of the storage dimension.
@@ -937,6 +951,7 @@ class TriggerCapabilities:
     frame_start: TriggerInputOutputCapabilities
 
     def dict(self) -> Dict[str, Any]: ...
+    """Returns a dictionary of the TriggerCapabilities attributes."""
 ```
 - `acquisition_start`: An instance of the `TriggerInputOutputCapabilities` class.
   
@@ -961,25 +976,25 @@ class TriggerEdge:
     LevelHigh: ClassVar[TriggerEdge]
 
     def __eq__(self, other: object) -> bool:
-        """Checks if two TriggerEdge objects are equal."""
+    """Checks if two TriggerEdge objects are equal."""
 
     def __ge__(self, other: object) -> bool:
-        """Checks if this TriggerEdge is greater than or equal to another."""
+    """Checks if this TriggerEdge is greater than or equal to another."""
 
     def __gt__(self, other: object) -> bool:
-        """Checks if this TriggerEdge is greater than another."""
+    """Checks if this TriggerEdge is greater than another."""
 
     def __int__(self) -> int:
-        """Converts the TriggerEdge to an integer."""
+    """Converts the TriggerEdge to an integer."""
 
     def __le__(self, other: object) -> bool:
-        """Checks if this TriggerEdge is less than or equal to another."""
+    """Checks if this TriggerEdge is less than or equal to another."""
 
     def __lt__(self, other: object) -> bool:
-        """Checks if this TriggerEdge is less than another."""
+    """Checks if this TriggerEdge is less than another."""
 
     def __ne__(self, other: object) -> bool:
-        """Checks if two TriggerEdge objects are not equal."""
+    """Checks if two TriggerEdge objects are not equal."""
 ```
 
 - `Falling`: Enum-type class variable of `TriggerEdge` that defines the falling edge of the trigger.
@@ -1002,6 +1017,7 @@ class TriggerInputOutputCapabilities:
     output: int
 
     def dict(self) -> Dict[str, Any]: ...
+    """Returns a dictionary of the TriggerInputOutputCapabilities attributes."""
 ```
 
 - `input`: 
@@ -1017,10 +1033,10 @@ The `VideoFrame` class represents data from acquisition of a frame.
 ```python
 class VideoFrame:
     def data(self) -> NDArray[Any]:
-        """Returns the data of the video frame as an NDArray."""
+    """Returns the data of the video frame as an NDArray."""
 
     def metadata(self) -> VideoFrameMetadata:
-        """Returns the metadata associated with the video frame."""
+    """Returns the metadata associated with the video frame."""
 ```
 
 - Call `data()` to create an NDArray of the `VideoFrame` data.
@@ -1100,6 +1116,7 @@ class VideoStreamCapabilities:
     frame_average_count: Property
 
     def dict(self) -> Dict[str, Any]: ...
+    """Returns a dictionary of the VideoStreamCapabilities attributes."""
 ```
 
 - `camera`: An instance of the CameraCapabilities class.
