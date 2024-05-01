@@ -571,7 +571,7 @@ class PropertyType:
     """Checks if two PropertyType objects are not equal."""
 ```
 
-- `FixedPrecision`: Enum-type class variable of `PropertyType` that indicates fixed precision values.
+- `FixedPrecision`: Enum-type class variable of `PropertyType` that indicates fixed precision or integer values.
 
 - `FloatingPrecision`: Enum-type class variable of `PropertyType` that indicates floating point precision values.
 
