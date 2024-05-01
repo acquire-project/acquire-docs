@@ -848,7 +848,7 @@ class StorageCapabilities:
     """Returns a dictionary of the StorageCapabilities attributes."""
 ```
 
-- `chunking_is_supported`: A boolean indicating whether chunking is supported for zarr storage.
+- `chunking_is_supported`: A boolean indicating whether chunking is supported for this storage device.
   
 - `sharding_is_supported`: A boolean indicating whether sharding is supported for zarr storage.
   
