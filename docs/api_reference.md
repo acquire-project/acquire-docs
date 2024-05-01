@@ -850,7 +850,7 @@ class StorageCapabilities:
 
 - `chunking_is_supported`: A boolean indicating whether chunking is supported for this storage device.
   
-- `sharding_is_supported`: A boolean indicating whether sharding is supported for zarr storage.
+- `sharding_is_supported`: A boolean indicating whether sharding is supported for this storage device.
   
 - `multiscale_is_supported`: A boolean indicating whether multiscale storage is supported.
 
