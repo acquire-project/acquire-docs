@@ -617,7 +617,7 @@ class Runtime:
         stream_id (int): The ID of the stream for which available data is requested.
 
     Returns:
-        AvailableData: The AvailableData instance for the given VideoStream ID.
+        AvailableDataContext: Context manager for available data for the given VideoStream ID.
     """
 
     def get_configuration(self) -> Properties:
