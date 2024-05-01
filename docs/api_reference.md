@@ -530,7 +530,7 @@ class Property:
     """Returns a dictionary of the Property attributes."""
 ```
 
-- `writable`: A boolean indicating whether the propetry can be overwritten.
+- `writable`: A boolean indicating whether the property can be written.
 
 - `low`: Floating point number.
 
