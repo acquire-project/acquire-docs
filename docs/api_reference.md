@@ -876,7 +876,7 @@ class StorageDimension:
   
 - `array_size_px`: The size of the output array along this dimension, in pixels. The final (i.e., append) dimension must have size 0.
 
-- `chunk_size_px`: Integer.
+- `chunk_size_px`: The size of a chunk along this dimension, in pixels.
 
 - `shard_size_chunks`: Integer number of chunks per shard. Shards enable aggregating multiple chunks into a single file.
 
