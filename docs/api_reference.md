@@ -874,7 +874,7 @@ class StorageDimension:
 
 - `kind`: An instance of the `DimensionType` specifying if the storage dimension is space, channel, time, or a different physical dimension.
   
-- `array_size_px`: Integer.
+- `array_size_px`: The size of the output array along this dimension, in pixels. The final (i.e., append) dimension must have size 0.
 
 - `chunk_size_px`: Integer.
 
