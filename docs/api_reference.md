@@ -29,7 +29,7 @@ class AvailableData:
 ```python
 class AvailableDataContext:
     def __enter__(self) -> AvailableData: ...
-    """ """
+    """Get the available data from the runtime and return it."""
 
     def __exit__(
         self, exc_type: Any, exc_value: Any, traceback: Any
