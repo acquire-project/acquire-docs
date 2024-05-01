@@ -34,7 +34,7 @@ class AvailableDataContext:
     def __exit__(
         self, exc_type: Any, exc_value: Any, traceback: Any
     ) -> None: ...
-    """ """
+    """Clean up any references to the available data returned when entering this context."""
 ```
 
 ## Class `Camera`
