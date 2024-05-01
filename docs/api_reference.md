@@ -59,7 +59,7 @@ class Camera:
 - The `dict` method creates a dictionary of a `Camera` object's attributes.
 
 ## Class `CameraCapabilities`
-The `CameraCapabilities` class is used to describe the camera’s available properties.
+The `CameraCapabilities` class is used to describe the camera’s supported properties.
 
 ```python
 class CameraCapabilities:
@@ -77,13 +77,13 @@ class CameraCapabilities:
     """Returns a dictionary of the CameraCapabilities attributes."""
 ```
 
-- `exposure_time_us`: An instance of the `Property` class.
+- `exposure_time_us`: An instance of the `Property` class that captures the range and type of supported values in microseconds for the camera's exposure time, which is how long in microseconds the camera collects light from the sample for a single frame.
   
-- `line_interval_us`: An instance of the `Property` class.
+- `line_interval_us`: An instance of the `Property` class that captures the range and type of supported values in microseconds for a rolling shutter camera to scan one line.
   
-- `readout_direction`: An instance of the `Property` class.
+- `readout_direction`: An instance of the `Property` class that specifies whether the data is read out of the camera forwards or backwards and if that direction can be chosen by the user.
   
-- `binning`: An instance of the `Property` class.
+- `binning`: An instance of the `Property` class that captures the range and type of support values for binning, which is combining adjacent pixels by averaging in each direction, and whether the binning factor can be chosen by the user.
   
 - `offset`: An instance of the `OffsetShapeCapabilities` class.
   
