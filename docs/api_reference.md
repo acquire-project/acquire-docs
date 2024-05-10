@@ -514,6 +514,25 @@ class PID:
 
 - The `dict` method creates a dictionary of a `PID` object's attributes.
 
+## Class `Properties`
+
+The `Properties` class represents properties related to video streams.
+
+```python
+class Properties:
+    video: Tuple[VideoStream, VideoStream]
+
+    def __init__(self, *args: None, **kwargs: Any) -> None: ..
+    """Initializes a Properties object with optional arguments.""".
+
+    def dict(self) -> Dict[str, Any]: ...
+    """Returns a dictionary of the Properties attributes."""
+```
+
+- `video`: A tuple containing two `VideoStream` instances since `Acquire` supports simultaneous streaming from 2 video sources. `VideoStream` objects have 2 attributes `camera` and `storage` to set the source and sink for the stream.
+
+- The `dict` method creates a dictionary of a `Properties` object's attributes.
+
 ## Class `Property`
 
 ```python
@@ -578,25 +597,6 @@ class PropertyType:
 - `Enum`: Enum-type class variable of `PropertyType` that indicates enum-type values.
 
 - `String`: Enum-type class variable of `PropertyType` that indicates string values.
-
-## Class `Properties`
-
-The `Properties` class represents properties related to video streams.
-
-```python
-class Properties:
-    video: Tuple[VideoStream, VideoStream]
-
-    def __init__(self, *args: None, **kwargs: Any) -> None: ..
-    """Initializes a Properties object with optional arguments.""".
-
-    def dict(self) -> Dict[str, Any]: ...
-    """Returns a dictionary of the Properties attributes."""
-```
-
-- `video`: A tuple containing two `VideoStream` instances since `Acquire` supports simultaneous streaming from 2 video sources. `VideoStream` objects have 2 attributes `camera` and `storage` to set the source and sink for the stream.
-
-- The `dict` method creates a dictionary of a `Properties` object's attributes.
 
 ## Class `Runtime`
 
