@@ -450,22 +450,22 @@ class InputTriggers:
 
 - The `dict` method creates a dictionary of a `InputTriggers` object's attributes.
 
-## Class `OffsetShapeCapabilities`
+## Class `OffsetCapabilities`
 
 ```python
-class OffsetShapeCapabilities:
+class OffsetCapabilities:
     x: Property
     y: Property
 
     def dict(self) -> Dict[str, Any]: ...
-    """Returns a dictionary of the OffsetShapeCapabilities attributes."""
+    """Returns a dictionary of the OffsetCapabilities attributes."""
 ```
 
 - `x`: An instance of the `Property` class
 
 - `y`: An instance of the `Property` class
 
-- The `dict` method creates a dictionary of a `OffsetShapeCapabilities` object's attributes.
+- The `dict` method creates a dictionary of a `OffsetCapabilities` object's attributes.
 
 ## Class `OutputTriggers`
 
@@ -746,6 +746,23 @@ class SampleType:
 - `U12`: Enum-type class variable of `SampleType` that specifies values of 12-bit unsigned integer type.
 
 - `U14`: Enum-type class variable of `SampleType` that specifies values of 14-bit unsigned integer type.
+
+## Class `ShapeCapabilities`
+
+```python
+class ShapeCapabilities:
+    x: Property
+    y: Property
+
+    def dict(self) -> Dict[str, Any]: ...
+    """Returns a dictionary of the ShapeCapabilities attributes."""
+```
+
+- `x`: An instance of the `Property` class
+
+- `y`: An instance of the `Property` class
+
+- The `dict` method creates a dictionary of a `ShapeCapabilities` object's attributes.
 
 ## Class `SignalIOKind`
 
