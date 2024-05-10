@@ -91,9 +91,9 @@ class CameraCapabilities:
   
 - `supported_pixel_types`: A list containing instances of the `SampleType` class representing each of the supported pixel types, such as 8-bit unsigned integer (uint8). 
   
-- `digital_lines`: An instance of the `DigitalLineCapabilities` class.
+- `digital_lines`: An instance of the `DigitalLineCapabilities` class which indicates the number and names of the available lines. Up to 8 lines are supported with the last line typically being the camera software trigger.
   
-- `triggers`: An instance of the `TriggerCapabilities` class.
+- `triggers`: An instance of the `TriggerCapabilities` class which indicate what kinds of triggers (start acquisition, start exposure, or start a frame) are supported.
 
 - The `dict` method create a dictionary of a `CameraCapabilities` object's attributes.
 
@@ -342,9 +342,9 @@ class DigitalLineCapabilities:
     """Returns a dictionary of the DigitalLineCapabilities attributes."""
 ```
 
-- line_count: Integer.
+- line_count: Integer number representing the number of digital lines supported.
 
-- names: Tuple of strings.
+- names: Tuple of strings to name each of the digital lines, typically the last one is the camera software trigger.
 
 - The `dict` method creates a dictionary of a `DigitalLineCapabilities` object's attributes.
 
@@ -532,11 +532,11 @@ class Property:
 
 - `writable`: A boolean indicating whether the property can be written.
 
-- `low`: Floating point number.
+- `low`: Floating point number for the lower bound of the property, if applicable.
 
-- `high`: Floating point number.
+- `high`: Floating point number for the upper bound of the property, if applicable.
 
-- `kind`: An instance of the `PropertyType` class.
+- `kind`: An instance of the `PropertyType` class which indicates the type of the property (fixed precision, floating-point, enum, or string).
 
 - The `dict` method creates a dictionary of a `Property` object's attributes.
 
@@ -654,7 +654,7 @@ class Runtime:
 
 - Call `device_manager()` to return the `DeviceManager` object associated with this `Runtime` instance.
 
-- Call `get_available_data` with a specific `stream_id`, 0 or 1, to return the `AvailableDataContext` associated with the 1st or 2nd video source, respectively.
+- Call `get_available_data` with a specific `stream_id`, 0 or 1, to return the context manager, `AvailableDataContext`, associated with the 1st or 2nd video source, respectively.
 
 - Call `get_configuration()` to return the `Properties` object associated with this `Runtime` instance.
 
@@ -878,7 +878,7 @@ class StorageDimension:
 
 - `chunk_size_px`: The size of a chunk along this dimension, in pixels.
 
-- `shard_size_chunks`: Integer number of chunks per shard. Shards enable aggregating multiple chunks into a single file.
+- `shard_size_chunks`: Integer number of chunks per shard. Shards enable aggregating multiple chunks into a single file. This value is ignored if sharding is not supported by the storage device.
 
 - The `dict` method creates a dictionary of a `StorageDimensions` object's attributes.
 
@@ -907,7 +907,7 @@ class StorageProperties:
 
 - `pixel_scale_um`: A tuple of two floats representing the pixel size of the camera in micrometers.
 
-- `acquisition_dimensions`: A list of instances of the `StorageDimension` class, one for each acquisition dimension.
+- `acquisition_dimensions`: A list of instances of the `StorageDimension` class, one for each acquisition dimension. The fastest changing dimension should be first in the list and the append dimension should be last. This value is only applicable for Zarr storage devices.
 
 - `enable_multiscale`: A boolean indicating whether multiscale storage is enabled.
 
@@ -953,11 +953,11 @@ class TriggerCapabilities:
     def dict(self) -> Dict[str, Any]: ...
     """Returns a dictionary of the TriggerCapabilities attributes."""
 ```
-- `acquisition_start`: An instance of the `TriggerInputOutputCapabilities` class.
+- `acquisition_start`: An instance of the `TriggerInputOutputCapabilities` class indicating which lines, either input or output, are supported for starting acquisition.
   
-- `exposure`: An instance of the `TriggerInputOutputCapabilities` class.
+- `exposure`: An instance of the `TriggerInputOutputCapabilities` class indicating which lines, either input or output, are supported for starting exposure.
   
-- `frame_start`: An instance of the `TriggerInputOutputCapabilities` class.
+- `frame_start`: An instance of the `TriggerInputOutputCapabilities` class indicating which lines, either input or output, are supported for starting a frame.
 
 - The `dict` method creates a dictionary of a `TriggerCapabilities` object's attributes.
 
@@ -1119,9 +1119,9 @@ class VideoStreamCapabilities:
     """Returns a dictionary of the VideoStreamCapabilities attributes."""
 ```
 
-- `camera`: An instance of the CameraCapabilities class.
+- `camera`: An instance of the CameraCapabilities class which represents the capabilities for the camera in this video stream.
   
-- `storage`: An instance of the StorageCapabilities class.
+- `storage`: An instance of the StorageCapabilities class which represents the capabilities for the storage device in this video stream.
   
 - `max_frame_count`: An instance of the Property class.
   
