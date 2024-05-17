@@ -26,6 +26,8 @@ class AvailableData:
 
 ## Class `AvailableDataContext`
 
+The `AvailableDataContext` class is the context manager for available data for the given VideoStream ID.
+
 ```python
 class AvailableDataContext:
     def __enter__(self) -> AvailableData: ...
@@ -85,9 +87,9 @@ class CameraCapabilities:
   
 - `binning`: An instance of the `Property` class that captures the range and type of support values for binning, which is combining adjacent pixels by averaging in each direction, and whether the binning factor can be chosen by the user.
   
-- `offset`: An instance of the `OffsetShapeCapabilities` class.
+- `offset`: An instance of the `OffsetShapeCapabilities` class that represents the horizontal and vertical offset for the region of interest on the camera chip.
   
-- `shape`: An instance of the `OffsetShapeCapabilities` class.
+- `shape`: An instance of the `OffsetShapeCapabilities` class that represents the width and height of the region of interest on the camera chip.
   
 - `supported_pixel_types`: A list containing instances of the `SampleType` class representing each of the supported pixel types, such as 8-bit unsigned integer (uint8). 
   
@@ -141,6 +143,8 @@ class CameraProperties:
 - The `dict` method create a dictionary of a `CameraProperties` object's attributes.
 
 ## Class `Capabilities`
+
+The `Capabilities` class contains representations of each of the 2 supported VideoStream objects.
 
 ```python
 class Capabilities:
@@ -333,6 +337,8 @@ class DeviceState:
 
 ## Class `DigitalLineCapabilities`
 
+The `DigitalLineCapabilities` class represents the digital lines supported by the device.
+
 ```python
 class DigitalLineCapabilities:
     line_count: int
@@ -349,6 +355,7 @@ class DigitalLineCapabilities:
 - The `dict` method creates a dictionary of a `DigitalLineCapabilities` object's attributes.
 
 ## Class `DimensionType`
+
 The `DimensionType` class is used to specify the physical meaning of a dimension, such as space or time dimension. When downsampling, Space and Time dimensions are downsampled by the same factor. Channel and Other dimensions are not downsampled.
 
 This value is also reflected in the dimension metadata of an OME-Zarr dataset.
@@ -452,6 +459,8 @@ class InputTriggers:
 
 ## Class `OffsetShapeCapabilities`
 
+The `OffsetShapeCapabilities` class represents the size of the offset or the shape of the region of interest on the camera.
+
 ```python
 class OffsetShapeCapabilities:
     x: Property
@@ -536,6 +545,8 @@ class Properties:
 
 ## Class `Property`
 
+The `Property` class indicates the type of and whether the property can be overwritten. For numerical values, it also captures the accepted range of values.
+
 ```python
 class Property:
     writable: bool
@@ -561,6 +572,8 @@ class Property:
 - The `dict` method creates a dictionary of a `Property` object's attributes.
 
 ## Class `PropertyType`
+
+The `PropertyType` class indicates the type of the property (fixed precision, floating-point, enum, or string).
 
 ```python
 class PropertyType:
@@ -839,6 +852,8 @@ class Storage:
 
 ## Class `StorageCapabilities`
 
+The `StorageCapabilities` class represents what types of data handling is supported by the storage device.
+
 ```python
 class StorageCapabilities:
     chunking_is_supported: bool
@@ -858,6 +873,8 @@ class StorageCapabilities:
 - The `dict` method creates a dictionary of a `StorageCapabilities` object's attributes.
 
 ## Class `StorageDimension`
+
+The `StorageDimension` represents the type and size of the dimension for storage.
 
 ```python
 class StorageDimension:
@@ -944,6 +961,8 @@ class Trigger:
 - The `dict` method creates a dictionary of a `Trigger` object's attributes.
 
 ## Class `TriggerCapabilities`
+
+The `TriggerCapabilities` class specifies what types of events the trigger can initiate.
 
 ```python
 class TriggerCapabilities:
@@ -1110,6 +1129,8 @@ class VideoStream:
 - The `dict` method creates a dictionary of a `VideoStream` object's attributes.
 
 ## Class `VideoStreamCapabilities`
+
+The `VideoStreamCapabilities` class captures the capabilities for a video stream.
 
 ```python
 class VideoStreamCapabilities:
