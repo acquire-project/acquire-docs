@@ -459,7 +459,7 @@ class InputTriggers:
 
 ## Class `OffsetShapeCapabilities`
 
-The `OffsetShapeCapabilities` class represents the size of the offset or the shape of the region of interest on the camera.
+The `OffsetShapeCapabilities` class represents the size of the offset or the shape of the region of interest on the camera. The sum of the offset and shape is the size of the full camera chip.
 
 ```python
 class OffsetShapeCapabilities:
