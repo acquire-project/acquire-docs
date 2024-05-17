@@ -450,22 +450,23 @@ class InputTriggers:
 
 - The `dict` method creates a dictionary of a `InputTriggers` object's attributes.
 
-## Class `OffsetCapabilities`
+## Class `OffsetShapeCapabilities`
 
 ```python
-class OffsetCapabilities:
+class OffsetShapeCapabilities:
     x: Property
     y: Property
 
     def dict(self) -> Dict[str, Any]: ...
-    """Returns a dictionary of the OffsetCapabilities attributes."""
+    """Returns a dictionary of the OffsetShapeCapabilities attributes."""
 ```
 
-- `x`: An instance of the `Property` class
+- `x`: An instance of the `Property` class which represents the width of the region of interest on the camera or the horizontal offset of the region of interest on the camera chip.
 
-- `y`: An instance of the `Property` class
+- `y`: An instance of the `Property` class which represents the height of the region of interest on the camera or the vertical offset of the region of interest on the camera chip.
 
-- The `dict` method creates a dictionary of a `OffsetCapabilities` object's attributes.
+- The `dict` method creates a dictionary of a `OffsetShapeCapabilities` object's attributes.
+
 
 ## Class `OutputTriggers`
 
@@ -747,23 +748,6 @@ class SampleType:
 
 - `U14`: Enum-type class variable of `SampleType` that specifies values of 14-bit unsigned integer type.
 
-## Class `ShapeCapabilities`
-
-```python
-class ShapeCapabilities:
-    x: Property
-    y: Property
-
-    def dict(self) -> Dict[str, Any]: ...
-    """Returns a dictionary of the ShapeCapabilities attributes."""
-```
-
-- `x`: An instance of the `Property` class
-
-- `y`: An instance of the `Property` class
-
-- The `dict` method creates a dictionary of a `ShapeCapabilities` object's attributes.
-
 ## Class `SignalIOKind`
 
 The `SignalIOKind` class defines the signal type, input or output, for a trigger.
@@ -1028,6 +1012,8 @@ class TriggerEdge:
 
 ## Class TriggerInputOutputCapabilities
 
+The `TriggerInputOutputCapabilities` class specifies which of the up to 8 supported digital lines can be used for either input or output triggering. The 2 attributes, input and output, each are read-only values and 8-bit integers from the conversion of the 8 binary digit representation of the digital lines to a decimal integer. For example, if lines 0 and 2 were available for input triggers, the 8 binary digit representation would be 0b00000101, since the 8 available lines are zero indexed. 00000101 binary is 5 in the decimal system, so the input attribute would have a value of 5. 
+
 ```python
 class TriggerInputOutputCapabilities:
     input: int
@@ -1037,9 +1023,9 @@ class TriggerInputOutputCapabilities:
     """Returns a dictionary of the TriggerInputOutputCapabilities attributes."""
 ```
 
-- `input`: Integer.
+- `input`: 8-bit integer representing which digital lines can be used for input triggering. For example, if lines 0 and 2 were available for input triggers, the 8 binary digit representation of the lines is 00000101, which is 5 in the decimal system.
 
-- `output`: Integer.
+- `output`: 8-bit integer representing which digital lines can be used for output triggering. For example, if lines 3 and 5 were available for output triggers, the 8 binary digit representation of the lines is 00101000, which is 40 in the decimal system.
 
 - The `dict` method creates a dictionary of a `TriggerInputOutputCapabilities` object's attributes.
 
