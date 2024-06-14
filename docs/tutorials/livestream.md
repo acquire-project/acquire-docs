@@ -6,4 +6,4 @@ The below script can be used to livestream data to the [napari viewer](https://n
 {% include "../examples/livestream_napari.py" %}
 ~~~
 
-[Download this tutorial as a Python script](livestream.py){ .md-button .md-button-center }
+[Download this tutorial as a Python script](../examples/livestream_napari.py){ .md-button .md-button-center }
