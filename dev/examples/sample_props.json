@@ -1,0 +1,200 @@
+{
+  "video": [
+    {
+      "camera": {
+        "identifier": {
+          "id": [
+            0,
+            1
+          ],
+          "kind": "Camera",
+          "name": "simulated: radial sin"
+        },
+        "settings": {
+          "binning": 1,
+          "exposure_time_us": 0.0,
+          "input_triggers": {
+            "acquisition_start": {
+              "edge": "Rising",
+              "enable": false,
+              "kind": "Input",
+              "line": 0
+            },
+            "exposure": {
+              "edge": "Rising",
+              "enable": false,
+              "kind": "Input",
+              "line": 0
+            },
+            "frame_start": {
+              "edge": "Rising",
+              "enable": false,
+              "kind": "Input",
+              "line": 0
+            }
+          },
+          "line_interval_us": 0.0,
+          "offset": [
+            0,
+            0
+          ],
+          "output_triggers": {
+            "exposure": {
+              "edge": "Rising",
+              "enable": false,
+              "kind": "Input",
+              "line": 0
+            },
+            "frame_start": {
+              "edge": "Rising",
+              "enable": false,
+              "kind": "Input",
+              "line": 0
+            },
+            "trigger_wait": {
+              "edge": "Rising",
+              "enable": false,
+              "kind": "Input",
+              "line": 0
+            }
+          },
+          "pixel_type": "U16",
+          "readout_direction": "Forward",
+          "shape": [
+            1,
+            1
+          ]
+        }
+      },
+      "frame_average_count": 0,
+      "max_frame_count": 18446744073709551615,
+      "storage": {
+        "identifier": {
+          "id": [
+            0,
+            0
+          ],
+          "kind": "NONE",
+          "name": ""
+        },
+        "settings": {
+          "chunking": {
+            "max_bytes_per_chunk": 16777216,
+            "tile": {
+              "height": 0,
+              "planes": 0,
+              "width": 0
+            }
+          },
+          "enable_multiscale": false,
+          "external_metadata_json": "",
+          "filename": "",
+          "first_frame_id": 0,
+          "pixel_scale_um": [
+            0.0,
+            0.0
+          ]
+        },
+        "write_delay_ms": 0.0
+      }
+    },
+    {
+      "camera": {
+        "identifier": {
+          "id": [
+            0,
+            0
+          ],
+          "kind": "NONE",
+          "name": ""
+        },
+        "settings": {
+          "binning": 1,
+          "exposure_time_us": 0.0,
+          "input_triggers": {
+            "acquisition_start": {
+              "edge": "Rising",
+              "enable": false,
+              "kind": "Input",
+              "line": 0
+            },
+            "exposure": {
+              "edge": "Rising",
+              "enable": false,
+              "kind": "Input",
+              "line": 0
+            },
+            "frame_start": {
+              "edge": "Rising",
+              "enable": false,
+              "kind": "Input",
+              "line": 0
+            }
+          },
+          "line_interval_us": 0.0,
+          "offset": [
+            0,
+            0
+          ],
+          "output_triggers": {
+            "exposure": {
+              "edge": "Rising",
+              "enable": false,
+              "kind": "Input",
+              "line": 0
+            },
+            "frame_start": {
+              "edge": "Rising",
+              "enable": false,
+              "kind": "Input",
+              "line": 0
+            },
+            "trigger_wait": {
+              "edge": "Rising",
+              "enable": false,
+              "kind": "Input",
+              "line": 0
+            }
+          },
+          "pixel_type": "U16",
+          "readout_direction": "Forward",
+          "shape": [
+            0,
+            0
+          ]
+        }
+      },
+      "frame_average_count": 0,
+      "max_frame_count": 18446744073709551615,
+      "storage": {
+        "identifier": {
+          "id": [
+            0,
+            0
+          ],
+          "kind": "NONE",
+          "name": ""
+        },
+        "settings": {
+          "chunking": {
+            "max_bytes_per_chunk": 16777216,
+            "tile": {
+              "height": 0,
+              "planes": 0,
+              "width": 0
+            }
+          },
+          "enable_multiscale": false,
+          "external_metadata_json": "",
+          "filename": "",
+          "first_frame_id": 0,
+          "pixel_scale_um": [
+            0.0,
+            0.0
+          ]
+        },
+        "write_delay_ms": 0.0
+      }
+    }
+  ]
+}
