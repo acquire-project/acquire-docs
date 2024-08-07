@@ -374,3 +374,56 @@ li.md-source__fact {
         flex-grow: 0;
     }
 }
+
+/******************
+ API Documentation 
+ ******************/
+
+[data-md-color-scheme="default"] {
+    --doc-symbol-class-bg-color: #5cad0f1a;
+    --doc-symbol-class-fg-color: #5cad0f;
+    --doc-symbol-function-bg-color: #0550ae1a;
+    --doc-symbol-function-fg-color: #0550ae;
+}
+
+[data-md-color-scheme="slate"] {
+    --doc-symbol-class-bg-color: #5cad0f1a;
+    --doc-symbol-class-fg-color: #5cad0f;
+    --doc-symbol-function-bg-color: #0550ae1a;
+    --doc-symbol-function-fg-color: #0550ae;
+}
+
+code.doc-symbol-parameter::after {
+  content: "parameter";
+}
+
+code.doc-symbol-attribute::after {
+  content: "attribute";
+}
+
+code.doc-symbol-function::after {
+  content: "function";
+}
+
+code.doc-symbol-method::after {
+  content: "method";
+}
+
+code.doc-symbol-class::after {
+  content: "class";
+}
+
+code.doc-symbol-module::after {
+  content: "module";
+}
+
+/* Class */
+div.doc.doc-object.doc-class> h2 {
+    font-size: 1.5rem;
+}
+
+/* Method */
+div.doc.doc-object.doc-function> h3 {
+    margin-top: 32px;
+    font-size: 1rem;
+}

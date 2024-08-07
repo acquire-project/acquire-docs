@@ -21,25 +21,44 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
 
-      - uses: actions/checkout@v3
+      - name: Clone acquire-docs repo
+        uses: actions/checkout@v4
+        with:
+          path: acquire-docs  # place in a named directory
+
       - uses: actions/setup-python@v4
         with:
           python-version: '3.10'
-      - run: pip install -r requirements.txt
+      - run: pip install -r acquire-docs/requirements.txt
 
       - name: Generate downloadable scripts
         run: |
+          cd acquire-docs
           bash .github/workflows/convert.sh
+
+      - name: Clone acquire-python repo
+        uses: actions/checkout@v4
+        with:
+          path: acquire-python  # place in a named directory
+          repository: acquire-project/acquire-python
+
+      - name: Install acquire-python  # For collecting the API reference
+        run: |
+          cd acquire-python
+          git submodule update --init --recursive
+          python -m pip install -e .
 
       - name: Build website
         run: |
+          cd acquire-docs
           mkdocs build
 
       - name: Deploy docs
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: site
+          # external_repository: acquire/acquire-docs.github.io
+          publish_dir: acquire-docs/site
           publish_branch: gh-pages
           destination_dir: dev
           # cname: acquire.org
