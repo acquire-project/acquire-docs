@@ -47,6 +47,9 @@ The output of this code is below. All discovered devices, both cameras and stora
 <DeviceIdentifier Storage "Zarr">
 <DeviceIdentifier Storage "ZarrBlosc1ZstdByteShuffle">
 <DeviceIdentifier Storage "ZarrBlosc1Lz4ByteShuffle">
+<DeviceIdentifier Storage "ZarrV3">
+<DeviceIdentifier Storage "ZarrV3Blosc1ZstdByteShuffle">
+<DeviceIdentifier Storage "ZarrV3Blosc1Lz4ByteShuffle">
 ```
 
 For cameras that weren't discovered you will see an error like the one below. These errors will not affect performance and can be ignored.
