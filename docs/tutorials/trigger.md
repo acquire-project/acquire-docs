@@ -69,7 +69,7 @@ Output triggers can be set to begin exposure, start a new frame, or wait before 
 
 ```python
 config.video[0].camera.settings.output_triggers.exposure = acquire.Trigger(
-	enable=True, line=1, edge="Rising"
+	edge="Rising", enable=True, line=1, kind="Output"
 )
 ```
 
