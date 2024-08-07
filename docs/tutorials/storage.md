@@ -30,9 +30,12 @@ The output of that script will be:
 <DeviceIdentifier Storage "Zarr">
 <DeviceIdentifier Storage "ZarrBlosc1ZstdByteShuffle">
 <DeviceIdentifier Storage "ZarrBlosc1Lz4ByteShuffle">
+<DeviceIdentifier Storage "ZarrV3">
+<DeviceIdentifier Storage "ZarrV3Blosc1ZstdByteShuffle">
+<DeviceIdentifier Storage "ZarrV3Blosc1Lz4ByteShuffle">
 ```
 
-`Acquire` supports streaming data to [bigtiff](http://bigtiff.org/) and [Zarr V2](https://zarr.readthedocs.io/en/stable/spec/v2.html).
+`Acquire` supports streaming data to [bigtiff](http://bigtiff.org/), [Zarr V2](https://zarr-specs.readthedocs.io/en/latest/v2/v2.0.html), and [Zarr V3](https://zarr-specs.readthedocs.io/en/latest/specs.html).
 
 Zarr has additional capabilities relative to the basic storage devices, namely _chunking_, _compression_, and _multiscale storage_. You can learn more about the Zarr capabilities in `Acquire` [here](https://github.com/acquire-project/acquire-driver-zarr).
 
@@ -49,6 +52,12 @@ Zarr has additional capabilities relative to the basic storage devices, namely _
 - **ZarrBlosc1ZstdByteShuffle** - Streams compressed data (_zstd_ codec) to a [Zarr V2](https://zarr.readthedocs.io/en/stable/spec/v2.html) file with associated metadata.
 
 - **ZarrBlosc1Lz4ByteShuffle** - Streams compressed data (_lz4_ codec) to a [Zarr V2](https://zarr.readthedocs.io/en/stable/spec/v2.html) file with associated metadata.
+
+- - **ZarrV3** - Streams data to a [Zarr V3](https://zarr-specs.readthedocs.io/en/latest/specs.html) file with associated metadata.
+
+- **ZarrV3Blosc1ZstdByteShuffle** - Streams compressed data (_zstd_ codec) to a [Zarr V3](https://zarr-specs.readthedocs.io/en/latest/specs.html) file with associated metadata.
+
+- **ZarrV3Blosc1Lz4ByteShuffle** - Streams compressed data (_lz4_ codec) to a [Zarr V3](https://zarr-specs.readthedocs.io/en/latest/specs.html) file with associated metadata.
 
 ## Configure the Storage Device
 
