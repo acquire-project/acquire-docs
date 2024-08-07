@@ -138,16 +138,13 @@ config.video[1].camera.settings.shape = (1280, 720)
 
 Now we'll configure each output, or sink device.
 For both simulated cameras, we'll be writing to Zarr, a format which supports chunked arrays.
-
+For now, we'll simply specify the output file name. For more information about setting up chunking, check out the tutorial [Chunking Data for Zarr Storage](./tutorials/chunked.md)
 
 ```python
 config.video[0].storage.identifier = dm.select(acquire.DeviceKind.Storage, "Zarr")
 
 # what file or directory to write the data to
 config.video[0].storage.settings.filename = "output1.zarr"
-
-# where applicable, how large should a chunk file get before opening the next chunk file
-config.video[0].storage.settings.chunking.max_bytes_per_chunk = 32 * 2**20  # 32 MiB chunk sizes
 ```
 
 
@@ -156,9 +153,6 @@ config.video[1].storage.identifier = dm.select(acquire.DeviceKind.Storage, "Zarr
 
 # what file or directory to write the data to
 config.video[1].storage.settings.filename = "output2.zarr"
-
-# where applicable, how large should a chunk file get before opening the next chunk file
-config.video[1].storage.settings.chunking.max_bytes_per_chunk = 64 * 2**20  # 64 MiB chunk sizes
 ```
 
 Finally, let's specify how many frames to generate for each camera before stopping our simulated acquisition.
