@@ -82,11 +82,8 @@ DeviceState.Armed
 <builtins.AvailableData object at 0x00000218D685E3D0>
 ```
 1. The first time we print is immediately after starting acquisition, so no time has elapsed for data collection as compared to the camera exposure time, so while the camera is running, `Running`, there is no data available.
-
-3. The next print happens after waiting 0.5 seconds, so acquisition is still runnning and now there is acquired data available.
-
-5. The subsequent print is following calling `runtime.stop()` which waits until the specified max number of frames is collected and then terminates acquisition. Thus, the device is no longer running and there is no available data, since all objects were deleted by calling the `stop` method. The device is in an `Armed` state ready for the next acquisition.
-
-7. The final print occurs after waiting 5 seconds following the start of acquisition. This waiting period is longer than the 1 second acqusition time (0.1 seconds/frame and 10 frames), so the device is no longer collecting data. However, `runtime.stop()` hasn't been called, so the `AvailableData` object has not yet been deleted.
+2. The next print happens after waiting 0.5 seconds, so acquisition is still runnning and now there is acquired data available.
+3. The subsequent print is following calling `runtime.stop()` which waits until the specified max number of frames is collected and then terminates acquisition. Thus, the device is no longer running and there is no available data, since all objects were deleted by calling the `stop` method. The device is in an `Armed` state ready for the next acquisition.
+4. The final print occurs after waiting 5 seconds following the start of acquisition. This waiting period is longer than the 1 second acqusition time (0.1 seconds/frame and 10 frames), so the device is no longer collecting data. However, `runtime.stop()` hasn't been called, so the `AvailableData` object has not yet been deleted.
 
 [Download this tutorial as a Python script](start_stop.py){ .md-button .md-button-center }
