@@ -49,31 +49,27 @@ Acquire also supports the following output file formats:
 - [Tiff](https://en.wikipedia.org/wiki/TIFF)
 - [Zarr](https://zarr.dev/)
 
-For testing and demonstration purposes, Acquire provides a few simulated cameras, as well as raw and trash output devices.
-To see all the devices that Acquire supports, you can run the following script:
-
-```python
-import acquire
-
-for device in acquire.Runtime().device_manager().devices():
-    print(device)
-```
+Acquire also provides a few simulated cameras, as well as raw byte storage and "trash," which discards all data written to it.
 
 ## Tutorial Prerequisites
 
-We will be writing to and reading from the [Zarr format](https://zarr.readthedocs.io/en/stable/), using the [Dask library](https://www.dask.org/) to load and inspect the data, and visualizing the data using [napari](https://napari.org/stable/).
+We will be streaming to [TIFF], using [scikit-image] to load and inspect the data, and visualizing the data using [napari].
 
-You can install these prerequisites with:
+You can install prerequisites with:
 
 ```
-python -m pip install dask "napari[all]" zarr
+python -m pip install "napari[all]" scikit-image
 ```
 
 ## Setup for Acquisition
 
-We will use one of Acquire's simulated cameras to generate data and use Zarr for our output file format, which is called "storage device" in `Acquire`.
+In Acquire parlance, the combination of a source (camera), filter, and sink (output) is called a **video stream**.
+We will generate data using simulated cameras (our source) and output to TIFF on the filesystem (our sink).
+(For this tutorial, we will not use a filter.)
+Acquire supports up to two such video streams.
 
-To begin, instantiate `Runtime` and `DeviceManager` and list the currently supported devices.
+Sources are implemented as **Camera** devices, and sinks are implemented as **Storage** devices.
+We'll start by seeing all the devices that Acquire supports:
 
 ```python
 import acquire
@@ -84,22 +80,23 @@ dm = runtime.device_manager()
 for device in dm.devices():
     print(device)
 ```
+
 The **runtime** is the main entry point in Acquire.
 Through the runtime, you configure your devices, start acquisition, check acquisition status, inspect data as it streams from your cameras, and terminate acquisition.
 
 Let's configure our devices now.
 To do this, we'll get a copy of the current runtime configuration.
-We can update the configuration with identifiers from the the runtime's **device manager**, but these devices won't instantiate until we start acquisition.
+We can update the configuration with identifiers from the runtime's **device manager**, but these devices won't be created until we start the acquisition.
 
-Acquire supports up to two video streams.
-These streams consist of a **source** (i.e., a camera), optionally a **filter**, and a **sink** (an output, like a Zarr dataset or a Tiff file).
 Before configuring the streams, grab the current configuration of the `Runtime` object with:
 
 ```python
 config = runtime.get_configuration()
 ```
 
-Video streams are configured independently. Configure the first video stream by setting properties on `config.video[0]` and the second video stream with `config.video[1]`. We'll be using simulated cameras, one generating a radial sine pattern and one generating a random pattern.
+Video streams are configured independently.
+Configure the first video stream by setting properties on `config.video[0]` and the second video stream with `config.video[1]`.
+We'll be using simulated cameras, one generating a radial sine pattern...
 
 ```python
 config.video[0].camera.identifier = dm.select(acquire.DeviceKind.Camera, "simulated: radial sin")
@@ -118,6 +115,7 @@ config.video[0].camera.settings.pixel_type = acquire.SampleType.U8
 config.video[0].camera.settings.shape = (1024, 768)
 ```
 
+... and one generating a random pattern.
 
 ```python
 config.video[1].camera.identifier = dm.select(acquire.DeviceKind.Camera, "simulated: uniform random")
@@ -137,34 +135,27 @@ config.video[1].camera.settings.shape = (1280, 720)
 ```
 
 Now we'll configure each output, or sink device.
-For both simulated cameras, we'll be writing to Zarr, a format which supports chunked arrays.
-
+For both simulated cameras, we'll be writing to [TIFF], a well-known format for storing image data.
 
 ```python
-config.video[0].storage.identifier = dm.select(acquire.DeviceKind.Storage, "Zarr")
+config.video[0].storage.identifier = dm.select(acquire.DeviceKind.Storage, "Tiff")
 
-# what file or directory to write the data to
-config.video[0].storage.settings.filename = "output1.zarr"
-
-# where applicable, how large should a chunk file get before opening the next chunk file
-config.video[0].storage.settings.chunking.max_bytes_per_chunk = 32 * 2**20  # 32 MiB chunk sizes
+# write the data from this stream to a file named "output1.tif"
+config.video[0].storage.settings.uri = "output1.tif"
 ```
 
 
 ```python
-config.video[1].storage.identifier = dm.select(acquire.DeviceKind.Storage, "Zarr")
+config.video[1].storage.identifier = dm.select(acquire.DeviceKind.Storage, "Tiff")
 
-# what file or directory to write the data to
-config.video[1].storage.settings.filename = "output2.zarr"
-
-# where applicable, how large should a chunk file get before opening the next chunk file
-config.video[1].storage.settings.chunking.max_bytes_per_chunk = 64 * 2**20  # 64 MiB chunk sizes
+# write the data from this stream to a file named "output2.tif"
+config.video[1].storage.settings.uri = "output2.tif"
 ```
 
 Finally, let's specify how many frames to generate for each camera before stopping our simulated acquisition.
 We also need to register our configuration with the runtime using the `set_configuration` method.
 
-If you want to let the runtime just keep acquiring effectively forever, you can set `max_frame_count` to `2**64 - 1`.
+If you want to let the runtime acquire effectively forever, you can set `max_frame_count` to `2**64 - 1`.
 
 ```python
 config.video[0].max_frame_count = 100 # collect 100 frames
@@ -178,26 +169,21 @@ config = runtime.set_configuration(config)
     If you run this tutorial multiple times, you can clear output from previous runs with:
 
     ```python
-    import os
-    import shutil
-
-    if config.video[0].storage.settings.filename in os.listdir("."):
-        shutil.rmtree(config.video[0].storage.settings.filename)
-
-    if config.video[1].storage.settings.filename in os.listdir("."):
-        shutil.rmtree(config.video[1].storage.settings.filename)
+    from pathlib import Path
+    
+    Path(config.video[0].storage.settings.uri).unlink(missing_ok=True)
+    Path(config.video[1].storage.settings.uri).unlink(missing_ok=True)
     ```
 
 ## Acquire Data
 
-To start aquiring data:
+To start acquiring data:
 
 ```python
 runtime.start()
 ```
 
-Acquisition happens in a separate thread, so at any point we can check on the status by calling the  `get_state` method.
-
+Acquisition happens in a separate thread, so at any point we can check on the status by calling the `get_state` method.
 
 ```python
 runtime.get_state()
@@ -210,25 +196,26 @@ This method will wait until you've reached the number of frames to collect speci
 runtime.stop()
 ```
 
-## Visualizing the Data with napari
+## Visualizing the data with napari
 
 Let's take a look at what we've written.
 We'll load each Zarr dataset as a Dask array and inspect its dimensions, then we'll use napari to view it.
 
 ```python
-import dask.array as da
+from skimage.io import imread
 import napari
 
-data1 = da.from_zarr(config.video[0].storage.settings.filename, component="0")
-data1
-
-data2 = da.from_zarr(config.video[1].storage.settings.filename, component="0")
+data1 = imread(config.video[0].storage.settings.uri)
+data2 = imread(config.video[1].storage.settings.uri)
 
 viewer1 = napari.view_image(data1)
-
 viewer2 = napari.view_image(data2)
 ```
 
 ## Conclusion
 
 For more examples of using Acquire, check out our [tutorials page](tutorials/index.md).
+
+[Tiff]: https://en.wikipedia.org/wiki/TIFF
+[scikit-image]: https://scikit-image.org/
+[napari]: https://napari.org/stable/

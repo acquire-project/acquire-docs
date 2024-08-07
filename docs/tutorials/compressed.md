@@ -28,18 +28,21 @@ config.video[0].camera.identifier = dm.select(acquire.DeviceKind.Camera, "simula
 config.video[0].storage.identifier = dm.select(acquire.DeviceKind.Storage, "ZarrBlosc1ZstdByteShuffle")
 
 # Set the time for collecting data for a each frame
-config.video[0].camera.settings.exposure_time_us = 5e4  # 50 ms
+config.video[0].camera.settings.exposure_time_us = 7e4  # 70 ms
 
 config.video[0].camera.settings.shape = (1024, 768)
 
 # Set the max frame count
 config.video[0].max_frame_count = 100 # collect 100 frames
 
-# Set the output file to out.zarr
-config.video[0].storage.settings.filename = "out.zarr"
+# Set the output location to out.zarr
+config.video[0].storage.settings.uri = "out.zarr"
 
 # Update the configuration with the chosen parameters
 config = runtime.set_configuration(config)
+
+# Configure the storage dimensions
+
 ```
 
 ## Inspect Acquired Data
@@ -52,14 +55,14 @@ runtime.start()
 runtime.stop()
 ```
 
-We'll use the [Zarr Python package](https://zarr.readthedocs.io/en/stable/) to read the data in `out.zarr` file.
+We'll use the [zarr-python package](https://zarr.readthedocs.io/en/stable/) to read the data in `out.zarr` directory.
 
 ```python
 # We'll utilize the Zarr python package to read the data
 import zarr
 
 # load from Zarr
-compressed = zarr.open(config.video[0].storage.settings.filename)
+compressed = zarr.open(config.video[0].storage.settings.uri)
 ```
 
 We'll print some of the data properties to illustrate how the data was compressed. Since we have not enabled [multiscale](https://acquire-project.github.io/acquire-docs/tutorials/multiscale/) output, `out.zarr` will only have one top level array`"0"`.

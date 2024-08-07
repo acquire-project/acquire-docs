@@ -58,8 +58,8 @@ config.video[0].camera.settings.exposure_time_us = 5e4  # 50 ms
 # (x, y) size of the image in pixels
 config.video[0].camera.settings.shape = (1024, 768)
 
-# Specify the pixel type as Uint32
-config.video[0].camera.settings.pixel_type = acquire.SampleType.U32
+# Specify the pixel type as uint16
+config.video[0].camera.settings.pixel_type = acquire.SampleType.U16
 ```
 
 ## Configure `Storage`

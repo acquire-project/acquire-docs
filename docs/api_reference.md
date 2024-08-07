@@ -638,7 +638,7 @@ class Runtime:
     """Returns the current configuration properties of the runtime."""
 
     def get_capabilities(self) -> Capabilities: ...
-    """Returns the current capabilites of the runtime as an instance of Capabilities."""
+    """Returns the current capabilities of the runtime as an instance of Capabilities."""
 
     def get_state(self) -> DeviceState:
     """Returns the current state of the device."""
