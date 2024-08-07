@@ -37,7 +37,7 @@ config = runtime.set_configuration(config)
 ```
 ## Working with `AvailableData` objects
 
-During Acquisition, the `AvailableData` object is the streaming interface, and this class has a `frames` method which iterates over the `VideoFrame` objects in `AvailableData`. Once we start acquisition, we'll utilize this iterator method to list the frames. To increase the likelihood of `AvailableData` containing data, we'll utilize the time python package to introduce a delay before we create our `AvailableData` object
+During Acquisition, the `AvailableData` object is the streaming interface, and this class has a `frames` method which iterates over the `VideoFrame` objects in `AvailableData`. Once we start acquisition, we'll utilize this iterator method to list the frames. To increase the likelihood of `AvailableData` containing data, we'll utilize the `time` python package to introduce a delay before we create our `AvailableData` object
 
 
 ```python
@@ -76,7 +76,7 @@ else:
     del available_data
 
 ```
-`video_frames` is a list with each element being an instance of the `VideoFrame` class. `VideoFrame` has a `data` method which provides the frame as an `NDArray`. The shape of this NDArray corresponds to the image dimensions used internally by Acquire with (planes, height, width, channels). Since we have a single channel, both the first and the last dimensions will be 1. The interior dimensions are height and width, respectively.
+`video_frames` is a list with each element being an instance of the `VideoFrame` class. `VideoFrame` has a `data` method which provides the frame as an `NDArray`. The shape of this NDArray corresponds to the image dimensions used internally by Acquire namely [planes, height, width, channels]. Since we have a single channel, both the first and the last dimensions will be 1. The interior dimensions are height and width, respectively.
 
 
 ```python
