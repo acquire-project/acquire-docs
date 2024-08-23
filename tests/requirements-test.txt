@@ -1,0 +1,7 @@
+acquire-imaging
+napari[all]
+numpy
+ome-zarr
+pytest
+tifffile
+zarr
