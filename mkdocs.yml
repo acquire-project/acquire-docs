@@ -57,8 +57,6 @@ nav:
       - tutorials/access_data/livestream.md
     - Zarr:
       - tutorials/zarr/index.md
-      - tutorials/zarr/multiscale.md
-      - tutorials/zarr/chunked.md
       - tutorials/zarr/compressed.md
   - For contributors:
     - for_contributors/index.md
