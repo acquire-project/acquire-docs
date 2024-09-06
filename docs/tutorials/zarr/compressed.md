@@ -63,7 +63,7 @@ import zarr
 compressed = zarr.open(config.video[0].storage.settings.filename)
 ```
 
-We'll print some of the data properties to illustrate how the data was compressed. Since we have not enabled [multiscale](multiscale.md) output, `out.zarr` will only have one top level array`"0"`.
+We'll print some of the data properties to illustrate how the data was compressed. Since we have not enabled multiscale output, `out.zarr` will only have one top level array`"0"`.
 
 
 ```python
