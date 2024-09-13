@@ -45,7 +45,7 @@ Zarr has additional capabilities relative to the basic storage devices, namely _
 
 - **trash** - Writes nothing. Discards incoming data. Useful for live streaming applications.
 
-- **tiff-json** - Stores the video stream in a [bigtiff](http://bigtiff.org/), and stores metadata in a `JSON` file. Both are located in a folder identified by the `filename` property.
+- **tiff-json** - Stores the video stream in a [bigtiff](http://bigtiff.org/), and stores metadata in a `JSON` file. Both are located in a folder identified by the `uri` property.
 
 - **Zarr** - Streams data to a [Zarr V2](https://zarr.readthedocs.io/en/stable/spec/v2.html) file with associated metadata.
 
@@ -71,7 +71,7 @@ config = runtime.get_configuration()
 config.video[0].storage.identifier = dm.select(acquire.DeviceKind.Storage, "tiff")
 
 # Set the data filename to out.tif in your current directory (provide the whole filetree to save to a different directory)
-config.video[0].storage.settings.filename = "out.tif"
+config.video[0].storage.settings.uri = "out.tif"
 ```
 
 Before proceeding, complete the `Camera` setup and call `set_configuration` to save those new configuration settings.
