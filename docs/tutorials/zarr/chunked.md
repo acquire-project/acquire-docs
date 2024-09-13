@@ -160,11 +160,10 @@ print(group["0"])
 
 The output will be:
 ```
-<zarr.core.Array '/0' (300, 3, 10, 1080, 1920) uint8>
+<zarr.core.Array '/0' (10, 3, 10, 1080, 1920) uint8>
 ```
-As expected, we have only 1 top level directory, corresponding to the single array in the group.
-We would expect more than 1 array only if we were writing [multiscale data](multiscale.md).
-The overall array shape is (10, 1, 1080, 1920), corresponding to 10 frames, 1 channel, and a height and width of 1080
-and 1920, respectively, per frame.
+
+The overall array shape is (10, 3, 10, 1080, 1920), corresponding to 10 time points, 3 channels, 10 planes, and a height and width of 1080
+and 1920, respectively, for each acquired frame.
 
 [Download this tutorial as a Python script](chunked.py){ .md-button .md-button-center }
