@@ -38,7 +38,7 @@ config.video[0].camera.settings.pixel_type = acquire.SampleType.U8
 config.video[0].storage.settings.pixel_scale_um = (1, 1) # 1 micron by 1 micron
 
 # Set the output file to out.zarr
-config.video[0].storage.settings.filename = "out.zarr"
+config.video[0].storage.settings.uri = "out.zarr"
 ```
 
 To complete configuration, we'll configure the chunking and multiscale specific settings and update all settings with the `set_configuration` method. For a more detailed explanation of configuring Zarr storage with chunking, check out [this tutorial](./chunked.md).
