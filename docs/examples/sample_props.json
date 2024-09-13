@@ -81,7 +81,7 @@
                     "acquisition_dimensions": [],
                     "enable_multiscale": false,
                     "external_metadata_json": "",
-                    "filename": "",
+                    "uri": "",
                     "first_frame_id": 0,
                     "pixel_scale_um": [
                         0.0,
@@ -172,7 +172,7 @@
                     "acquisition_dimensions": [],
                     "enable_multiscale": false,
                     "external_metadata_json": "",
-                    "filename": "",
+                    "uri": "",
                     "first_frame_id": 0,
                     "pixel_scale_um": [
                         0.0,
