@@ -17,7 +17,7 @@ runtime = acquire.Runtime()
 config = acquire.setup(runtime, "simulated: radial sin", "Tiff")
 
 # Specify settings
-config.video[0].storage.settings.filename == "out.tif"
+config.video[0].storage.settings.uri == "out.tif"
 config.video[0].camera.settings.shape = (192, 108)
 config.video[0].camera.settings.exposure_time_us = 10e4
 config.video[0].max_frame_count = 10

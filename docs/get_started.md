@@ -141,7 +141,7 @@ For now, we'll simply specify the output file name.
 config.video[0].storage.identifier = dm.select(acquire.DeviceKind.Storage, "Tiff")
 
 # what file or directory to write the data to
-config.video[0].storage.settings.filename = "output1.tif"
+config.video[0].storage.settings.uri = "output1.tif"
 ```
 
 
@@ -149,7 +149,7 @@ config.video[0].storage.settings.filename = "output1.tif"
 config.video[1].storage.identifier = dm.select(acquire.DeviceKind.Storage, "Tiff")
 
 # what file or directory to write the data to
-config.video[1].storage.settings.filename = "output2.tif"
+config.video[1].storage.settings.uri = "output2.tif"
 ```
 
 Finally, let's specify how many frames to generate for each camera before stopping our simulated acquisition.
@@ -205,8 +205,8 @@ We'll load each Zarr dataset as a Dask array and inspect its dimensions, then we
 from skimage.io import imread
 import napari
 
-data1 = imread(config.video[0].storage.settings.filename)
-data2 = imread(config.video[1].storage.settings.filename)
+data1 = imread(config.video[0].storage.settings.uri)
+data2 = imread(config.video[1].storage.settings.uri)
 
 viewer1 = napari.view_image(data1)
 

@@ -79,7 +79,7 @@ config.video[0].camera.settings.output_triggers.exposure = acquire.Trigger(
 
 ```python
 config.video[0].storage.identifier = runtime.device_manager().select(acquire.DeviceKind.Storage,'zarr')
-config.video[0].storage.settings.filename="out.zarr"
+config.video[0].storage.settings.uri = "out.zarr"
 ```
 
 ## Save configuration

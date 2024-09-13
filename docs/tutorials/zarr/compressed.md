@@ -37,7 +37,7 @@ config.video[0].camera.settings.shape = (1024, 768)
 config.video[0].max_frame_count = 100 # collect 100 frames
 
 # Set the output location to out.zarr
-config.video[0].storage.settings.filename = "out.zarr"
+config.video[0].storage.settings.uri = "out.zarr"
 
 # Update the configuration with the chosen parameters
 config = runtime.set_configuration(config)
@@ -60,7 +60,7 @@ We'll use the [zarr-python package](https://zarr.readthedocs.io/en/stable/) to r
 import zarr
 
 # load from Zarr
-compressed = zarr.open(config.video[0].storage.settings.filename)
+compressed = zarr.open(config.video[0].storage.settings.uri)
 ```
 
 We'll print some of the data properties to illustrate how the data was compressed. Since we have not enabled [multiscale](multiscale.md) output, `out.zarr` will only have one top level array`"0"`.
