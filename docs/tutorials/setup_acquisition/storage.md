@@ -53,7 +53,7 @@ Zarr has additional capabilities relative to the basic storage devices, namely _
 
 - **ZarrBlosc1Lz4ByteShuffle** - Streams compressed data (_lz4_ codec) to a [Zarr V2](https://zarr.readthedocs.io/en/stable/spec/v2.html) file with associated metadata.
 
-- - **ZarrV3** - Streams data to a [Zarr V3](https://zarr-specs.readthedocs.io/en/latest/specs.html) file with associated metadata.
+- **ZarrV3** - Streams data to a [Zarr V3](https://zarr-specs.readthedocs.io/en/latest/specs.html) file with associated metadata.
 
 - **ZarrV3Blosc1ZstdByteShuffle** - Streams compressed data (_zstd_ codec) to a [Zarr V3](https://zarr-specs.readthedocs.io/en/latest/specs.html) file with associated metadata.
 
