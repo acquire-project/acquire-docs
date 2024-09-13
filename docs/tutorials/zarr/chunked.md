@@ -37,7 +37,7 @@ config.video[0].camera.settings.shape = (1920, 1080)
 config.video[0].camera.settings.pixel_type = acquire.SampleType.U8
 
 # Set the output file to out.zarr
-config.video[0].storage.settings.filename = "out.zarr"
+config.video[0].storage.settings.uri = "out.zarr"
 ```
 
 ### Storage dimensions
@@ -149,7 +149,7 @@ You can inspect the Zarr file directory to check that the data saved as expected
 import zarr
 
 # create a zarr Group object
-group = zarr.open(config.video[0].storage.settings.filename)
+group = zarr.open(config.video[0].storage.settings.uri)
 
 # check for the expected # of directories in the zarr container
 assert len(group) == 1
