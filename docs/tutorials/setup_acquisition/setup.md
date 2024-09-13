@@ -46,7 +46,7 @@ config.video[0].camera.identifier = runtime.device_manager().select(acquire.Devi
 config.video[0].storage.identifier = runtime.device_manager().select(acquire.DeviceKind.Storage, "Zarr")
 
 # Set the output file to out.zarr
-config.video[0].storage.settings.filename = "out.zarr"
+config.video[0].storage.settings.uri = "out.zarr"
 ```
 
 In either case, we can update the configuration settings using:
