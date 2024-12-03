@@ -16,9 +16,15 @@ We welcome contributions to the Acquire code base and to documentation. Refer to
 
 ## Build
 
-To build the website locally and serve it, run the following commands:
+To build the website locally and serve it, after cloning and successfully installing `acquire-imaging` and
+`acquire-zarr` in developer mode, run the following commands:
 
 ```bash
 pip install -r requirements.txt
 mkdocs serve
 ```
+
+> [!NOTE]
+> This setup assumes you have acquire-python and acquire-zarr cloned in the same
+> parent directory as acquire-docs. If this is not the case, edit the
+> [`mkdocs.yml` file](https://github.com/acquire-project/acquire-docs/blob/main/mkdocs.yml) accordingly.

@@ -62,6 +62,8 @@ nav:
     - for_contributors/index.md
     - for_contributors/docs_contribution_quickstart.md
     - for_contributors/update_version.md
+  - Stream to Zarr:
+    - stream_to_zarr/index.md
 
 markdown_extensions:
   - pymdownx.highlight:
@@ -93,7 +95,7 @@ plugins:
         python:
           # Global-only options
           load_external_modules: true
-          paths: [../acquire-python/python/acquire]
+          paths: [../acquire-python/python/acquire, ../acquire-zarr/python/acquire]
           import:
             - https://docs.python.org/3/objects.inv
           options:  # See https://mkdocstrings.github.io/python/usage/#globallocal-options
