@@ -1,251 +1,255 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-         <loc>https://acquire-project.github.io/acquire-docs/0.2.0/</loc>
+         <loc>https://acquire-project.github.io/acquire-docs/</loc>
          <lastmod>2025-02-18</lastmod>
     </url>
     <url>
-         <loc>https://acquire-project.github.io/acquire-docs/0.2.0/get_started/</loc>
+         <loc>https://acquire-project.github.io/acquire-docs/get_started/</loc>
          <lastmod>2025-02-18</lastmod>
     </url>
     <url>
-         <loc>https://acquire-project.github.io/acquire-docs/0.2.0/acquire-imaging/</loc>
+         <loc>https://acquire-project.github.io/acquire-docs/acquire-imaging/</loc>
          <lastmod>2025-02-18</lastmod>
     </url>
     <url>
-         <loc>https://acquire-project.github.io/acquire-docs/0.2.0/acquire-imaging/api_reference/</loc>
+         <loc>https://acquire-project.github.io/acquire-docs/acquire-imaging/api_reference/</loc>
          <lastmod>2025-02-18</lastmod>
     </url>
     <url>
-         <loc>https://acquire-project.github.io/acquire-docs/0.2.0/acquire-imaging/get_started/</loc>
+         <loc>https://acquire-project.github.io/acquire-docs/acquire-imaging/get_started/</loc>
          <lastmod>2025-02-18</lastmod>
     </url>
     <url>
-         <loc>https://acquire-project.github.io/acquire-docs/0.2.0/acquire-imaging/tutorials/</loc>
+         <loc>https://acquire-project.github.io/acquire-docs/acquire-imaging/tutorials/</loc>
          <lastmod>2025-02-18</lastmod>
     </url>
     <url>
-         <loc>https://acquire-project.github.io/acquire-docs/0.2.0/acquire-imaging/tutorials/access_data/</loc>
+         <loc>https://acquire-project.github.io/acquire-docs/acquire-imaging/tutorials/access_data/</loc>
          <lastmod>2025-02-18</lastmod>
     </url>
     <url>
-         <loc>https://acquire-project.github.io/acquire-docs/0.2.0/acquire-imaging/tutorials/access_data/framedata/</loc>
+         <loc>https://acquire-project.github.io/acquire-docs/acquire-imaging/tutorials/access_data/framedata/</loc>
          <lastmod>2025-02-18</lastmod>
     </url>
     <url>
-         <loc>https://acquire-project.github.io/acquire-docs/0.2.0/acquire-imaging/tutorials/access_data/livestream/</loc>
+         <loc>https://acquire-project.github.io/acquire-docs/acquire-imaging/tutorials/access_data/livestream/</loc>
          <lastmod>2025-02-18</lastmod>
     </url>
     <url>
-         <loc>https://acquire-project.github.io/acquire-docs/0.2.0/acquire-imaging/tutorials/setup_acquisition/</loc>
+         <loc>https://acquire-project.github.io/acquire-docs/acquire-imaging/tutorials/setup_acquisition/</loc>
          <lastmod>2025-02-18</lastmod>
     </url>
     <url>
-         <loc>https://acquire-project.github.io/acquire-docs/0.2.0/acquire-imaging/tutorials/setup_acquisition/configure/</loc>
+         <loc>https://acquire-project.github.io/acquire-docs/acquire-imaging/tutorials/setup_acquisition/configure/</loc>
          <lastmod>2025-02-18</lastmod>
     </url>
     <url>
-         <loc>https://acquire-project.github.io/acquire-docs/0.2.0/acquire-imaging/tutorials/setup_acquisition/drivers/</loc>
+         <loc>https://acquire-project.github.io/acquire-docs/acquire-imaging/tutorials/setup_acquisition/drivers/</loc>
          <lastmod>2025-02-18</lastmod>
     </url>
     <url>
-         <loc>https://acquire-project.github.io/acquire-docs/0.2.0/acquire-imaging/tutorials/setup_acquisition/select/</loc>
+         <loc>https://acquire-project.github.io/acquire-docs/acquire-imaging/tutorials/setup_acquisition/select/</loc>
          <lastmod>2025-02-18</lastmod>
     </url>
     <url>
-         <loc>https://acquire-project.github.io/acquire-docs/0.2.0/acquire-imaging/tutorials/setup_acquisition/setup/</loc>
+         <loc>https://acquire-project.github.io/acquire-docs/acquire-imaging/tutorials/setup_acquisition/setup/</loc>
          <lastmod>2025-02-18</lastmod>
     </url>
     <url>
-         <loc>https://acquire-project.github.io/acquire-docs/0.2.0/acquire-imaging/tutorials/setup_acquisition/start_stop/</loc>
+         <loc>https://acquire-project.github.io/acquire-docs/acquire-imaging/tutorials/setup_acquisition/start_stop/</loc>
          <lastmod>2025-02-18</lastmod>
     </url>
     <url>
-         <loc>https://acquire-project.github.io/acquire-docs/0.2.0/acquire-imaging/tutorials/setup_acquisition/storage/</loc>
+         <loc>https://acquire-project.github.io/acquire-docs/acquire-imaging/tutorials/setup_acquisition/storage/</loc>
          <lastmod>2025-02-18</lastmod>
     </url>
     <url>
-         <loc>https://acquire-project.github.io/acquire-docs/0.2.0/acquire-imaging/tutorials/setup_acquisition/trigger/</loc>
+         <loc>https://acquire-project.github.io/acquire-docs/acquire-imaging/tutorials/setup_acquisition/trigger/</loc>
          <lastmod>2025-02-18</lastmod>
     </url>
     <url>
-         <loc>https://acquire-project.github.io/acquire-docs/0.2.0/acquire-imaging/tutorials/using_json/</loc>
+         <loc>https://acquire-project.github.io/acquire-docs/acquire-imaging/tutorials/using_json/</loc>
          <lastmod>2025-02-18</lastmod>
     </url>
     <url>
-         <loc>https://acquire-project.github.io/acquire-docs/0.2.0/acquire-imaging/tutorials/using_json/props_json/</loc>
+         <loc>https://acquire-project.github.io/acquire-docs/acquire-imaging/tutorials/using_json/props_json/</loc>
          <lastmod>2025-02-18</lastmod>
     </url>
     <url>
-         <loc>https://acquire-project.github.io/acquire-docs/0.2.0/acquire-imaging/tutorials/using_json/trig_json/</loc>
+         <loc>https://acquire-project.github.io/acquire-docs/acquire-imaging/tutorials/using_json/trig_json/</loc>
          <lastmod>2025-02-18</lastmod>
     </url>
     <url>
-         <loc>https://acquire-project.github.io/acquire-docs/0.2.0/acquire-imaging/tutorials/zarr/</loc>
+         <loc>https://acquire-project.github.io/acquire-docs/acquire-imaging/tutorials/zarr/</loc>
          <lastmod>2025-02-18</lastmod>
     </url>
     <url>
-         <loc>https://acquire-project.github.io/acquire-docs/0.2.0/acquire-imaging/tutorials/zarr/compressed/</loc>
+         <loc>https://acquire-project.github.io/acquire-docs/acquire-imaging/tutorials/zarr/compressed/</loc>
          <lastmod>2025-02-18</lastmod>
     </url>
     <url>
-         <loc>https://acquire-project.github.io/acquire-docs/0.2.0/api_reference/</loc>
+         <loc>https://acquire-project.github.io/acquire-docs/api_reference/</loc>
          <lastmod>2025-02-18</lastmod>
     </url>
     <url>
-         <loc>https://acquire-project.github.io/acquire-docs/0.2.0/api_reference/c_api/</loc>
+         <loc>https://acquire-project.github.io/acquire-docs/api_reference/zarr_api/</loc>
          <lastmod>2025-02-18</lastmod>
     </url>
     <url>
-         <loc>https://acquire-project.github.io/acquire-docs/0.2.0/api_reference/zarr_api/</loc>
+         <loc>https://acquire-project.github.io/acquire-docs/api_reference/c_api/</loc>
          <lastmod>2025-02-18</lastmod>
     </url>
     <url>
-         <loc>https://acquire-project.github.io/acquire-docs/0.2.0/examples/</loc>
+         <loc>https://acquire-project.github.io/acquire-docs/examples/</loc>
          <lastmod>2025-02-18</lastmod>
     </url>
     <url>
-         <loc>https://acquire-project.github.io/acquire-docs/0.2.0/examples/c_examples/</loc>
+         <loc>https://acquire-project.github.io/acquire-docs/examples/c_examples/</loc>
          <lastmod>2025-02-18</lastmod>
     </url>
     <url>
-         <loc>https://acquire-project.github.io/acquire-docs/0.2.0/examples/python_examples/</loc>
+         <loc>https://acquire-project.github.io/acquire-docs/examples/python_examples/</loc>
          <lastmod>2025-02-18</lastmod>
     </url>
     <url>
-         <loc>https://acquire-project.github.io/acquire-docs/0.2.0/for_contributors/</loc>
+         <loc>https://acquire-project.github.io/acquire-docs/for_contributors/</loc>
          <lastmod>2025-02-18</lastmod>
     </url>
     <url>
-         <loc>https://acquire-project.github.io/acquire-docs/0.2.0/for_contributors/docs_contribution_quickstart/</loc>
+         <loc>https://acquire-project.github.io/acquire-docs/for_contributors/codebase/</loc>
          <lastmod>2025-02-18</lastmod>
     </url>
     <url>
-         <loc>https://acquire-project.github.io/acquire-docs/0.2.0/for_contributors/update_version/</loc>
+         <loc>https://acquire-project.github.io/acquire-docs/for_contributors/docs_contribution_quickstart/</loc>
          <lastmod>2025-02-18</lastmod>
     </url>
     <url>
-         <loc>https://acquire-project.github.io/acquire-docs/0.2.0/acquire_zarr_c_api/annotated/</loc>
+         <loc>https://acquire-project.github.io/acquire-docs/for_contributors/update_version/</loc>
          <lastmod>2025-02-18</lastmod>
     </url>
     <url>
-         <loc>https://acquire-project.github.io/acquire-docs/0.2.0/acquire_zarr_c_api/files/</loc>
+         <loc>https://acquire-project.github.io/acquire-docs/acquire_zarr_c_api/annotated/</loc>
          <lastmod>2025-02-18</lastmod>
     </url>
     <url>
-         <loc>https://acquire-project.github.io/acquire-docs/0.2.0/acquire_zarr_c_api/structZarrCompressionSettings/</loc>
+         <loc>https://acquire-project.github.io/acquire-docs/acquire_zarr_c_api/files/</loc>
          <lastmod>2025-02-18</lastmod>
     </url>
     <url>
-         <loc>https://acquire-project.github.io/acquire-docs/0.2.0/acquire_zarr_c_api/structZarrDimensionProperties/</loc>
+         <loc>https://acquire-project.github.io/acquire-docs/acquire_zarr_c_api/structZarrCompressionSettings/</loc>
          <lastmod>2025-02-18</lastmod>
     </url>
     <url>
-         <loc>https://acquire-project.github.io/acquire-docs/0.2.0/acquire_zarr_c_api/structZarrS3Settings/</loc>
+         <loc>https://acquire-project.github.io/acquire-docs/acquire_zarr_c_api/structZarrDimensionProperties/</loc>
          <lastmod>2025-02-18</lastmod>
     </url>
     <url>
-         <loc>https://acquire-project.github.io/acquire-docs/0.2.0/acquire_zarr_c_api/structZarrStreamSettings/</loc>
+         <loc>https://acquire-project.github.io/acquire-docs/acquire_zarr_c_api/structZarrS3Settings/</loc>
          <lastmod>2025-02-18</lastmod>
     </url>
     <url>
-         <loc>https://acquire-project.github.io/acquire-docs/0.2.0/acquire_zarr_c_api/dir_333e6df7611621adb9e912e152b800c4/</loc>
+         <loc>https://acquire-project.github.io/acquire-docs/acquire_zarr_c_api/structZarrStreamSettings/</loc>
          <lastmod>2025-02-18</lastmod>
     </url>
     <url>
-         <loc>https://acquire-project.github.io/acquire-docs/0.2.0/acquire_zarr_c_api/dir_ccebfe39b92f73ccebee9a2fb203dc1b/</loc>
+         <loc>https://acquire-project.github.io/acquire-docs/acquire_zarr_c_api/dir_333e6df7611621adb9e912e152b800c4/</loc>
          <lastmod>2025-02-18</lastmod>
     </url>
     <url>
-         <loc>https://acquire-project.github.io/acquire-docs/0.2.0/acquire_zarr_c_api/acquire_8zarr_8h/</loc>
+         <loc>https://acquire-project.github.io/acquire-docs/acquire_zarr_c_api/dir_ccebfe39b92f73ccebee9a2fb203dc1b/</loc>
          <lastmod>2025-02-18</lastmod>
     </url>
     <url>
-         <loc>https://acquire-project.github.io/acquire-docs/0.2.0/acquire_zarr_c_api/acquire_8zarr_8h_source/</loc>
+         <loc>https://acquire-project.github.io/acquire-docs/acquire_zarr_c_api/acquire_8zarr_8h/</loc>
          <lastmod>2025-02-18</lastmod>
     </url>
     <url>
-         <loc>https://acquire-project.github.io/acquire-docs/0.2.0/acquire_zarr_c_api/zarr_8types_8h/</loc>
+         <loc>https://acquire-project.github.io/acquire-docs/acquire_zarr_c_api/acquire_8zarr_8h_source/</loc>
          <lastmod>2025-02-18</lastmod>
     </url>
     <url>
-         <loc>https://acquire-project.github.io/acquire-docs/0.2.0/acquire_zarr_c_api/zarr_8types_8h_source/</loc>
+         <loc>https://acquire-project.github.io/acquire-docs/acquire_zarr_c_api/zarr_8types_8h/</loc>
          <lastmod>2025-02-18</lastmod>
     </url>
     <url>
-         <loc>https://acquire-project.github.io/acquire-docs/0.2.0/acquire_zarr_c_api/namespaces/</loc>
+         <loc>https://acquire-project.github.io/acquire-docs/acquire_zarr_c_api/zarr_8types_8h_source/</loc>
          <lastmod>2025-02-18</lastmod>
     </url>
     <url>
-         <loc>https://acquire-project.github.io/acquire-docs/0.2.0/acquire_zarr_c_api/classes/</loc>
+         <loc>https://acquire-project.github.io/acquire-docs/acquire_zarr_c_api/namespaces/</loc>
          <lastmod>2025-02-18</lastmod>
     </url>
     <url>
-         <loc>https://acquire-project.github.io/acquire-docs/0.2.0/acquire_zarr_c_api/hierarchy/</loc>
+         <loc>https://acquire-project.github.io/acquire-docs/acquire_zarr_c_api/classes/</loc>
          <lastmod>2025-02-18</lastmod>
     </url>
     <url>
-         <loc>https://acquire-project.github.io/acquire-docs/0.2.0/acquire_zarr_c_api/modules/</loc>
+         <loc>https://acquire-project.github.io/acquire-docs/acquire_zarr_c_api/hierarchy/</loc>
          <lastmod>2025-02-18</lastmod>
     </url>
     <url>
-         <loc>https://acquire-project.github.io/acquire-docs/0.2.0/acquire_zarr_c_api/pages/</loc>
+         <loc>https://acquire-project.github.io/acquire-docs/acquire_zarr_c_api/modules/</loc>
          <lastmod>2025-02-18</lastmod>
     </url>
     <url>
-         <loc>https://acquire-project.github.io/acquire-docs/0.2.0/acquire_zarr_c_api/class_members/</loc>
+         <loc>https://acquire-project.github.io/acquire-docs/acquire_zarr_c_api/pages/</loc>
          <lastmod>2025-02-18</lastmod>
     </url>
     <url>
-         <loc>https://acquire-project.github.io/acquire-docs/0.2.0/acquire_zarr_c_api/class_member_functions/</loc>
+         <loc>https://acquire-project.github.io/acquire-docs/acquire_zarr_c_api/class_members/</loc>
          <lastmod>2025-02-18</lastmod>
     </url>
     <url>
-         <loc>https://acquire-project.github.io/acquire-docs/0.2.0/acquire_zarr_c_api/class_member_variables/</loc>
+         <loc>https://acquire-project.github.io/acquire-docs/acquire_zarr_c_api/class_member_functions/</loc>
          <lastmod>2025-02-18</lastmod>
     </url>
     <url>
-         <loc>https://acquire-project.github.io/acquire-docs/0.2.0/acquire_zarr_c_api/class_member_typedefs/</loc>
+         <loc>https://acquire-project.github.io/acquire-docs/acquire_zarr_c_api/class_member_variables/</loc>
          <lastmod>2025-02-18</lastmod>
     </url>
     <url>
-         <loc>https://acquire-project.github.io/acquire-docs/0.2.0/acquire_zarr_c_api/class_member_enums/</loc>
+         <loc>https://acquire-project.github.io/acquire-docs/acquire_zarr_c_api/class_member_typedefs/</loc>
          <lastmod>2025-02-18</lastmod>
     </url>
     <url>
-         <loc>https://acquire-project.github.io/acquire-docs/0.2.0/acquire_zarr_c_api/namespace_members/</loc>
+         <loc>https://acquire-project.github.io/acquire-docs/acquire_zarr_c_api/class_member_enums/</loc>
          <lastmod>2025-02-18</lastmod>
     </url>
     <url>
-         <loc>https://acquire-project.github.io/acquire-docs/0.2.0/acquire_zarr_c_api/namespace_member_functions/</loc>
+         <loc>https://acquire-project.github.io/acquire-docs/acquire_zarr_c_api/namespace_members/</loc>
          <lastmod>2025-02-18</lastmod>
     </url>
     <url>
-         <loc>https://acquire-project.github.io/acquire-docs/0.2.0/acquire_zarr_c_api/namespace_member_variables/</loc>
+         <loc>https://acquire-project.github.io/acquire-docs/acquire_zarr_c_api/namespace_member_functions/</loc>
          <lastmod>2025-02-18</lastmod>
     </url>
     <url>
-         <loc>https://acquire-project.github.io/acquire-docs/0.2.0/acquire_zarr_c_api/namespace_member_typedefs/</loc>
+         <loc>https://acquire-project.github.io/acquire-docs/acquire_zarr_c_api/namespace_member_variables/</loc>
          <lastmod>2025-02-18</lastmod>
     </url>
     <url>
-         <loc>https://acquire-project.github.io/acquire-docs/0.2.0/acquire_zarr_c_api/namespace_member_enums/</loc>
+         <loc>https://acquire-project.github.io/acquire-docs/acquire_zarr_c_api/namespace_member_typedefs/</loc>
          <lastmod>2025-02-18</lastmod>
     </url>
     <url>
-         <loc>https://acquire-project.github.io/acquire-docs/0.2.0/acquire_zarr_c_api/functions/</loc>
+         <loc>https://acquire-project.github.io/acquire-docs/acquire_zarr_c_api/namespace_member_enums/</loc>
          <lastmod>2025-02-18</lastmod>
     </url>
     <url>
-         <loc>https://acquire-project.github.io/acquire-docs/0.2.0/acquire_zarr_c_api/macros/</loc>
+         <loc>https://acquire-project.github.io/acquire-docs/acquire_zarr_c_api/functions/</loc>
          <lastmod>2025-02-18</lastmod>
     </url>
     <url>
-         <loc>https://acquire-project.github.io/acquire-docs/0.2.0/acquire_zarr_c_api/variables/</loc>
+         <loc>https://acquire-project.github.io/acquire-docs/acquire_zarr_c_api/macros/</loc>
          <lastmod>2025-02-18</lastmod>
     </url>
     <url>
-         <loc>https://acquire-project.github.io/acquire-docs/0.2.0/acquire_zarr_c_api/links/</loc>
+         <loc>https://acquire-project.github.io/acquire-docs/acquire_zarr_c_api/variables/</loc>
+         <lastmod>2025-02-18</lastmod>
+    </url>
+    <url>
+         <loc>https://acquire-project.github.io/acquire-docs/acquire_zarr_c_api/links/</loc>
          <lastmod>2025-02-18</lastmod>
     </url>
 </urlset>
