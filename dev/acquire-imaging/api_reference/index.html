@@ -14,7 +14,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.4">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.9">
     
     
       
@@ -22,7 +22,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.8608ea7d.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.4af4bdda.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
@@ -1582,7 +1582,7 @@ acquisition to ensure no data is overwritten before it can be processed.</p>
       </thead>
       <tbody>
             <tr class="doc-section-item">
-              <td><code><a class="autorefs autorefs-internal" title="acquire.AvailableData.frames" href="#acquire.AvailableData.frames">frames</a></code></td>
+              <td><code><a class="autorefs autorefs-internal" title="            frames() -> Iterator[VideoFrame] (acquire.AvailableData.frames)" href="#acquire.AvailableData.frames">frames</a></code></td>
               <td>
                 <div class="doc-md-description">
                   <p>Returns an iterator over the video frames in the available data.</p>
@@ -1590,7 +1590,7 @@ acquisition to ensure no data is overwritten before it can be processed.</p>
               </td>
             </tr>
             <tr class="doc-section-item">
-              <td><code><a class="autorefs autorefs-internal" title="acquire.AvailableData.get_frame_count" href="#acquire.AvailableData.get_frame_count">get_frame_count</a></code></td>
+              <td><code><a class="autorefs autorefs-internal" title="            get_frame_count() -> int (acquire.AvailableData.get_frame_count)" href="#acquire.AvailableData.get_frame_count">get_frame_count</a></code></td>
               <td>
                 <div class="doc-md-description">
                   <p>Returns the total number of video frames in the available data.</p>
@@ -1639,7 +1639,7 @@ acquisition to ensure no data is overwritten before it can be processed.</p>
       <tbody>
           <tr class="doc-section-item">
             <td>
-                  <code><a class="autorefs autorefs-external" title="typing.Iterator" href="https://docs.python.org/3/library/typing.html#typing.Iterator">Iterator</a>[<a class="autorefs autorefs-internal" title="acquire.acquire.VideoFrame" href="#acquire.VideoFrame">VideoFrame</a>]</code>
+                  <code><a class="autorefs autorefs-external" title="typing.Iterator" href="https://docs.python.org/3/library/typing.html#typing.Iterator">Iterator</a>[<a class="autorefs autorefs-internal" title="    acquire.VideoFrame (acquire.acquire.VideoFrame)" href="#acquire.VideoFrame">VideoFrame</a>]</code>
             </td>
             <td>
               <div class="doc-md-description">
@@ -1649,6 +1649,7 @@ acquisition to ensure no data is overwritten before it can be processed.</p>
           </tr>
       </tbody>
     </table>
+
 
     </div>
 
@@ -1691,6 +1692,7 @@ acquisition to ensure no data is overwritten before it can be processed.</p>
           </tr>
       </tbody>
     </table>
+
 
     </div>
 
@@ -1780,7 +1782,7 @@ data for the given VideoStream ID.</p>
           <tr class="doc-section-item">
             <td><code><span title="acquire.Camera.identifier">identifier</span></code></td>
             <td>
-                  <code><a class="autorefs autorefs-external" title="typing.Optional" href="https://docs.python.org/3/library/typing.html#typing.Optional">Optional</a>[<a class="autorefs autorefs-internal" title="acquire.acquire.DeviceIdentifier" href="#acquire.DeviceIdentifier">DeviceIdentifier</a>]</code>
+                  <code><a class="autorefs autorefs-external" title="typing.Optional" href="https://docs.python.org/3/library/typing.html#typing.Optional">Optional</a>[<a class="autorefs autorefs-internal" title="    acquire.DeviceIdentifier (acquire.acquire.DeviceIdentifier)" href="#acquire.DeviceIdentifier">DeviceIdentifier</a>]</code>
             </td>
             <td>
               <div class="doc-md-description">
@@ -1794,7 +1796,7 @@ supported. Otherwise, it is of type <code>None</code>.</p>
           <tr class="doc-section-item">
             <td><code><span title="acquire.Camera.settings">settings</span></code></td>
             <td>
-                  <code><a class="autorefs autorefs-internal" title="acquire.acquire.CameraProperties" href="#acquire.CameraProperties">CameraProperties</a></code>
+                  <code><a class="autorefs autorefs-internal" title="    acquire.CameraProperties (acquire.acquire.CameraProperties)" href="#acquire.CameraProperties">CameraProperties</a></code>
             </td>
             <td>
               <div class="doc-md-description">
@@ -1866,7 +1868,7 @@ supported properties.</p>
           <tr class="doc-section-item">
             <td><code><span title="acquire.CameraCapabilities.exposure_time_us">exposure_time_us</span></code></td>
             <td>
-                  <code><a class="autorefs autorefs-internal" title="acquire.acquire.Property" href="#acquire.Property">Property</a></code>
+                  <code><a class="autorefs autorefs-internal" title="    acquire.Property (acquire.acquire.Property)" href="#acquire.Property">Property</a></code>
             </td>
             <td>
               <div class="doc-md-description">
@@ -1880,7 +1882,7 @@ from the sample for a single frame.</p>
           <tr class="doc-section-item">
             <td><code><span title="acquire.CameraCapabilities.line_interval_us">line_interval_us</span></code></td>
             <td>
-                  <code><a class="autorefs autorefs-internal" title="acquire.acquire.Property" href="#acquire.Property">Property</a></code>
+                  <code><a class="autorefs autorefs-internal" title="    acquire.Property (acquire.acquire.Property)" href="#acquire.Property">Property</a></code>
             </td>
             <td>
               <div class="doc-md-description">
@@ -1893,7 +1895,7 @@ camera to scan one line.</p>
           <tr class="doc-section-item">
             <td><code><span title="acquire.CameraCapabilities.readout_direction">readout_direction</span></code></td>
             <td>
-                  <code><a class="autorefs autorefs-internal" title="acquire.acquire.Property" href="#acquire.Property">Property</a></code>
+                  <code><a class="autorefs autorefs-internal" title="    acquire.Property (acquire.acquire.Property)" href="#acquire.Property">Property</a></code>
             </td>
             <td>
               <div class="doc-md-description">
@@ -1906,7 +1908,7 @@ direction can be chosen by the user.</p>
           <tr class="doc-section-item">
             <td><code><span title="acquire.CameraCapabilities.binning">binning</span></code></td>
             <td>
-                  <code><a class="autorefs autorefs-internal" title="acquire.acquire.Property" href="#acquire.Property">Property</a></code>
+                  <code><a class="autorefs autorefs-internal" title="    acquire.Property (acquire.acquire.Property)" href="#acquire.Property">Property</a></code>
             </td>
             <td>
               <div class="doc-md-description">
@@ -1920,7 +1922,7 @@ factor can be chosen by the user.</p>
           <tr class="doc-section-item">
             <td><code><span title="acquire.CameraCapabilities.offset">offset</span></code></td>
             <td>
-                  <code><a class="autorefs autorefs-internal" title="acquire.acquire.OffsetCapabilities" href="#acquire.OffsetCapabilities">OffsetCapabilities</a></code>
+                  <code><a class="autorefs autorefs-internal" title="    acquire.OffsetCapabilities (acquire.acquire.OffsetCapabilities)" href="#acquire.OffsetCapabilities">OffsetCapabilities</a></code>
             </td>
             <td>
               <div class="doc-md-description">
@@ -1933,7 +1935,7 @@ the camera chip.</p>
           <tr class="doc-section-item">
             <td><code><span title="acquire.CameraCapabilities.shape">shape</span></code></td>
             <td>
-                  <code><a class="autorefs autorefs-internal" title="acquire.acquire.ShapeCapabilities" href="#acquire.ShapeCapabilities">ShapeCapabilities</a></code>
+                  <code><a class="autorefs autorefs-internal" title="    acquire.ShapeCapabilities (acquire.acquire.ShapeCapabilities)" href="#acquire.ShapeCapabilities">ShapeCapabilities</a></code>
             </td>
             <td>
               <div class="doc-md-description">
@@ -1945,7 +1947,7 @@ the width and height of the region of interest on the camera chip.</p>
           <tr class="doc-section-item">
             <td><code><span title="acquire.CameraCapabilities.supported_pixel_types">supported_pixel_types</span></code></td>
             <td>
-                  <code><a class="autorefs autorefs-external" title="typing.List" href="https://docs.python.org/3/library/typing.html#typing.List">List</a>[<a class="autorefs autorefs-internal" title="acquire.acquire.SampleType" href="#acquire.SampleType">SampleType</a>]</code>
+                  <code><a class="autorefs autorefs-external" title="typing.List" href="https://docs.python.org/3/library/typing.html#typing.List">List</a>[<a class="autorefs autorefs-internal" title="    acquire.SampleType (acquire.acquire.SampleType)" href="#acquire.SampleType">SampleType</a>]</code>
             </td>
             <td>
               <div class="doc-md-description">
@@ -1958,7 +1960,7 @@ each of the supported pixel types, such as 8-bit unsigned integer
           <tr class="doc-section-item">
             <td><code><span title="acquire.CameraCapabilities.digital_lines">digital_lines</span></code></td>
             <td>
-                  <code><a class="autorefs autorefs-internal" title="acquire.acquire.DigitalLineCapabilities" href="#acquire.DigitalLineCapabilities">DigitalLineCapabilities</a></code>
+                  <code><a class="autorefs autorefs-internal" title="    acquire.DigitalLineCapabilities (acquire.acquire.DigitalLineCapabilities)" href="#acquire.DigitalLineCapabilities">DigitalLineCapabilities</a></code>
             </td>
             <td>
               <div class="doc-md-description">
@@ -1971,7 +1973,7 @@ supported with the last line typically being the camera software trigger.</p>
           <tr class="doc-section-item">
             <td><code><span title="acquire.CameraCapabilities.triggers">triggers</span></code></td>
             <td>
-                  <code><a class="autorefs autorefs-internal" title="acquire.acquire.TriggerCapabilities" href="#acquire.TriggerCapabilities">TriggerCapabilities</a></code>
+                  <code><a class="autorefs autorefs-internal" title="    acquire.TriggerCapabilities (acquire.acquire.TriggerCapabilities)" href="#acquire.TriggerCapabilities">TriggerCapabilities</a></code>
             </td>
             <td>
               <div class="doc-md-description">
@@ -2083,7 +2085,7 @@ be combined.</p>
           <tr class="doc-section-item">
             <td><code><span title="acquire.CameraProperties.pixel_type">pixel_type</span></code></td>
             <td>
-                  <code><a class="autorefs autorefs-internal" title="acquire.acquire.SampleType" href="#acquire.SampleType">SampleType</a></code>
+                  <code><a class="autorefs autorefs-internal" title="    acquire.SampleType (acquire.acquire.SampleType)" href="#acquire.SampleType">SampleType</a></code>
             </td>
             <td>
               <div class="doc-md-description">
@@ -2095,7 +2097,7 @@ data type, for example Uint16, a 16-bit unsigned integer type.</p>
           <tr class="doc-section-item">
             <td><code><span title="acquire.CameraProperties.readout_direction">readout_direction</span></code></td>
             <td>
-                  <code><a class="autorefs autorefs-internal" title="acquire.acquire.Direction" href="#acquire.Direction">Direction</a></code>
+                  <code><a class="autorefs autorefs-internal" title="    acquire.Direction (acquire.acquire.Direction)" href="#acquire.Direction">Direction</a></code>
             </td>
             <td>
               <div class="doc-md-description">
@@ -2131,7 +2133,7 @@ the image region of interest on the camera.</p>
           <tr class="doc-section-item">
             <td><code><span title="acquire.CameraProperties.input_triggers">input_triggers</span></code></td>
             <td>
-                  <code><a class="autorefs autorefs-internal" title="acquire.acquire.InputTriggers" href="#acquire.InputTriggers">InputTriggers</a></code>
+                  <code><a class="autorefs autorefs-internal" title="    acquire.InputTriggers (acquire.acquire.InputTriggers)" href="#acquire.InputTriggers">InputTriggers</a></code>
             </td>
             <td>
               <div class="doc-md-description">
@@ -2144,7 +2146,7 @@ acquiring a frame.</p>
           <tr class="doc-section-item">
             <td><code><span title="acquire.CameraProperties.output_triggers">output_triggers</span></code></td>
             <td>
-                  <code><a class="autorefs autorefs-internal" title="acquire.acquire.OutputTriggers" href="#acquire.OutputTriggers">OutputTriggers</a></code>
+                  <code><a class="autorefs autorefs-internal" title="    acquire.OutputTriggers (acquire.acquire.OutputTriggers)" href="#acquire.OutputTriggers">OutputTriggers</a></code>
             </td>
             <td>
               <div class="doc-md-description">
@@ -2217,7 +2219,7 @@ supported VideoStream objects.</p>
           <tr class="doc-section-item">
             <td><code><span title="acquire.Capabilities.video">video</span></code></td>
             <td>
-                  <code><a class="autorefs autorefs-external" title="typing.Tuple" href="https://docs.python.org/3/library/typing.html#typing.Tuple">Tuple</a>[<a class="autorefs autorefs-internal" title="acquire.acquire.VideoStreamCapabilities" href="#acquire.VideoStreamCapabilities">VideoStreamCapabilities</a>, <a class="autorefs autorefs-internal" title="acquire.acquire.VideoStreamCapabilities" href="#acquire.VideoStreamCapabilities">VideoStreamCapabilities</a>]</code>
+                  <code><a class="autorefs autorefs-external" title="typing.Tuple" href="https://docs.python.org/3/library/typing.html#typing.Tuple">Tuple</a>[<a class="autorefs autorefs-internal" title="    acquire.VideoStreamCapabilities (acquire.acquire.VideoStreamCapabilities)" href="#acquire.VideoStreamCapabilities">VideoStreamCapabilities</a>, <a class="autorefs autorefs-internal" title="    acquire.VideoStreamCapabilities (acquire.acquire.VideoStreamCapabilities)" href="#acquire.VideoStreamCapabilities">VideoStreamCapabilities</a>]</code>
             </td>
             <td>
               <div class="doc-md-description">
@@ -2302,7 +2304,7 @@ run.</p>
           <tr class="doc-section-item">
             <td><code><span title="acquire.DeviceIdentifier.kind">kind</span></code></td>
             <td>
-                  <code><a class="autorefs autorefs-internal" title="acquire.acquire.DeviceKind" href="#acquire.DeviceKind">DeviceKind</a></code>
+                  <code><a class="autorefs autorefs-internal" title="    acquire.DeviceKind (acquire.acquire.DeviceKind)" href="#acquire.DeviceKind">DeviceKind</a></code>
             </td>
             <td>
               <div class="doc-md-description">
@@ -2343,7 +2345,7 @@ kind of the device.</p>
       </thead>
       <tbody>
             <tr class="doc-section-item">
-              <td><code><a class="autorefs autorefs-internal" title="acquire.DeviceIdentifier.none" href="#acquire.DeviceIdentifier.none">none</a></code></td>
+              <td><code><a class="autorefs autorefs-internal" title="            none() -> DeviceIdentifier (acquire.DeviceIdentifier.none)" href="#acquire.DeviceIdentifier.none">none</a></code></td>
               <td>
                 <div class="doc-md-description">
                   <p>Returns a "None" type DeviceIdentifier.</p>
@@ -2380,6 +2382,7 @@ kind of the device.</p>
 
         <p>Returns a "None" type DeviceIdentifier.</p>
 <p>Useful when a DeviceIdentifier is not needed.</p>
+
 
     </div>
 
@@ -2423,7 +2426,7 @@ kind of the device.</p>
           <tr class="doc-section-item">
             <td><code><span title="acquire.DeviceKind.Camera">Camera</span></code></td>
             <td>
-                  <code><a class="autorefs autorefs-internal" title="acquire.acquire.DeviceKind" href="#acquire.DeviceKind">DeviceKind</a></code>
+                  <code><a class="autorefs autorefs-internal" title="    acquire.DeviceKind (acquire.acquire.DeviceKind)" href="#acquire.DeviceKind">DeviceKind</a></code>
             </td>
             <td>
               <div class="doc-md-description">
@@ -2435,7 +2438,7 @@ a camera.</p>
           <tr class="doc-section-item">
             <td><code><span title="acquire.DeviceKind.NONE">NONE</span></code></td>
             <td>
-                  <code><a class="autorefs autorefs-internal" title="acquire.acquire.DeviceKind" href="#acquire.DeviceKind">DeviceKind</a></code>
+                  <code><a class="autorefs autorefs-internal" title="    acquire.DeviceKind (acquire.acquire.DeviceKind)" href="#acquire.DeviceKind">DeviceKind</a></code>
             </td>
             <td>
               <div class="doc-md-description">
@@ -2447,7 +2450,7 @@ unavailable.</p>
           <tr class="doc-section-item">
             <td><code><span title="acquire.DeviceKind.Signals">Signals</span></code></td>
             <td>
-                  <code><a class="autorefs autorefs-internal" title="acquire.acquire.DeviceKind" href="#acquire.DeviceKind">DeviceKind</a></code>
+                  <code><a class="autorefs autorefs-internal" title="    acquire.DeviceKind (acquire.acquire.DeviceKind)" href="#acquire.DeviceKind">DeviceKind</a></code>
             </td>
             <td>
               <div class="doc-md-description">
@@ -2459,7 +2462,7 @@ a signal.</p>
           <tr class="doc-section-item">
             <td><code><span title="acquire.DeviceKind.StageAxis">StageAxis</span></code></td>
             <td>
-                  <code><a class="autorefs autorefs-internal" title="acquire.acquire.DeviceKind" href="#acquire.DeviceKind">DeviceKind</a></code>
+                  <code><a class="autorefs autorefs-internal" title="    acquire.DeviceKind (acquire.acquire.DeviceKind)" href="#acquire.DeviceKind">DeviceKind</a></code>
             </td>
             <td>
               <div class="doc-md-description">
@@ -2471,7 +2474,7 @@ a stage.</p>
           <tr class="doc-section-item">
             <td><code><span title="acquire.DeviceKind.Storage">Storage</span></code></td>
             <td>
-                  <code><a class="autorefs autorefs-internal" title="acquire.acquire.DeviceKind" href="#acquire.DeviceKind">DeviceKind</a></code>
+                  <code><a class="autorefs autorefs-internal" title="    acquire.DeviceKind (acquire.acquire.DeviceKind)" href="#acquire.DeviceKind">DeviceKind</a></code>
             </td>
             <td>
               <div class="doc-md-description">
@@ -2548,7 +2551,7 @@ system.</p>
       </thead>
       <tbody>
             <tr class="doc-section-item">
-              <td><code><a class="autorefs autorefs-internal" title="acquire.DeviceManager.devices" href="#acquire.DeviceManager.devices">devices</a></code></td>
+              <td><code><a class="autorefs autorefs-internal" title="            devices() -> List[DeviceIdentifier] (acquire.DeviceManager.devices)" href="#acquire.DeviceManager.devices">devices</a></code></td>
               <td>
                 <div class="doc-md-description">
                   <p>Returns a list of all available device identifiers.</p>
@@ -2556,7 +2559,7 @@ system.</p>
               </td>
             </tr>
             <tr class="doc-section-item">
-              <td><code><a class="autorefs autorefs-internal" title="acquire.DeviceManager.select" href="#acquire.DeviceManager.select">select</a></code></td>
+              <td><code><a class="autorefs autorefs-internal" title="            select(kind: DeviceKind, name: Optional[str] = None) -> Optional[DeviceIdentifier] (acquire.DeviceManager.select)" href="#acquire.DeviceManager.select">select</a></code></td>
               <td>
                 <div class="doc-md-description">
                   <p>Selects a specified device.</p>
@@ -2564,7 +2567,7 @@ system.</p>
               </td>
             </tr>
             <tr class="doc-section-item">
-              <td><code><a class="autorefs autorefs-internal" title="acquire.DeviceManager.select_one_of" href="#acquire.DeviceManager.select_one_of">select_one_of</a></code></td>
+              <td><code><a class="autorefs autorefs-internal" title="            select_one_of(kind: DeviceKind, names: List[str]) -> Optional[DeviceIdentifier] (acquire.DeviceManager.select_one_of)" href="#acquire.DeviceManager.select_one_of">select_one_of</a></code></td>
               <td>
                 <div class="doc-md-description">
                   <p>Selects the first device in the list of devices that is of one of</p>
@@ -2600,6 +2603,7 @@ system.</p>
     <div class="doc doc-contents ">
 
         <p>Returns a list of all available device identifiers.</p>
+
 
     </div>
 
@@ -2637,7 +2641,7 @@ or to select a specific device by name.</p>
                 <code>kind</code>
             </td>
             <td>
-                  <code><a class="autorefs autorefs-internal" title="acquire.acquire.DeviceKind" href="#acquire.DeviceKind">DeviceKind</a></code>
+                  <code><a class="autorefs autorefs-internal" title="    acquire.DeviceKind (acquire.acquire.DeviceKind)" href="#acquire.DeviceKind">DeviceKind</a></code>
             </td>
             <td>
               <div class="doc-md-description">
@@ -2679,7 +2683,7 @@ or to select a specific device by name.</p>
       <tbody>
           <tr class="doc-section-item">
             <td>
-                  <code><a class="autorefs autorefs-external" title="typing.Optional" href="https://docs.python.org/3/library/typing.html#typing.Optional">Optional</a>[<a class="autorefs autorefs-internal" title="acquire.acquire.DeviceIdentifier" href="#acquire.DeviceIdentifier">DeviceIdentifier</a>]</code>
+                  <code><a class="autorefs autorefs-external" title="typing.Optional" href="https://docs.python.org/3/library/typing.html#typing.Optional">Optional</a>[<a class="autorefs autorefs-internal" title="    acquire.DeviceIdentifier (acquire.acquire.DeviceIdentifier)" href="#acquire.DeviceIdentifier">DeviceIdentifier</a>]</code>
             </td>
             <td>
               <div class="doc-md-description">
@@ -2689,7 +2693,7 @@ or to select a specific device by name.</p>
           </tr>
           <tr class="doc-section-item">
             <td>
-                  <code><a class="autorefs autorefs-external" title="typing.Optional" href="https://docs.python.org/3/library/typing.html#typing.Optional">Optional</a>[<a class="autorefs autorefs-internal" title="acquire.acquire.DeviceIdentifier" href="#acquire.DeviceIdentifier">DeviceIdentifier</a>]</code>
+                  <code><a class="autorefs autorefs-external" title="typing.Optional" href="https://docs.python.org/3/library/typing.html#typing.Optional">Optional</a>[<a class="autorefs autorefs-internal" title="    acquire.DeviceIdentifier (acquire.acquire.DeviceIdentifier)" href="#acquire.DeviceIdentifier">DeviceIdentifier</a>]</code>
             </td>
             <td>
               <div class="doc-md-description">
@@ -2699,6 +2703,7 @@ or to select a specific device by name.</p>
           </tr>
       </tbody>
     </table>
+
 
     </div>
 
@@ -2735,7 +2740,7 @@ the specified kinds.</p>
                 <code>kind</code>
             </td>
             <td>
-                  <code><a class="autorefs autorefs-internal" title="acquire.acquire.DeviceKind" href="#acquire.DeviceKind">DeviceKind</a></code>
+                  <code><a class="autorefs autorefs-internal" title="    acquire.DeviceKind (acquire.acquire.DeviceKind)" href="#acquire.DeviceKind">DeviceKind</a></code>
             </td>
             <td>
               <div class="doc-md-description">
@@ -2778,7 +2783,7 @@ supported.</p>
       <tbody>
           <tr class="doc-section-item">
             <td>
-                  <code><a class="autorefs autorefs-external" title="typing.Optional" href="https://docs.python.org/3/library/typing.html#typing.Optional">Optional</a>[<a class="autorefs autorefs-internal" title="acquire.acquire.DeviceIdentifier" href="#acquire.DeviceIdentifier">DeviceIdentifier</a>]</code>
+                  <code><a class="autorefs autorefs-external" title="typing.Optional" href="https://docs.python.org/3/library/typing.html#typing.Optional">Optional</a>[<a class="autorefs autorefs-internal" title="    acquire.DeviceIdentifier (acquire.acquire.DeviceIdentifier)" href="#acquire.DeviceIdentifier">DeviceIdentifier</a>]</code>
             </td>
             <td>
               <div class="doc-md-description">
@@ -2788,7 +2793,7 @@ supported.</p>
           </tr>
           <tr class="doc-section-item">
             <td>
-                  <code><a class="autorefs autorefs-external" title="typing.Optional" href="https://docs.python.org/3/library/typing.html#typing.Optional">Optional</a>[<a class="autorefs autorefs-internal" title="acquire.acquire.DeviceIdentifier" href="#acquire.DeviceIdentifier">DeviceIdentifier</a>]</code>
+                  <code><a class="autorefs autorefs-external" title="typing.Optional" href="https://docs.python.org/3/library/typing.html#typing.Optional">Optional</a>[<a class="autorefs autorefs-internal" title="    acquire.DeviceIdentifier (acquire.acquire.DeviceIdentifier)" href="#acquire.DeviceIdentifier">DeviceIdentifier</a>]</code>
             </td>
             <td>
               <div class="doc-md-description">
@@ -2798,6 +2803,7 @@ supported.</p>
           </tr>
       </tbody>
     </table>
+
 
     </div>
 
@@ -2841,7 +2847,7 @@ supported.</p>
           <tr class="doc-section-item">
             <td><code><span title="acquire.DeviceState.Closed">Closed</span></code></td>
             <td>
-                  <code><a class="autorefs autorefs-internal" title="acquire.acquire.DeviceState" href="#acquire.DeviceState">DeviceState</a></code>
+                  <code><a class="autorefs autorefs-internal" title="    acquire.DeviceState (acquire.acquire.DeviceState)" href="#acquire.DeviceState">DeviceState</a></code>
             </td>
             <td>
               <div class="doc-md-description">
@@ -2853,7 +2859,7 @@ device is not ready for configuration.</p>
           <tr class="doc-section-item">
             <td><code><span title="acquire.DeviceState.AwaitingConfiguration">AwaitingConfiguration</span></code></td>
             <td>
-                  <code><a class="autorefs autorefs-internal" title="acquire.acquire.DeviceState" href="#acquire.DeviceState">DeviceState</a></code>
+                  <code><a class="autorefs autorefs-internal" title="    acquire.DeviceState (acquire.acquire.DeviceState)" href="#acquire.DeviceState">DeviceState</a></code>
             </td>
             <td>
               <div class="doc-md-description">
@@ -2865,7 +2871,7 @@ device is ready for configuration.</p>
           <tr class="doc-section-item">
             <td><code><span title="acquire.DeviceState.Armed">Armed</span></code></td>
             <td>
-                  <code><a class="autorefs autorefs-internal" title="acquire.acquire.DeviceState" href="#acquire.DeviceState">DeviceState</a></code>
+                  <code><a class="autorefs autorefs-internal" title="    acquire.DeviceState (acquire.acquire.DeviceState)" href="#acquire.DeviceState">DeviceState</a></code>
             </td>
             <td>
               <div class="doc-md-description">
@@ -2877,7 +2883,7 @@ device is ready to stream data.</p>
           <tr class="doc-section-item">
             <td><code><span title="acquire.DeviceState.Running">Running</span></code></td>
             <td>
-                  <code><a class="autorefs autorefs-internal" title="acquire.acquire.DeviceState" href="#acquire.DeviceState">DeviceState</a></code>
+                  <code><a class="autorefs autorefs-internal" title="    acquire.DeviceState (acquire.acquire.DeviceState)" href="#acquire.DeviceState">DeviceState</a></code>
             </td>
             <td>
               <div class="doc-md-description">
@@ -3036,7 +3042,7 @@ dataset.</p>
           <tr class="doc-section-item">
             <td><code><span title="acquire.DimensionType.Space">Space</span></code></td>
             <td>
-                  <code><a class="autorefs autorefs-internal" title="acquire.acquire.DimensionType" href="#acquire.DimensionType">DimensionType</a></code>
+                  <code><a class="autorefs autorefs-internal" title="    acquire.DimensionType (acquire.acquire.DimensionType)" href="#acquire.DimensionType">DimensionType</a></code>
             </td>
             <td>
               <div class="doc-md-description">
@@ -3048,7 +3054,7 @@ dimension.</p>
           <tr class="doc-section-item">
             <td><code><span title="acquire.DimensionType.Channel">Channel</span></code></td>
             <td>
-                  <code><a class="autorefs autorefs-internal" title="acquire.acquire.DimensionType" href="#acquire.DimensionType">DimensionType</a></code>
+                  <code><a class="autorefs autorefs-internal" title="    acquire.DimensionType (acquire.acquire.DimensionType)" href="#acquire.DimensionType">DimensionType</a></code>
             </td>
             <td>
               <div class="doc-md-description">
@@ -3060,7 +3066,7 @@ channel dimension.</p>
           <tr class="doc-section-item">
             <td><code><span title="acquire.DimensionType.Time">Time</span></code></td>
             <td>
-                  <code><a class="autorefs autorefs-internal" title="acquire.acquire.DimensionType" href="#acquire.DimensionType">DimensionType</a></code>
+                  <code><a class="autorefs autorefs-internal" title="    acquire.DimensionType (acquire.acquire.DimensionType)" href="#acquire.DimensionType">DimensionType</a></code>
             </td>
             <td>
               <div class="doc-md-description">
@@ -3072,7 +3078,7 @@ dimension.</p>
           <tr class="doc-section-item">
             <td><code><span title="acquire.DimensionType.Other">Other</span></code></td>
             <td>
-                  <code><a class="autorefs autorefs-internal" title="acquire.acquire.DimensionType" href="#acquire.DimensionType">DimensionType</a></code>
+                  <code><a class="autorefs autorefs-internal" title="    acquire.DimensionType (acquire.acquire.DimensionType)" href="#acquire.DimensionType">DimensionType</a></code>
             </td>
             <td>
               <div class="doc-md-description">
@@ -3143,7 +3149,7 @@ dimension is not a space, channel, or time.</p>
           <tr class="doc-section-item">
             <td><code><span title="acquire.Direction.Backward">Backward</span></code></td>
             <td>
-                  <code><a class="autorefs autorefs-internal" title="acquire.acquire.Direction" href="#acquire.Direction">Direction</a></code>
+                  <code><a class="autorefs autorefs-internal" title="    acquire.Direction (acquire.acquire.Direction)" href="#acquire.Direction">Direction</a></code>
             </td>
             <td>
               <div class="doc-md-description">
@@ -3155,7 +3161,7 @@ is streamed backward.</p>
           <tr class="doc-section-item">
             <td><code><span title="acquire.Direction.Forward">Forward</span></code></td>
             <td>
-                  <code><a class="autorefs autorefs-internal" title="acquire.acquire.Direction" href="#acquire.Direction">Direction</a></code>
+                  <code><a class="autorefs autorefs-internal" title="    acquire.Direction (acquire.acquire.Direction)" href="#acquire.Direction">Direction</a></code>
             </td>
             <td>
               <div class="doc-md-description">
@@ -3226,7 +3232,7 @@ is streamed forward.</p>
           <tr class="doc-section-item">
             <td><code><span title="acquire.InputTriggers.acquisition_start">acquisition_start</span></code></td>
             <td>
-                  <code><a class="autorefs autorefs-internal" title="acquire.acquire.Trigger" href="#acquire.Trigger">Trigger</a></code>
+                  <code><a class="autorefs autorefs-internal" title="    acquire.Trigger (acquire.acquire.Trigger)" href="#acquire.Trigger">Trigger</a></code>
             </td>
             <td>
               <div class="doc-md-description">
@@ -3238,7 +3244,7 @@ starting acquisition.</p>
           <tr class="doc-section-item">
             <td><code><span title="acquire.InputTriggers.exposure">exposure</span></code></td>
             <td>
-                  <code><a class="autorefs autorefs-internal" title="acquire.acquire.Trigger" href="#acquire.Trigger">Trigger</a></code>
+                  <code><a class="autorefs autorefs-internal" title="    acquire.Trigger (acquire.acquire.Trigger)" href="#acquire.Trigger">Trigger</a></code>
             </td>
             <td>
               <div class="doc-md-description">
@@ -3250,7 +3256,7 @@ exposure.</p>
           <tr class="doc-section-item">
             <td><code><span title="acquire.InputTriggers.frame_start">frame_start</span></code></td>
             <td>
-                  <code><a class="autorefs autorefs-internal" title="acquire.acquire.Trigger" href="#acquire.Trigger">Trigger</a></code>
+                  <code><a class="autorefs autorefs-internal" title="    acquire.Trigger (acquire.acquire.Trigger)" href="#acquire.Trigger">Trigger</a></code>
             </td>
             <td>
               <div class="doc-md-description">
@@ -3365,7 +3371,7 @@ device.</p>
           <tr class="doc-section-item">
             <td><code><span title="acquire.OutputTriggers.exposure">exposure</span></code></td>
             <td>
-                  <code><a class="autorefs autorefs-internal" title="acquire.acquire.Trigger" href="#acquire.Trigger">Trigger</a></code>
+                  <code><a class="autorefs autorefs-internal" title="    acquire.Trigger (acquire.acquire.Trigger)" href="#acquire.Trigger">Trigger</a></code>
             </td>
             <td>
               <div class="doc-md-description">
@@ -3377,7 +3383,7 @@ exposure.</p>
           <tr class="doc-section-item">
             <td><code><span title="acquire.OutputTriggers.frame_start">frame_start</span></code></td>
             <td>
-                  <code><a class="autorefs autorefs-internal" title="acquire.acquire.Trigger" href="#acquire.Trigger">Trigger</a></code>
+                  <code><a class="autorefs autorefs-internal" title="    acquire.Trigger (acquire.acquire.Trigger)" href="#acquire.Trigger">Trigger</a></code>
             </td>
             <td>
               <div class="doc-md-description">
@@ -3389,7 +3395,7 @@ starting a frame.</p>
           <tr class="doc-section-item">
             <td><code><span title="acquire.OutputTriggers.trigger_wait">trigger_wait</span></code></td>
             <td>
-                  <code><a class="autorefs autorefs-internal" title="acquire.acquire.Trigger" href="#acquire.Trigger">Trigger</a></code>
+                  <code><a class="autorefs autorefs-internal" title="    acquire.Trigger (acquire.acquire.Trigger)" href="#acquire.Trigger">Trigger</a></code>
             </td>
             <td>
               <div class="doc-md-description">
@@ -3552,7 +3558,7 @@ waiting before continuing acquisition.</p>
           <tr class="doc-section-item">
             <td><code><span title="acquire.Properties.video">video</span></code></td>
             <td>
-                  <code><a class="autorefs autorefs-external" title="typing.Tuple" href="https://docs.python.org/3/library/typing.html#typing.Tuple">Tuple</a>[<a class="autorefs autorefs-internal" title="acquire.acquire.VideoStream" href="#acquire.VideoStream">VideoStream</a>, <a class="autorefs autorefs-internal" title="acquire.acquire.VideoStream" href="#acquire.VideoStream">VideoStream</a>]</code>
+                  <code><a class="autorefs autorefs-external" title="typing.Tuple" href="https://docs.python.org/3/library/typing.html#typing.Tuple">Tuple</a>[<a class="autorefs autorefs-internal" title="    acquire.VideoStream (acquire.acquire.VideoStream)" href="#acquire.VideoStream">VideoStream</a>, <a class="autorefs autorefs-internal" title="    acquire.VideoStream (acquire.acquire.VideoStream)" href="#acquire.VideoStream">VideoStream</a>]</code>
             </td>
             <td>
               <div class="doc-md-description">
@@ -3661,7 +3667,7 @@ applicable.</p>
           <tr class="doc-section-item">
             <td><code><span title="acquire.Property.kind">kind</span></code></td>
             <td>
-                  <code><a class="autorefs autorefs-internal" title="acquire.acquire.PropertyType" href="#acquire.PropertyType">PropertyType</a></code>
+                  <code><a class="autorefs autorefs-internal" title="    acquire.PropertyType (acquire.acquire.PropertyType)" href="#acquire.PropertyType">PropertyType</a></code>
             </td>
             <td>
               <div class="doc-md-description">
@@ -3733,7 +3739,7 @@ precision, floating-point, enum, or string).</p>
           <tr class="doc-section-item">
             <td><code><span title="acquire.PropertyType.FixedPrecision">FixedPrecision</span></code></td>
             <td>
-                  <code><a class="autorefs autorefs-internal" title="acquire.acquire.PropertyType" href="#acquire.PropertyType">PropertyType</a></code>
+                  <code><a class="autorefs autorefs-internal" title="    acquire.PropertyType (acquire.acquire.PropertyType)" href="#acquire.PropertyType">PropertyType</a></code>
             </td>
             <td>
               <div class="doc-md-description">
@@ -3745,7 +3751,7 @@ precision or integer values.</p>
           <tr class="doc-section-item">
             <td><code><span title="acquire.PropertyType.FloatingPrecision">FloatingPrecision</span></code></td>
             <td>
-                  <code><a class="autorefs autorefs-internal" title="acquire.acquire.PropertyType" href="#acquire.PropertyType">PropertyType</a></code>
+                  <code><a class="autorefs autorefs-internal" title="    acquire.PropertyType (acquire.acquire.PropertyType)" href="#acquire.PropertyType">PropertyType</a></code>
             </td>
             <td>
               <div class="doc-md-description">
@@ -3757,7 +3763,7 @@ point precision values.</p>
           <tr class="doc-section-item">
             <td><code><span title="acquire.PropertyType.Enum">Enum</span></code></td>
             <td>
-                  <code><a class="autorefs autorefs-internal" title="acquire.acquire.PropertyType" href="#acquire.PropertyType">PropertyType</a></code>
+                  <code><a class="autorefs autorefs-internal" title="    acquire.PropertyType (acquire.acquire.PropertyType)" href="#acquire.PropertyType">PropertyType</a></code>
             </td>
             <td>
               <div class="doc-md-description">
@@ -3769,7 +3775,7 @@ values.</p>
           <tr class="doc-section-item">
             <td><code><span title="acquire.PropertyType.String">String</span></code></td>
             <td>
-                  <code><a class="autorefs autorefs-internal" title="acquire.acquire.PropertyType" href="#acquire.PropertyType">PropertyType</a></code>
+                  <code><a class="autorefs autorefs-internal" title="    acquire.PropertyType (acquire.acquire.PropertyType)" href="#acquire.PropertyType">PropertyType</a></code>
             </td>
             <td>
               <div class="doc-md-description">
@@ -3847,7 +3853,7 @@ stopping acquisition.</p>
       </thead>
       <tbody>
             <tr class="doc-section-item">
-              <td><code><a class="autorefs autorefs-internal" title="acquire.Runtime.abort" href="#acquire.Runtime.abort">abort</a></code></td>
+              <td><code><a class="autorefs autorefs-internal" title="            abort() -> None (acquire.Runtime.abort)" href="#acquire.Runtime.abort">abort</a></code></td>
               <td>
                 <div class="doc-md-description">
                   <p>Aborts the runtime, terminating it immediately.</p>
@@ -3855,7 +3861,7 @@ stopping acquisition.</p>
               </td>
             </tr>
             <tr class="doc-section-item">
-              <td><code><a class="autorefs autorefs-internal" title="acquire.Runtime.device_manager" href="#acquire.Runtime.device_manager">device_manager</a></code></td>
+              <td><code><a class="autorefs autorefs-internal" title="            device_manager() -> DeviceManager (acquire.Runtime.device_manager)" href="#acquire.Runtime.device_manager">device_manager</a></code></td>
               <td>
                 <div class="doc-md-description">
                   <p>Returns the DeviceManager instance associated with this Runtime.</p>
@@ -3863,7 +3869,7 @@ stopping acquisition.</p>
               </td>
             </tr>
             <tr class="doc-section-item">
-              <td><code><a class="autorefs autorefs-internal" title="acquire.Runtime.execute_trigger" href="#acquire.Runtime.execute_trigger">execute_trigger</a></code></td>
+              <td><code><a class="autorefs autorefs-internal" title="            execute_trigger(stream_id: int) -> None (acquire.Runtime.execute_trigger)" href="#acquire.Runtime.execute_trigger">execute_trigger</a></code></td>
               <td>
                 <div class="doc-md-description">
                   <p>Executes a trigger for the given stream ID.</p>
@@ -3871,7 +3877,7 @@ stopping acquisition.</p>
               </td>
             </tr>
             <tr class="doc-section-item">
-              <td><code><a class="autorefs autorefs-internal" title="acquire.Runtime.get_available_data" href="#acquire.Runtime.get_available_data">get_available_data</a></code></td>
+              <td><code><a class="autorefs autorefs-internal" title="            get_available_data(stream_id: int) -> AvailableDataContext (acquire.Runtime.get_available_data)" href="#acquire.Runtime.get_available_data">get_available_data</a></code></td>
               <td>
                 <div class="doc-md-description">
                   <p>Returns the AvailableDataContext instance for the given stream ID.</p>
@@ -3879,7 +3885,7 @@ stopping acquisition.</p>
               </td>
             </tr>
             <tr class="doc-section-item">
-              <td><code><a class="autorefs autorefs-internal" title="acquire.Runtime.get_capabilities" href="#acquire.Runtime.get_capabilities">get_capabilities</a></code></td>
+              <td><code><a class="autorefs autorefs-internal" title="            get_capabilities() -> Capabilities (acquire.Runtime.get_capabilities)" href="#acquire.Runtime.get_capabilities">get_capabilities</a></code></td>
               <td>
                 <div class="doc-md-description">
                   <p>Returns the current capabilites of the runtime as an instance of</p>
@@ -3887,7 +3893,7 @@ stopping acquisition.</p>
               </td>
             </tr>
             <tr class="doc-section-item">
-              <td><code><a class="autorefs autorefs-internal" title="acquire.Runtime.get_configuration" href="#acquire.Runtime.get_configuration">get_configuration</a></code></td>
+              <td><code><a class="autorefs autorefs-internal" title="            get_configuration() -> Properties (acquire.Runtime.get_configuration)" href="#acquire.Runtime.get_configuration">get_configuration</a></code></td>
               <td>
                 <div class="doc-md-description">
                   <p>Returns the current configuration properties of the runtime.</p>
@@ -3895,7 +3901,7 @@ stopping acquisition.</p>
               </td>
             </tr>
             <tr class="doc-section-item">
-              <td><code><a class="autorefs autorefs-internal" title="acquire.Runtime.get_state" href="#acquire.Runtime.get_state">get_state</a></code></td>
+              <td><code><a class="autorefs autorefs-internal" title="            get_state() -> DeviceState (acquire.Runtime.get_state)" href="#acquire.Runtime.get_state">get_state</a></code></td>
               <td>
                 <div class="doc-md-description">
                   <p>Returns the current state of the device.</p>
@@ -3903,7 +3909,7 @@ stopping acquisition.</p>
               </td>
             </tr>
             <tr class="doc-section-item">
-              <td><code><a class="autorefs autorefs-internal" title="acquire.Runtime.set_configuration" href="#acquire.Runtime.set_configuration">set_configuration</a></code></td>
+              <td><code><a class="autorefs autorefs-internal" title="            set_configuration(properties: Properties) -> Properties (acquire.Runtime.set_configuration)" href="#acquire.Runtime.set_configuration">set_configuration</a></code></td>
               <td>
                 <div class="doc-md-description">
                   <p>Applies the provided configuration properties to the runtime.</p>
@@ -3911,7 +3917,7 @@ stopping acquisition.</p>
               </td>
             </tr>
             <tr class="doc-section-item">
-              <td><code><a class="autorefs autorefs-internal" title="acquire.Runtime.start" href="#acquire.Runtime.start">start</a></code></td>
+              <td><code><a class="autorefs autorefs-internal" title="            start() -> None (acquire.Runtime.start)" href="#acquire.Runtime.start">start</a></code></td>
               <td>
                 <div class="doc-md-description">
                   <p>Starts the runtime, allowing it to collect data.</p>
@@ -3919,7 +3925,7 @@ stopping acquisition.</p>
               </td>
             </tr>
             <tr class="doc-section-item">
-              <td><code><a class="autorefs autorefs-internal" title="acquire.Runtime.stop" href="#acquire.Runtime.stop">stop</a></code></td>
+              <td><code><a class="autorefs autorefs-internal" title="            stop() -> None (acquire.Runtime.stop)" href="#acquire.Runtime.stop">stop</a></code></td>
               <td>
                 <div class="doc-md-description">
                   <p>Stops the runtime, ending data collection after the max number of</p>
@@ -3958,6 +3964,7 @@ stopping acquisition.</p>
 <p>Call <code>abort()</code> to immediately end data acqusition. All objects are
 deleted to free up disk space upon shutdown of <code>Runtime</code>.</p>
 
+
     </div>
 
 </div>
@@ -3977,6 +3984,7 @@ deleted to free up disk space upon shutdown of <code>Runtime</code>.</p>
 <p>Call <code>device_manager()</code> to return the <code>DeviceManager</code> object associated
 with this <code>Runtime</code> instance.</p>
 
+
     </div>
 
 </div>
@@ -3995,6 +4003,7 @@ with this <code>Runtime</code> instance.</p>
         <p>Executes a trigger for the given stream ID.</p>
 <p>Call <code>execute_trigger</code> with a specific <code>stream_id</code>, 0 or 1, to execute
 a trigger for that video source.</p>
+
 
     </div>
 
@@ -4059,7 +4068,7 @@ return the context manager, <code>AvailableDataContext</code>, associated with t
       <tbody>
           <tr class="doc-section-item">
 <td><code>AvailableDataContext</code></td>            <td>
-                  <code><a class="autorefs autorefs-internal" title="acquire.acquire.AvailableDataContext" href="#acquire.AvailableDataContext">AvailableDataContext</a></code>
+                  <code><a class="autorefs autorefs-internal" title="    acquire.AvailableDataContext (acquire.acquire.AvailableDataContext)" href="#acquire.AvailableDataContext">AvailableDataContext</a></code>
             </td>
             <td>
               <div class="doc-md-description">
@@ -4069,6 +4078,7 @@ return the context manager, <code>AvailableDataContext</code>, associated with t
           </tr>
       </tbody>
     </table>
+
 
     </div>
 
@@ -4090,6 +4100,7 @@ Capabilities.</p>
 <p>Call <code>get_capabilities()</code> to return the <code>Capabilities</code> object associated
 with this <code>Runtime</code> instance.</p>
 
+
     </div>
 
 </div>
@@ -4109,6 +4120,7 @@ with this <code>Runtime</code> instance.</p>
 <p>Call <code>get_configuration()</code> to return the <code>Properties</code> object associated
 with this <code>Runtime</code> instance.</p>
 
+
     </div>
 
 </div>
@@ -4127,6 +4139,7 @@ with this <code>Runtime</code> instance.</p>
         <p>Returns the current state of the device.</p>
 <p>Call <code>get_state()</code> to return the <code>DeviceState</code> object associated with
 this <code>Runtime</code> instance.</p>
+
 
     </div>
 
@@ -4164,7 +4177,7 @@ properties of this <code>Runtime</code> instance.</p>
                 <code>properties</code>
             </td>
             <td>
-                  <code><a class="autorefs autorefs-internal" title="acquire.acquire.Properties" href="#acquire.Properties">Properties</a></code>
+                  <code><a class="autorefs autorefs-internal" title="    acquire.Properties (acquire.acquire.Properties)" href="#acquire.Properties">Properties</a></code>
             </td>
             <td>
               <div class="doc-md-description">
@@ -4190,7 +4203,7 @@ properties of this <code>Runtime</code> instance.</p>
       <tbody>
           <tr class="doc-section-item">
             <td>
-                  <code><a class="autorefs autorefs-internal" title="acquire.acquire.Properties" href="#acquire.Properties">Properties</a></code>
+                  <code><a class="autorefs autorefs-internal" title="    acquire.Properties (acquire.acquire.Properties)" href="#acquire.Properties">Properties</a></code>
             </td>
             <td>
               <div class="doc-md-description">
@@ -4200,6 +4213,7 @@ properties of this <code>Runtime</code> instance.</p>
           </tr>
       </tbody>
     </table>
+
 
     </div>
 
@@ -4218,6 +4232,7 @@ properties of this <code>Runtime</code> instance.</p>
 
         <p>Starts the runtime, allowing it to collect data.</p>
 <p>Call <code>start()</code> to begin data acquisition.</p>
+
 
     </div>
 
@@ -4239,6 +4254,7 @@ frames is collected.</p>
 <p>Call <code>stop()</code> to end data acquisition once the max number of frames
 specified in <code>acquire.VideoStream.max_frame_count</code> is collected. All
 objects are deleted to free up disk space upon shutdown of <code>Runtime</code>.</p>
+
 
     </div>
 
@@ -4364,7 +4380,7 @@ data.</p>
           <tr class="doc-section-item">
             <td><code><span title="acquire.SampleType.F32">F32</span></code></td>
             <td>
-                  <code><a class="autorefs autorefs-internal" title="acquire.acquire.SampleType" href="#acquire.SampleType">SampleType</a></code>
+                  <code><a class="autorefs autorefs-internal" title="    acquire.SampleType (acquire.acquire.SampleType)" href="#acquire.SampleType">SampleType</a></code>
             </td>
             <td>
               <div class="doc-md-description">
@@ -4376,7 +4392,7 @@ data.</p>
           <tr class="doc-section-item">
             <td><code><span title="acquire.SampleType.I16">I16</span></code></td>
             <td>
-                  <code><a class="autorefs autorefs-internal" title="acquire.acquire.SampleType" href="#acquire.SampleType">SampleType</a></code>
+                  <code><a class="autorefs autorefs-internal" title="    acquire.SampleType (acquire.acquire.SampleType)" href="#acquire.SampleType">SampleType</a></code>
             </td>
             <td>
               <div class="doc-md-description">
@@ -4388,7 +4404,7 @@ data.</p>
           <tr class="doc-section-item">
             <td><code><span title="acquire.SampleType.I8">I8</span></code></td>
             <td>
-                  <code><a class="autorefs autorefs-internal" title="acquire.acquire.SampleType" href="#acquire.SampleType">SampleType</a></code>
+                  <code><a class="autorefs autorefs-internal" title="    acquire.SampleType (acquire.acquire.SampleType)" href="#acquire.SampleType">SampleType</a></code>
             </td>
             <td>
               <div class="doc-md-description">
@@ -4400,7 +4416,7 @@ data.</p>
           <tr class="doc-section-item">
             <td><code><span title="acquire.SampleType.U16">U16</span></code></td>
             <td>
-                  <code><a class="autorefs autorefs-internal" title="acquire.acquire.SampleType" href="#acquire.SampleType">SampleType</a></code>
+                  <code><a class="autorefs autorefs-internal" title="    acquire.SampleType (acquire.acquire.SampleType)" href="#acquire.SampleType">SampleType</a></code>
             </td>
             <td>
               <div class="doc-md-description">
@@ -4412,7 +4428,7 @@ data.</p>
           <tr class="doc-section-item">
             <td><code><span title="acquire.SampleType.U8">U8</span></code></td>
             <td>
-                  <code><a class="autorefs autorefs-internal" title="acquire.acquire.SampleType" href="#acquire.SampleType">SampleType</a></code>
+                  <code><a class="autorefs autorefs-internal" title="    acquire.SampleType (acquire.acquire.SampleType)" href="#acquire.SampleType">SampleType</a></code>
             </td>
             <td>
               <div class="doc-md-description">
@@ -4424,7 +4440,7 @@ data.</p>
           <tr class="doc-section-item">
             <td><code><span title="acquire.SampleType.U10">U10</span></code></td>
             <td>
-                  <code><a class="autorefs autorefs-internal" title="acquire.acquire.SampleType" href="#acquire.SampleType">SampleType</a></code>
+                  <code><a class="autorefs autorefs-internal" title="    acquire.SampleType (acquire.acquire.SampleType)" href="#acquire.SampleType">SampleType</a></code>
             </td>
             <td>
               <div class="doc-md-description">
@@ -4436,7 +4452,7 @@ data.</p>
           <tr class="doc-section-item">
             <td><code><span title="acquire.SampleType.U12">U12</span></code></td>
             <td>
-                  <code><a class="autorefs autorefs-internal" title="acquire.acquire.SampleType" href="#acquire.SampleType">SampleType</a></code>
+                  <code><a class="autorefs autorefs-internal" title="    acquire.SampleType (acquire.acquire.SampleType)" href="#acquire.SampleType">SampleType</a></code>
             </td>
             <td>
               <div class="doc-md-description">
@@ -4448,7 +4464,7 @@ data.</p>
           <tr class="doc-section-item">
             <td><code><span title="acquire.SampleType.U14">U14</span></code></td>
             <td>
-                  <code><a class="autorefs autorefs-internal" title="acquire.acquire.SampleType" href="#acquire.SampleType">SampleType</a></code>
+                  <code><a class="autorefs autorefs-internal" title="    acquire.SampleType (acquire.acquire.SampleType)" href="#acquire.SampleType">SampleType</a></code>
             </td>
             <td>
               <div class="doc-md-description">
@@ -4521,7 +4537,7 @@ on the camera.</p>
           <tr class="doc-section-item">
             <td><code><span title="acquire.ShapeCapabilities.x">x</span></code></td>
             <td>
-                  <code><a class="autorefs autorefs-internal" title="acquire.acquire.Property" href="#acquire.Property">Property</a></code>
+                  <code><a class="autorefs autorefs-internal" title="    acquire.Property (acquire.acquire.Property)" href="#acquire.Property">Property</a></code>
             </td>
             <td>
               <div class="doc-md-description">
@@ -4534,7 +4550,7 @@ the region of interest on the camera chip.</p>
           <tr class="doc-section-item">
             <td><code><span title="acquire.ShapeCapabilities.y">y</span></code></td>
             <td>
-                  <code><a class="autorefs autorefs-internal" title="acquire.acquire.Property" href="#acquire.Property">Property</a></code>
+                  <code><a class="autorefs autorefs-internal" title="    acquire.Property (acquire.acquire.Property)" href="#acquire.Property">Property</a></code>
             </td>
             <td>
               <div class="doc-md-description">
@@ -4607,7 +4623,7 @@ trigger.</p>
           <tr class="doc-section-item">
             <td><code><span title="acquire.SignalIOKind.Input">Input</span></code></td>
             <td>
-                  <code><a class="autorefs autorefs-internal" title="acquire.acquire.SignalIOKind" href="#acquire.SignalIOKind">SignalIOKind</a></code>
+                  <code><a class="autorefs autorefs-internal" title="    acquire.SignalIOKind (acquire.acquire.SignalIOKind)" href="#acquire.SignalIOKind">SignalIOKind</a></code>
             </td>
             <td>
               <div class="doc-md-description">
@@ -4619,7 +4635,7 @@ coming in to the device.</p>
           <tr class="doc-section-item">
             <td><code><span title="acquire.SignalIOKind.Output">Output</span></code></td>
             <td>
-                  <code><a class="autorefs autorefs-internal" title="acquire.acquire.SignalIOKind" href="#acquire.SignalIOKind">SignalIOKind</a></code>
+                  <code><a class="autorefs autorefs-internal" title="    acquire.SignalIOKind (acquire.acquire.SignalIOKind)" href="#acquire.SignalIOKind">SignalIOKind</a></code>
             </td>
             <td>
               <div class="doc-md-description">
@@ -4690,7 +4706,7 @@ sent out of the device.</p>
           <tr class="doc-section-item">
             <td><code><span title="acquire.SignalType.Analog">Analog</span></code></td>
             <td>
-                  <code><a class="autorefs autorefs-internal" title="acquire.acquire.SignalType" href="#acquire.SignalType">SignalType</a></code>
+                  <code><a class="autorefs autorefs-internal" title="    acquire.SignalType (acquire.acquire.SignalType)" href="#acquire.SignalType">SignalType</a></code>
             </td>
             <td>
               <div class="doc-md-description">
@@ -4702,7 +4718,7 @@ analog.</p>
           <tr class="doc-section-item">
             <td><code><span title="acquire.SignalType.Digital">Digital</span></code></td>
             <td>
-                  <code><a class="autorefs autorefs-internal" title="acquire.acquire.SignalType" href="#acquire.SignalType">SignalType</a></code>
+                  <code><a class="autorefs autorefs-internal" title="    acquire.SignalType (acquire.acquire.SignalType)" href="#acquire.SignalType">SignalType</a></code>
             </td>
             <td>
               <div class="doc-md-description">
@@ -4773,7 +4789,7 @@ digital.</p>
           <tr class="doc-section-item">
             <td><code><span title="acquire.Storage.identifier">identifier</span></code></td>
             <td>
-                  <code><a class="autorefs autorefs-external" title="typing.Optional" href="https://docs.python.org/3/library/typing.html#typing.Optional">Optional</a>[<a class="autorefs autorefs-internal" title="acquire.acquire.DeviceIdentifier" href="#acquire.DeviceIdentifier">DeviceIdentifier</a>]</code>
+                  <code><a class="autorefs autorefs-external" title="typing.Optional" href="https://docs.python.org/3/library/typing.html#typing.Optional">Optional</a>[<a class="autorefs autorefs-internal" title="    acquire.DeviceIdentifier (acquire.acquire.DeviceIdentifier)" href="#acquire.DeviceIdentifier">DeviceIdentifier</a>]</code>
             </td>
             <td>
               <div class="doc-md-description">
@@ -4786,7 +4802,7 @@ device is natively supported. Otherwise, it is of type <code>None</code>.</p>
           <tr class="doc-section-item">
             <td><code><span title="acquire.Storage.settings">settings</span></code></td>
             <td>
-                  <code><a class="autorefs autorefs-internal" title="acquire.acquire.StorageProperties" href="#acquire.StorageProperties">StorageProperties</a></code>
+                  <code><a class="autorefs autorefs-internal" title="    acquire.StorageProperties (acquire.acquire.StorageProperties)" href="#acquire.StorageProperties">StorageProperties</a></code>
             </td>
             <td>
               <div class="doc-md-description">
@@ -4963,7 +4979,7 @@ device.</p>
           <tr class="doc-section-item">
             <td><code><span title="acquire.StorageDimension.kind">kind</span></code></td>
             <td>
-                  <code><a class="autorefs autorefs-internal" title="acquire.acquire.DimensionType" href="#acquire.DimensionType">DimensionType</a></code>
+                  <code><a class="autorefs autorefs-internal" title="    acquire.DimensionType (acquire.acquire.DimensionType)" href="#acquire.DimensionType">DimensionType</a></code>
             </td>
             <td>
               <div class="doc-md-description">
@@ -5140,7 +5156,7 @@ micrometers.</p>
           <tr class="doc-section-item">
             <td><code><span title="acquire.StorageProperties.acquisition_dimensions">acquisition_dimensions</span></code></td>
             <td>
-                  <code><a class="autorefs autorefs-external" title="typing.List" href="https://docs.python.org/3/library/typing.html#typing.List">List</a>[<a class="autorefs autorefs-internal" title="acquire.acquire.StorageDimension" href="#acquire.StorageDimension">StorageDimension</a>]</code>
+                  <code><a class="autorefs autorefs-external" title="typing.List" href="https://docs.python.org/3/library/typing.html#typing.List">List</a>[<a class="autorefs autorefs-internal" title="    acquire.StorageDimension (acquire.acquire.StorageDimension)" href="#acquire.StorageDimension">StorageDimension</a>]</code>
             </td>
             <td>
               <div class="doc-md-description">
@@ -5224,7 +5240,7 @@ value is only applicable for Zarr storage devices.</p>
           <tr class="doc-section-item">
             <td><code><span title="acquire.Trigger.edge">edge</span></code></td>
             <td>
-                  <code><a class="autorefs autorefs-internal" title="acquire.acquire.TriggerEdge" href="#acquire.TriggerEdge">TriggerEdge</a></code>
+                  <code><a class="autorefs autorefs-internal" title="    acquire.TriggerEdge (acquire.acquire.TriggerEdge)" href="#acquire.TriggerEdge">TriggerEdge</a></code>
             </td>
             <td>
               <div class="doc-md-description">
@@ -5258,7 +5274,7 @@ on the rising or falling edge trigger signal.</p>
           <tr class="doc-section-item">
             <td><code><span title="acquire.Trigger.kind">kind</span></code></td>
             <td>
-                  <code><a class="autorefs autorefs-internal" title="acquire.acquire.SignalIOKind" href="#acquire.SignalIOKind">SignalIOKind</a></code>
+                  <code><a class="autorefs autorefs-internal" title="    acquire.SignalIOKind (acquire.acquire.SignalIOKind)" href="#acquire.SignalIOKind">SignalIOKind</a></code>
             </td>
             <td>
               <div class="doc-md-description">
@@ -5329,7 +5345,7 @@ input or output.</p>
           <tr class="doc-section-item">
             <td><code><span title="acquire.TriggerCapabilities.acquisition_start">acquisition_start</span></code></td>
             <td>
-                  <code><a class="autorefs autorefs-internal" title="acquire.acquire.TriggerInputOutputCapabilities" href="#acquire.TriggerInputOutputCapabilities">TriggerInputOutputCapabilities</a></code>
+                  <code><a class="autorefs autorefs-internal" title="    acquire.TriggerInputOutputCapabilities (acquire.acquire.TriggerInputOutputCapabilities)" href="#acquire.TriggerInputOutputCapabilities">TriggerInputOutputCapabilities</a></code>
             </td>
             <td>
               <div class="doc-md-description">
@@ -5342,7 +5358,7 @@ acquisition.</p>
           <tr class="doc-section-item">
             <td><code><span title="acquire.TriggerCapabilities.exposure">exposure</span></code></td>
             <td>
-                  <code><a class="autorefs autorefs-internal" title="acquire.acquire.TriggerInputOutputCapabilities" href="#acquire.TriggerInputOutputCapabilities">TriggerInputOutputCapabilities</a></code>
+                  <code><a class="autorefs autorefs-internal" title="    acquire.TriggerInputOutputCapabilities (acquire.acquire.TriggerInputOutputCapabilities)" href="#acquire.TriggerInputOutputCapabilities">TriggerInputOutputCapabilities</a></code>
             </td>
             <td>
               <div class="doc-md-description">
@@ -5355,7 +5371,7 @@ exposure.</p>
           <tr class="doc-section-item">
             <td><code><span title="acquire.TriggerCapabilities.frame_start">frame_start</span></code></td>
             <td>
-                  <code><a class="autorefs autorefs-internal" title="acquire.acquire.TriggerInputOutputCapabilities" href="#acquire.TriggerInputOutputCapabilities">TriggerInputOutputCapabilities</a></code>
+                  <code><a class="autorefs autorefs-internal" title="    acquire.TriggerInputOutputCapabilities (acquire.acquire.TriggerInputOutputCapabilities)" href="#acquire.TriggerInputOutputCapabilities">TriggerInputOutputCapabilities</a></code>
             </td>
             <td>
               <div class="doc-md-description">
@@ -5428,7 +5444,7 @@ initiates the trigger.</p>
           <tr class="doc-section-item">
             <td><code><span title="acquire.TriggerEdge.Falling">Falling</span></code></td>
             <td>
-                  <code><a class="autorefs autorefs-internal" title="acquire.acquire.TriggerEdge" href="#acquire.TriggerEdge">TriggerEdge</a></code>
+                  <code><a class="autorefs autorefs-internal" title="    acquire.TriggerEdge (acquire.acquire.TriggerEdge)" href="#acquire.TriggerEdge">TriggerEdge</a></code>
             </td>
             <td>
               <div class="doc-md-description">
@@ -5440,7 +5456,7 @@ edge of the trigger.</p>
           <tr class="doc-section-item">
             <td><code><span title="acquire.TriggerEdge.NotApplicable">NotApplicable</span></code></td>
             <td>
-                  <code><a class="autorefs autorefs-internal" title="acquire.acquire.TriggerEdge" href="#acquire.TriggerEdge">TriggerEdge</a></code>
+                  <code><a class="autorefs autorefs-internal" title="    acquire.TriggerEdge (acquire.acquire.TriggerEdge)" href="#acquire.TriggerEdge">TriggerEdge</a></code>
             </td>
             <td>
               <div class="doc-md-description">
@@ -5452,7 +5468,7 @@ does not have a rising or falling edge.</p>
           <tr class="doc-section-item">
             <td><code><span title="acquire.TriggerEdge.Rising">Rising</span></code></td>
             <td>
-                  <code><a class="autorefs autorefs-internal" title="acquire.acquire.TriggerEdge" href="#acquire.TriggerEdge">TriggerEdge</a></code>
+                  <code><a class="autorefs autorefs-internal" title="    acquire.TriggerEdge (acquire.acquire.TriggerEdge)" href="#acquire.TriggerEdge">TriggerEdge</a></code>
             </td>
             <td>
               <div class="doc-md-description">
@@ -5464,7 +5480,7 @@ edge of the trigger.</p>
           <tr class="doc-section-item">
             <td><code><span title="acquire.TriggerEdge.AnyEdge">AnyEdge</span></code></td>
             <td>
-                  <code><a class="autorefs autorefs-internal" title="acquire.acquire.TriggerEdge" href="#acquire.TriggerEdge">TriggerEdge</a></code>
+                  <code><a class="autorefs autorefs-internal" title="    acquire.TriggerEdge (acquire.acquire.TriggerEdge)" href="#acquire.TriggerEdge">TriggerEdge</a></code>
             </td>
             <td>
               <div class="doc-md-description">
@@ -5476,7 +5492,7 @@ the trigger.</p>
           <tr class="doc-section-item">
             <td><code><span title="acquire.TriggerEdge.LevelLow">LevelLow</span></code></td>
             <td>
-                  <code><a class="autorefs autorefs-internal" title="acquire.acquire.TriggerEdge" href="#acquire.TriggerEdge">TriggerEdge</a></code>
+                  <code><a class="autorefs autorefs-internal" title="    acquire.TriggerEdge (acquire.acquire.TriggerEdge)" href="#acquire.TriggerEdge">TriggerEdge</a></code>
             </td>
             <td>
               <div class="doc-md-description">
@@ -5488,7 +5504,7 @@ level of the trigger.</p>
           <tr class="doc-section-item">
             <td><code><span title="acquire.TriggerEdge.LevelHigh">LevelHigh</span></code></td>
             <td>
-                  <code><a class="autorefs autorefs-internal" title="acquire.acquire.TriggerEdge" href="#acquire.TriggerEdge">TriggerEdge</a></code>
+                  <code><a class="autorefs autorefs-internal" title="    acquire.TriggerEdge (acquire.acquire.TriggerEdge)" href="#acquire.TriggerEdge">TriggerEdge</a></code>
             </td>
             <td>
               <div class="doc-md-description">
@@ -5661,7 +5677,7 @@ so the input attribute would have a value of 5.</p>
       </thead>
       <tbody>
             <tr class="doc-section-item">
-              <td><code><a class="autorefs autorefs-internal" title="acquire.VideoFrame.data" href="#acquire.VideoFrame.data">data</a></code></td>
+              <td><code><a class="autorefs autorefs-internal" title="            data() -> NDArray[Any] (acquire.VideoFrame.data)" href="#acquire.VideoFrame.data">data</a></code></td>
               <td>
                 <div class="doc-md-description">
                   <p>Returns the data of the video frame as an NDArray.</p>
@@ -5669,7 +5685,7 @@ so the input attribute would have a value of 5.</p>
               </td>
             </tr>
             <tr class="doc-section-item">
-              <td><code><a class="autorefs autorefs-internal" title="acquire.VideoFrame.metadata" href="#acquire.VideoFrame.metadata">metadata</a></code></td>
+              <td><code><a class="autorefs autorefs-internal" title="            metadata() -> VideoFrameMetadata (acquire.VideoFrame.metadata)" href="#acquire.VideoFrame.metadata">metadata</a></code></td>
               <td>
                 <div class="doc-md-description">
                   <p>Returns the metadata associated with the video frame.</p>
@@ -5707,6 +5723,7 @@ so the input attribute would have a value of 5.</p>
         <p>Returns the data of the video frame as an NDArray.</p>
 <p>Call <code>data()</code> to create an NDArray of the <code>VideoFrame</code> data.</p>
 
+
     </div>
 
 </div>
@@ -5725,6 +5742,7 @@ so the input attribute would have a value of 5.</p>
         <p>Returns the metadata associated with the video frame.</p>
 <p>Call <code>metadata()</code> to create a <code>VideoFrameMetadata</code> object containing
 the metadata of <code>VideoFrame</code>.</p>
+
 
     </div>
 
@@ -5780,7 +5798,7 @@ frame.</p>
           <tr class="doc-section-item">
             <td><code><span title="acquire.VideoFrameMetadata.timestamps">timestamps</span></code></td>
             <td>
-                  <code><a class="autorefs autorefs-internal" title="acquire.acquire.VideoFrameTimestamps" href="#acquire.VideoFrameTimestamps">VideoFrameTimestamps</a></code>
+                  <code><a class="autorefs autorefs-internal" title="    acquire.VideoFrameTimestamps (acquire.acquire.VideoFrameTimestamps)" href="#acquire.VideoFrameTimestamps">VideoFrameTimestamps</a></code>
             </td>
             <td>
               <div class="doc-md-description">
@@ -5934,7 +5952,7 @@ video frame.</p>
           <tr class="doc-section-item">
             <td><code><span title="acquire.VideoStream.camera">camera</span></code></td>
             <td>
-                  <code><a class="autorefs autorefs-internal" title="acquire.acquire.Camera" href="#acquire.Camera">Camera</a></code>
+                  <code><a class="autorefs autorefs-internal" title="    acquire.Camera (acquire.acquire.Camera)" href="#acquire.Camera">Camera</a></code>
             </td>
             <td>
               <div class="doc-md-description">
@@ -5946,7 +5964,7 @@ for the video stream.</p>
           <tr class="doc-section-item">
             <td><code><span title="acquire.VideoStream.storage">storage</span></code></td>
             <td>
-                  <code><a class="autorefs autorefs-internal" title="acquire.acquire.Storage" href="#acquire.Storage">Storage</a></code>
+                  <code><a class="autorefs autorefs-internal" title="    acquire.Storage (acquire.acquire.Storage)" href="#acquire.Storage">Storage</a></code>
             </td>
             <td>
               <div class="doc-md-description">
@@ -6042,7 +6060,7 @@ video stream.</p>
           <tr class="doc-section-item">
             <td><code><span title="acquire.VideoStreamCapabilities.camera">camera</span></code></td>
             <td>
-                  <code><a class="autorefs autorefs-internal" title="acquire.acquire.CameraCapabilities" href="#acquire.CameraCapabilities">CameraCapabilities</a></code>
+                  <code><a class="autorefs autorefs-internal" title="    acquire.CameraCapabilities (acquire.acquire.CameraCapabilities)" href="#acquire.CameraCapabilities">CameraCapabilities</a></code>
             </td>
             <td>
               <div class="doc-md-description">
@@ -6054,7 +6072,7 @@ capabilities for the camera in this video stream.</p>
           <tr class="doc-section-item">
             <td><code><span title="acquire.VideoStreamCapabilities.storage">storage</span></code></td>
             <td>
-                  <code><a class="autorefs autorefs-internal" title="acquire.acquire.StorageCapabilities" href="#acquire.StorageCapabilities">StorageCapabilities</a></code>
+                  <code><a class="autorefs autorefs-internal" title="    acquire.StorageCapabilities (acquire.acquire.StorageCapabilities)" href="#acquire.StorageCapabilities">StorageCapabilities</a></code>
             </td>
             <td>
               <div class="doc-md-description">
@@ -6066,7 +6084,7 @@ capabilities for the storage device in this video stream.</p>
           <tr class="doc-section-item">
             <td><code><span title="acquire.VideoStreamCapabilities.max_frame_count">max_frame_count</span></code></td>
             <td>
-                  <code><a class="autorefs autorefs-internal" title="acquire.acquire.Property" href="#acquire.Property">Property</a></code>
+                  <code><a class="autorefs autorefs-internal" title="    acquire.Property (acquire.acquire.Property)" href="#acquire.Property">Property</a></code>
             </td>
             <td>
               <div class="doc-md-description">
@@ -6077,7 +6095,7 @@ capabilities for the storage device in this video stream.</p>
           <tr class="doc-section-item">
             <td><code><span title="acquire.VideoStreamCapabilities.frame_average_count">frame_average_count</span></code></td>
             <td>
-                  <code><a class="autorefs autorefs-internal" title="acquire.acquire.Property" href="#acquire.Property">Property</a></code>
+                  <code><a class="autorefs autorefs-internal" title="    acquire.Property (acquire.acquire.Property)" href="#acquire.Property">Property</a></code>
             </td>
             <td>
               <div class="doc-md-description">
@@ -6212,6 +6230,7 @@ capabilities for the storage device in this video stream.</p>
 
         <p>Potentially create and get the global acquire runtime.</p>
 
+
     </div>
 
 </div>
@@ -6228,6 +6247,7 @@ capabilities for the storage device in this video stream.</p>
     <div class="doc doc-contents ">
 
         <p>Returns the version string for the core API.</p>
+
 
     </div>
 
@@ -6247,6 +6267,7 @@ capabilities for the storage device in this video stream.</p>
         <p>Napari dock-widget plugin entry-point</p>
 <p>This instances a magicgui dock widget that streams video to a layer.</p>
 
+
     </div>
 
 </div>
@@ -6264,6 +6285,7 @@ capabilities for the storage device in this video stream.</p>
 
         <p>Set up the runtime with a camera and storage device.</p>
 
+
     </div>
 
 </div>
@@ -6279,6 +6301,7 @@ capabilities for the storage device in this video stream.</p>
 
     <div class="doc doc-contents ">
 
+
     </div>
 
 </div>
@@ -6293,6 +6316,7 @@ capabilities for the storage device in this video stream.</p>
 
 
     <div class="doc doc-contents ">
+
 
     </div>
 
@@ -6453,7 +6477,7 @@ capabilities for the storage device in this video stream.</p>
     <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.footer", "navigation.indexes", "navigation.tracking", "content.code.copy", "toc.follow"], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.f1b6f286.min.js"></script>
+      <script src="../../assets/javascripts/bundle.c8b220af.min.js"></script>
       
         <script src="../../javascripts/version-select.js"></script>
       
