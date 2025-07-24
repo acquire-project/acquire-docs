@@ -35,6 +35,7 @@ extra_javascript:
 nav:
   - Home: index.md
   - Get Started: get_started.md
+  - Core concepts: core_concepts.md
   - Examples:
     - examples/index.md
     - examples/python_examples.md
