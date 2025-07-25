@@ -1,5 +1,10 @@
-# Get Started
-The `acquire-zarr` library provides both Python and C interfaces.
+# Getting started
+
+You can use `acquire-zarr` to stream data in either Python or C/C++ programs.
+This document provides a quick overview of how to get started with both languages.
+
+> [!TIP]
+> New to Zarr streaming? Check out our [Core concepts](core_concepts.md) page to understand the key terminology used throughout this guide.
 
 ## Get Started with Python
 
