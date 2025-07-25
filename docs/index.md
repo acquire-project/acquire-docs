@@ -23,7 +23,7 @@ To install the `acquire-zarr` Python library on Windows, macOS, or Ubuntu, run t
 ```bash
 python -m pip install acquire-zarr
 ```
-For more details, check out the [Get Started page](get_started.md).
+For more details, check out the [Getting started page](get_started.md).
 
 ### Build the C Library from Source
 
