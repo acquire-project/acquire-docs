@@ -25,6 +25,16 @@ The [OME-Zarr](https://ngff.openmicroscopy.org/latest/) specification is an exte
 
 A *stream* is the primary interface for writing data to Zarr arrays in acquire-zarr.
 The stream manages the process of organizing incoming data into chunks and shards, applying compression, and writing to the underlying storage backend.
+
+> [!NOTE]
+> acquire-zarr is designed to be used in a streaming fashion, meaning you can append data to the stream incrementally.
+> This is particularly useful for large datasets that cannot be loaded into memory all at once.
+> This means that random-access writing, i.e., writing to arbitrary locations in the array, is not supported; neither is reading from the stream.
+> While this is limiting in some use cases, it provides several advantages:
+> - **High throughput**: acquire-zarr is optimized for high-speed data acquisition, allowing you to write large amounts of data quickly.
+> - **Low memory usage**: acquire-zarr does not require loading the entire dataset into memory, making it suitable for large datasets.
+> - **Real-time data acquisition**: acquire-zarr is designed for real-time data acquisition, allowing you to write data as it is generated.
+
 You configure a stream by specifying one or more arrays, their dimensions, and storage settings.
 Once created, you can append data to the stream, and acquire-zarr handles all the details of chunking, compression, and storage.
 
