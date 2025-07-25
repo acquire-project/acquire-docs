@@ -53,6 +53,7 @@ jobs:
         with:
           path: acquire-zarr  # place in a named directory
           repository: acquire-project/acquire-zarr
+          submodules: true
 
       - name: Install Doxygen
         run: sudo apt-get install -y doxygen
@@ -69,9 +70,7 @@ jobs:
       - name: Install acquire-zarr  # For collecting the API reference
         run: |
           cd acquire-zarr
-          python -m pip install pybind11
-          cmake --preset=default -B build -DBUILD_PYTHON=ON .
-          cmake --build build
+          python -m pip install pybind11[global]
           python -m pip install .
 
       - name: Build website
