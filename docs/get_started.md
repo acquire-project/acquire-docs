@@ -210,6 +210,8 @@ stream.append(fluorescence_frame_data, key="sample1/fluorescence")
 stream.close()
 ```
 
+See the [API reference](api_reference/index.md) for more details on the available settings and methods.
+
 ### Building the Python library from source
 
 If you want to [contribute](for_contributors/index.md) to acquire-zarr, or customize the installation for your own system, you'll need to be able to build the Python bindings from source.
@@ -229,35 +231,31 @@ python -m pip install cmake<4.0.0 ninja pybind11[global] setuptools wheel
 ```
 
 Then, clone the `acquire-zarr` repository and install acquire-zarr in your Python environment:
-```
+
+```bash
 git clone --recursive https://github.com/acquire-project/acquire-zarr.git
 cd acquire-zarr
 python -m pip install .
 ```
 
-## Get Started with C Bindings
+## Getting started with C/C++
 
-### Install the C Library
+### Install the library
 
-The `acquire-zarr` C library is distributed as a binary and headers, which you can download for your system from our [Releases page](https://github.com/acquire-project/acquire-zarr/releases). You will also need to install the following dependencies:
+`acquire-zarr` provides a C API that works with both C and C++ projects.
+You can download the library for your system from our [Releases page](https://github.com/acquire-project/acquire-zarr/releases).
+The library ships with header files and precompiled binaries for Windows x86, macOS (x86 or ARM), or Linux (x86 or ARM), as well as source code examples and a sample CMakeLists.txt file.
 
-  - [c-blosc](https://github.com/Blosc/c-blosc) >= 1.21.5
-  - [nlohmann-json](https://github.com/nlohmann/json) >= 3.11.3
-  - [minio-cpp](https://github.com/minio/minio-cpp)  >= 0.3.0
-  - [crc32c](https://github.com/google/crc32c) >= 1.1.2
+### Usage
 
-We suggest using [vcpkg](https://github.com/microsoft/vcpkg) or another package manager to handle dependencies.
-
-[Here](https://github.com/acquire-project/acquire-zarr/blob/main/examples/CMakeLists.txt) is an example CMakeLists.txt file of C executables using acquire-zarr.
-
-#### Usage
+Similarly with Python, the typical workflow for acquiring data in C is to create a stream by configuring it with the desired settings, and then to append data to the stream.
 
 The library provides two main structs. First, `ZarrStream`, representing an output stream to a Zarr dataset.
 Second, `ZarrStreamSettings` to configure a Zarr stream.
 
 A typical use case for a 4-dimensional acquisition in C might look like this:
 
-```c
+```C
 #include "acquire.zarr.h"
 #include "assert.h"
 
@@ -311,7 +309,25 @@ int main() {
 
 Look at [acquire.zarr.h](include/acquire.zarr.h) for more details.
 
-### Building the C Library from Source
+### Building the library from source
 
-The library must be built from source to contribute to the latest development version or to incorporate the library into an existing program.
-To build the C library from source, follow [these instructions](https://github.com/acquire-project/acquire-zarr/blob/main/README.md#building).
+If you want to [contribute](for_contributors/index.md) to acquire-zarr, or customize the installation for your own system, you'll need to be able to build the library from source.
+The first step is to install the system dependencies as found in the ["Installing dependencies" section](https://github.com/acquire-project/acquire-zarr/blob/main/README.md#installing-dependencies) of the README.md file in the `acquire-zarr` repository.
+As in the README, we recommend using vcpkg to install them.
+You will also need CMake to build the library.
+
+Once you have built the library, try running the tests to ensure everything is working correctly.
+
+```bash
+cd build # or wherever you built the library
+ctest -C ${BUILD_TYPE} -L acquire-zarr --output-on-failure
+```
+
+where `${BUILD_TYPE}` can be `Debug`, `Release`, or `RelWithDebInfo`, depending on how you built the library.
+(If you did not specify a build type, it defaults to `Debug`.)
+
+If the tests pass, you can install the library to your system with:
+
+```bash
+cmake --install . --config ${BUILD_TYPE}
+```
