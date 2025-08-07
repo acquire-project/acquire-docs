@@ -16,18 +16,7 @@ acquisition workflows since it does not rely on runtime or hardware support.
 
 ## Installation
 
-### Install the Python library
-
-To install the `acquire-zarr` Python library on Windows, macOS, or Ubuntu, run the following command:
-
-```bash
-python -m pip install acquire-zarr
-```
-For more details, check out the [Getting started page](get_started.md).
-
-### Build the C Library from Source
-
-To build the C Library, follow [these instructions](https://github.com/acquire-project/acquire-zarr/blob/main/README.md).
+See our [Getting Started](get_started.md) page for installation instructions.
 
 ## Guides
 
