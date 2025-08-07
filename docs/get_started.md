@@ -307,7 +307,7 @@ int main() {
 }
 ```
 
-Look at [acquire.zarr.h](include/acquire.zarr.h) for more details.
+Look at [acquire.zarr.h](https://github.com/acquire-project/acquire-zarr/blob/main/include/acquire.zarr.h) for more details.
 
 ### Building the library from source
 
