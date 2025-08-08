@@ -23,22 +23,22 @@ See our [Getting Started](get_started.md) page for installation instructions.
 <div class="cards">
     <div class="card">
         <h4>Python API Reference</h4>
-        <p>Information on classes and methods</p>
+        <p>A detailed description of the Python API. Assumes understanding of <a href="core_concepts">core concepts</a>.</p>
         <a href="api_reference/zarr_api" class="button">Python API Reference</a>
     </div>
     <div class="card">
-        <h4>C Library Reference</h4>
-        <p>Information on functions and structures</p>
-        <a href="api_reference/c_api" class="button">C Library Reference</a>
+        <h4>C API Reference</h4>
+        <p>A detailed description of the C API. Assumes understanding of <a href="core_concepts">core concepts</a>.</p>
+        <a href="api_reference/c_api" class="button">C API Reference</a>
     </div>
     <div class="card">
-        <h4>Python Examples</h4>
-        <p>Examples that demonstrate how to use the Python library</p>
+        <h4>Examples in Python</h4>
+        <p>Code examples demonstrating library usage</p>
         <a href="examples/python_examples" class="button">Python Examples</a>
     </div>
     <div class="card">
-        <h4>C Examples</h4>
-        <p>Examples that demonstrate how to use the C Library</p>
+        <h4>Examples in C</h4>
+        <p>Code examples demonstrating library usage</p>
         <a href="examples/c_examples" class="button">C Examples</a>
     </div>
 </div>
@@ -62,7 +62,7 @@ date-released: '2025-02-06'
 doi: 10.5280/zenodo.14828040
 license:
 - apache-2.0
-title: 'acquire-zarr: Streaming directly to Zarr on the file system or cloud'
+title: 'acquire-zarr: Software for fast streaming to Zarr on the filesystem or in thecloud'
 type: software
 ~~~
 
