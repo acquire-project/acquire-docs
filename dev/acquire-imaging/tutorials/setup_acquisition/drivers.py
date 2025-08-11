@@ -1,3 +1,4 @@
+# %% [markdown]
 # # Test Camera Drivers
 #
 # This tutorial will cover testing that your cameras, or video sources, has been properly identified.
@@ -17,7 +18,7 @@
 #
 # Acquire will only identify cameras whose drivers are present on your machine. The `DeviceManager` class manages selection of cameras and storage. We can create a `DeviceManager` object using the following:
 
-# +
+# %%
 import acquire
 
 # Instantiate a Runtime object
@@ -25,13 +26,15 @@ runtime = acquire.Runtime()
 
 # Instantiate a DeviceManager object for the Runtime
 dm = runtime.device_manager()
-# -
 
+# %% [markdown]
 # `DeviceManager` objects have `device` methods which lists the identifiers for discovered devices. You can iterate over this list to determine which cameras were discovered.
 
+# %%
 for device in dm.devices():
     print(device)
 
+# %% [markdown]
 # The output of this code is below. All discovered devices, both cameras and storage devices, will be listed. In this tutorial, no cameras were connected to the machine, so only simulated cameras were found. Note that the storage devices also printed.
 #
 # ```

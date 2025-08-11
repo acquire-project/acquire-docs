@@ -8,24 +8,28 @@
       
       
       
-        <link rel="canonical" href="https://acquire-project.github.io/acquire-docs/acquire_zarr_c_api/annotated/">
+        <link rel="canonical" href="https://acquire-project.github.io/acquire-docs/core_concepts/">
       
       
+        <link rel="prev" href="../get_started/">
       
       
-      <link rel="icon" href="../../assets/images/favicon.png">
+        <link rel="next" href="../examples/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.16">
     
     
       
-        <title>Class List - Acquire Zarr Streaming</title>
+        <title>Core concepts - Acquire Zarr Streaming</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.7e37652d.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.7e37652d.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -44,11 +48,11 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/_mkdocstrings.css">
+      <link rel="stylesheet" href="../assets/_mkdocstrings.css">
     
-      <link rel="stylesheet" href="../../stylesheets/custom.css">
+      <link rel="stylesheet" href="../stylesheets/custom.css">
     
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -76,7 +80,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#class-list" class="md-skip">
+        <a href="#core-concepts" class="md-skip">
           Skip to content
         </a>
       
@@ -127,7 +131,7 @@
         <!-- Header title -->
         <div class="md-header__title" data-md-component="header-title">
             <div class="md-header__ellipsis" id="site-title">
-                <a href="../..">Acquire Zarr Streaming</a>
+                <a href="..">Acquire Zarr Streaming</a>
             </div>
             <div class="md-header__version" id="version-selector">
                 <!-- Version switcher -->
@@ -249,7 +253,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../.." class="md-tabs__link">
+      <a href=".." class="md-tabs__link">
         
   
   
@@ -268,7 +272,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../get_started/" class="md-tabs__link">
+      <a href="../get_started/" class="md-tabs__link">
         
   
   
@@ -285,9 +289,11 @@
   
   
   
+    
   
-    <li class="md-tabs__item">
-      <a href="../../core_concepts/" class="md-tabs__link">
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="./" class="md-tabs__link">
         
   
   
@@ -308,7 +314,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../examples/" class="md-tabs__link">
+        <a href="../examples/" class="md-tabs__link">
           
   
   
@@ -330,7 +336,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../api_reference/" class="md-tabs__link">
+        <a href="../api_reference/" class="md-tabs__link">
           
   
   
@@ -352,7 +358,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../for_contributors/" class="md-tabs__link">
+        <a href="../for_contributors/" class="md-tabs__link">
           
   
   
@@ -394,7 +400,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="Acquire Zarr Streaming" class="md-nav__button md-logo" aria-label="Acquire Zarr Streaming" data-md-component="logo">
+    <a href=".." title="Acquire Zarr Streaming" class="md-nav__button md-logo" aria-label="Acquire Zarr Streaming" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -424,7 +430,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../.." class="md-nav__link">
+      <a href=".." class="md-nav__link">
         
   
   
@@ -446,7 +452,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../get_started/" class="md-nav__link">
+      <a href="../get_started/" class="md-nav__link">
         
   
   
@@ -465,10 +471,32 @@
       
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../core_concepts/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Core concepts
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -479,6 +507,203 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#zarr" class="md-nav__link">
+    <span class="md-ellipsis">
+      Zarr
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ome-zarr" class="md-nav__link">
+    <span class="md-ellipsis">
+      OME-Zarr
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stream" class="md-nav__link">
+    <span class="md-ellipsis">
+      Stream
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#storage" class="md-nav__link">
+    <span class="md-ellipsis">
+      Storage
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Storage">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#store" class="md-nav__link">
+    <span class="md-ellipsis">
+      Store
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#array" class="md-nav__link">
+    <span class="md-ellipsis">
+      Array
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Array">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#multiscale-arrays" class="md-nav__link">
+    <span class="md-ellipsis">
+      Multiscale arrays
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#output-key" class="md-nav__link">
+    <span class="md-ellipsis">
+      Output key
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#group" class="md-nav__link">
+    <span class="md-ellipsis">
+      Group
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#s3-storage" class="md-nav__link">
+    <span class="md-ellipsis">
+      S3 storage
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dimensions-chunking-and-sharding" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dimensions, chunking, and sharding
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Dimensions, chunking, and sharding">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dimension" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dimension
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Dimension">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#append-dimension" class="md-nav__link">
+    <span class="md-ellipsis">
+      Append dimension
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#chunk" class="md-nav__link">
+    <span class="md-ellipsis">
+      Chunk
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#shard" class="md-nav__link">
+    <span class="md-ellipsis">
+      Shard
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#compression" class="md-nav__link">
+    <span class="md-ellipsis">
+      Compression
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#write-behavior" class="md-nav__link">
+    <span class="md-ellipsis">
+      Write behavior
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -515,7 +740,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../examples/" class="md-nav__link ">
+            <a href="../examples/" class="md-nav__link ">
               
   
   
@@ -550,7 +775,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../examples/python_examples/" class="md-nav__link">
+      <a href="../examples/python_examples/" class="md-nav__link">
         
   
   
@@ -573,7 +798,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../examples/c_examples/" class="md-nav__link">
+      <a href="../examples/c_examples/" class="md-nav__link">
         
   
   
@@ -628,7 +853,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../api_reference/" class="md-nav__link ">
+            <a href="../api_reference/" class="md-nav__link ">
               
   
   
@@ -663,7 +888,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../api_reference/zarr_api/" class="md-nav__link">
+      <a href="../api_reference/zarr_api/" class="md-nav__link">
         
   
   
@@ -711,7 +936,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../api_reference/c_api/" class="md-nav__link ">
+            <a href="../api_reference/c_api/" class="md-nav__link ">
               
   
   
@@ -746,7 +971,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../acquire_8zarr_8h/" class="md-nav__link">
+      <a href="../acquire_zarr_c_api/acquire_8zarr_8h/" class="md-nav__link">
         
   
   
@@ -769,7 +994,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../zarr_8types_8h/" class="md-nav__link">
+      <a href="../acquire_zarr_c_api/zarr_8types_8h/" class="md-nav__link">
         
   
   
@@ -834,7 +1059,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../for_contributors/" class="md-nav__link ">
+            <a href="../for_contributors/" class="md-nav__link ">
               
   
   
@@ -869,7 +1094,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../for_contributors/codebase/" class="md-nav__link">
+      <a href="../for_contributors/codebase/" class="md-nav__link">
         
   
   
@@ -892,7 +1117,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../for_contributors/docs_contribution_quickstart/" class="md-nav__link">
+      <a href="../for_contributors/docs_contribution_quickstart/" class="md-nav__link">
         
   
   
@@ -915,7 +1140,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../for_contributors/update_version/" class="md-nav__link">
+      <a href="../for_contributors/update_version/" class="md-nav__link">
         
   
   
@@ -958,6 +1183,191 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#zarr" class="md-nav__link">
+    <span class="md-ellipsis">
+      Zarr
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ome-zarr" class="md-nav__link">
+    <span class="md-ellipsis">
+      OME-Zarr
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stream" class="md-nav__link">
+    <span class="md-ellipsis">
+      Stream
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#storage" class="md-nav__link">
+    <span class="md-ellipsis">
+      Storage
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Storage">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#store" class="md-nav__link">
+    <span class="md-ellipsis">
+      Store
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#array" class="md-nav__link">
+    <span class="md-ellipsis">
+      Array
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Array">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#multiscale-arrays" class="md-nav__link">
+    <span class="md-ellipsis">
+      Multiscale arrays
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#output-key" class="md-nav__link">
+    <span class="md-ellipsis">
+      Output key
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#group" class="md-nav__link">
+    <span class="md-ellipsis">
+      Group
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#s3-storage" class="md-nav__link">
+    <span class="md-ellipsis">
+      S3 storage
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dimensions-chunking-and-sharding" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dimensions, chunking, and sharding
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Dimensions, chunking, and sharding">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dimension" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dimension
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Dimension">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#append-dimension" class="md-nav__link">
+    <span class="md-ellipsis">
+      Append dimension
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#chunk" class="md-nav__link">
+    <span class="md-ellipsis">
+      Chunk
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#shard" class="md-nav__link">
+    <span class="md-ellipsis">
+      Shard
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#compression" class="md-nav__link">
+    <span class="md-ellipsis">
+      Compression
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#write-behavior" class="md-nav__link">
+    <span class="md-ellipsis">
+      Write behavior
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -975,14 +1385,147 @@
   
 
 
-<h1 id="class-list">Class List<a class="headerlink" href="#class-list" title="Permanent link">&para;</a></h1>
-<p>Here are the classes, structs, unions and interfaces with brief descriptions:</p>
+<h1 id="core-concepts">Core concepts<a class="headerlink" href="#core-concepts" title="Permanent link">&para;</a></h1>
+<p>The following sections describe the core concepts and terminology used in the acquire-zarr library.
+See the <a href="https://zarr-specs.readthedocs.io/en/latest/v3/core/index.html#concepts-and-terminology">Concepts and terminology</a> section of the Zarr V3 specification for more details.</p>
+<p><img alt="Diagram of Zarr V3 concepts" src="https://zarr-specs.readthedocs.io/en/latest/_images/terminology-hierarchy.excalidraw.png" /></p>
+<h2 id="zarr">Zarr<a class="headerlink" href="#zarr" title="Permanent link">&para;</a></h2>
+<p>Zarr is a specification for storing large, multi-dimensional arrays in a "cloud-ready" format, i.e., one which is designed to be efficient for both local and remote storage.
+Arrays are stored as a grid of chunks, which are (optionally) compressed blocks of data that can be accessed independently.
+Zarr supports multiple storage backends, including local filesystems and cloud storage services like S3.
+There are two major versions of the Zarr specification: <a href="https://zarr-specs.readthedocs.io/en/latest/v2/v2.0.html">V2</a> and <a href="https://zarr-specs.readthedocs.io/en/latest/v3/core/index.html">V3</a>.
+The acquire-zarr library implements both specifications.</p>
+<blockquote>
+<p>[!WARNING]
+The V2 specification is currently deprecated and will be removed in a future release.
+We recommend using V3 for new projects.</p>
+</blockquote>
+<h2 id="ome-zarr">OME-Zarr<a class="headerlink" href="#ome-zarr" title="Permanent link">&para;</a></h2>
+<p>The <a href="https://ngff.openmicroscopy.org/latest/">OME-Zarr</a> specification is an extension of the Zarr specification that adds support for additional metadata and multiscale arrays.</p>
+<h2 id="stream">Stream<a class="headerlink" href="#stream" title="Permanent link">&para;</a></h2>
+<p>A <em>stream</em> is the primary interface for writing data to Zarr arrays in acquire-zarr.
+The stream manages the process of organizing incoming data into chunks and shards, applying compression, and writing to the underlying storage backend.</p>
+<blockquote>
+<p>[!NOTE]
+acquire-zarr is designed to be used in a streaming fashion, meaning you can append data to the stream incrementally.
+This is particularly useful for large datasets that cannot be loaded into memory all at once.
+This means that random-access writing, i.e., writing to arbitrary locations in the array, is not supported; neither is reading from the stream.
+While this is limiting in some use cases, it provides several advantages:
+- <strong>High throughput</strong>: acquire-zarr is optimized for high-speed data acquisition, allowing you to write large amounts of data quickly.
+- <strong>Low memory usage</strong>: acquire-zarr does not require loading the entire dataset into memory, making it suitable for large datasets.
+- <strong>Real-time data acquisition</strong>: acquire-zarr is designed for real-time data acquisition, allowing you to write data as it is generated.</p>
+</blockquote>
+<p>You configure a stream by specifying one or more arrays, their dimensions, and storage settings.
+Once created, you can append data to the stream, and acquire-zarr handles all the details of chunking, compression, and storage.</p>
+<h2 id="storage">Storage<a class="headerlink" href="#storage" title="Permanent link">&para;</a></h2>
+<h3 id="store">Store<a class="headerlink" href="#store" title="Permanent link">&para;</a></h3>
+<p>When we refer to a <em>store</em>, we mean a Zarr store, which is a hierarchical key-value store that can be used to store Zarr datasets.
+The store can be local (on disk) or remote (e.g., in cloud storage).
+We sometimes use this term interchangeably with "Zarr dataset" when the context is clear.
+The store contains child <em>nodes</em>, which can be either <em>arrays</em> or <em>groups</em>.</p>
+<h3 id="array">Array<a class="headerlink" href="#array" title="Permanent link">&para;</a></h3>
+<p>By <em>array</em> we mean a multi-dimensional array that can be stored as a child node in a Zarr store.
+Arrays can have any number of dimensions and can consist of one of several data types supported by acquire-zarr.
+Those data types are:</p>
 <ul>
-<li><strong>struct</strong> <a href="../structZarrArraySettings/"><strong>ZarrArraySettings</strong></a> <em>Properties of a Zarr array.</em>     </li>
-<li><strong>struct</strong> <a href="../structZarrCompressionSettings/"><strong>ZarrCompressionSettings</strong></a> <em>Compression settings for a Zarr array. @detail The compressor is not the same as the codec. A codec is a specific implementation of a compression algorithm, while a compressor is a library that implements one or more codecs.</em>     </li>
-<li><strong>struct</strong> <a href="../structZarrDimensionProperties/"><strong>ZarrDimensionProperties</strong></a> <em>Properties of a dimension of a Zarr array.</em>     </li>
-<li><strong>struct</strong> <a href="../structZarrS3Settings/"><strong>ZarrS3Settings</strong></a> <em>S3 settings for streaming to Zarr.</em>     </li>
-<li><strong>struct</strong> <a href="../structZarrStreamSettings/"><strong>ZarrStreamSettings</strong></a> <em>The settings for a Zarr stream.</em>     </li>
+<li>Unsigned integral types:</li>
+<li><code>uint8</code></li>
+<li><code>uint16</code></li>
+<li><code>uint32</code></li>
+<li><code>uint64</code></li>
+<li>Signed integral types:</li>
+<li><code>int8</code></li>
+<li><code>int16</code></li>
+<li><code>int32</code></li>
+<li><code>int64</code></li>
+<li>Floating-point types:</li>
+<li><code>float32</code></li>
+<li><code>float64</code></li>
+</ul>
+<h4 id="multiscale-arrays">Multiscale arrays<a class="headerlink" href="#multiscale-arrays" title="Permanent link">&para;</a></h4>
+<p>In acquire-zarr, arrays may be <em>multiscale</em> (see below), meaning they can store data at multiple resolutions or scales.
+Multiscale arrays are represented in the hierarchy as a group containing multiple arrays, each representing a different scale, e.g.,</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>my_array.zarr/
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    ├── 0/
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    │   └── ... (data)
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    ├── 1/
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    │   └── ... (data)
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>    └── 2/
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>        └── ... (data)
+</span></code></pre></div>
+<p>An image in the array at scale 0 is the full resolution image, while at scale <code>n</code>, the image is downsampled by a factor of <code>2^n</code> in x, y, and, if applicable, z.
+See <a href="#dimensions-chunking-and-sharding">Dimensions</a> below for more information.</p>
+<h4 id="output-key">Output key<a class="headerlink" href="#output-key" title="Permanent link">&para;</a></h4>
+<p>The <em>output key</em> is the path within a Zarr store where an array is located.
+This allows you to organize multiple arrays within a single store using a hierarchical structure.
+For example, you might use output keys like <code>"sample1/brightfield"</code> and <code>"sample1/fluorescence"</code> to organize different imaging modalities for the same sample, or you might additionally have a <code>"labels"</code> array for segmentation data.</p>
+<h3 id="group">Group<a class="headerlink" href="#group" title="Permanent link">&para;</a></h3>
+<p>A <em>group</em> is a node in a Zarr store that may contain other nodes, such as arrays or other groups.</p>
+<h3 id="s3-storage">S3 storage<a class="headerlink" href="#s3-storage" title="Permanent link">&para;</a></h3>
+<p>The acquire-zarr library can work with S3-compatible storage backends.
+When using S3, the Zarr store is represented as a hierarchy of objects in an S3 bucket.
+Each object corresponds to a node in the Zarr store, and the hierarchy is maintained using prefixes in the object keys.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>s3://my-bucket/my_array.zarr/
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>    ├── 0/
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>    │   └── ... (data)
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>    ├── 1/
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>    │   └── ... (data)
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>    └── 2/
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>        └── ... (data)
+</span></code></pre></div>
+<h2 id="dimensions-chunking-and-sharding">Dimensions, chunking, and sharding<a class="headerlink" href="#dimensions-chunking-and-sharding" title="Permanent link">&para;</a></h2>
+<h3 id="dimension">Dimension<a class="headerlink" href="#dimension" title="Permanent link">&para;</a></h3>
+<p>A <em>dimension</em> is a named axis of an array that can be used to organize and access the data within the array.
+Each dimension has a name, a type, and a size.
+The dimension type can be one of the following:</p>
+<ul>
+<li>Time</li>
+<li>Channel</li>
+<li>Space (e.g., x, y, z)</li>
+<li>Other (custom types can be defined)</li>
+</ul>
+<p>When creating a stream with acquire-zarr, you must specify <em>at least 3</em> dimensions: a spatial dimension X, a spatial dimension Y, and a third dimension of any type.
+Apart from this constraint, you can define as many dimensions of any type as you like, though you should keep in mind that if you are targeting the OME-Zarr specification, there are <a href="https://ngff.openmicroscopy.org/latest/#multiscale-md">some constraints on the types and order</a> of your dimensions.</p>
+<p>When you configure a dimension in acquire-zarr, you must specify the following properties:
+- <code>name</code>: The name of the dimension (e.g., "t", "c", "z", "y", "x")
+- <code>type</code>: The type of the dimension (as above)
+- <code>array_size_px</code>: The size of the array in pixels for this dimension
+- <code>chunk_size_px</code>: The size of the chunk (see below) in pixels for this dimension
+- <code>shard_size_chunks</code>: The size of the shard (see below) in chunks for this dimension (Zarr V3 only)</p>
+<p>Dimensions are configured in order of <em>slowest changing</em> to <em>fastest changing</em>.
+For example, if you have a 4D array with dimensions time, channel, y, and x, you would configure the dimensions in that order.</p>
+<h4 id="append-dimension">Append dimension<a class="headerlink" href="#append-dimension" title="Permanent link">&para;</a></h4>
+<p>The <em>append dimension</em> is the slowest-varying dimension in the array, meaning it is the dimension that changes the least frequently as you append data to the stream.
+It is called the append dimension because it is the dimension that grows dynamically as you append new data to the stream, with no predetermined limit.
+In the example above, the append dimension is the time dimension.
+You can set <code>array_size_px</code> to any value for this dimension, but it will be ignored in favor of the actual size of the data you append to the stream, so it's typical to set it to 0.
+Append dimensions are usually time or spatial dimensions, but can be any type.</p>
+<h3 id="chunk">Chunk<a class="headerlink" href="#chunk" title="Permanent link">&para;</a></h3>
+<p>A <em>chunk</em> is a contiguous block of data within an array that is stored together.
+Chunks are used to optimize data access and storage efficiency, and are considered <em>compressible units</em>.
+When you stream data to an array, acquire-zarr will automatically divide the data into chunks based on the chunk size specified in the stream settings.</p>
+<p>When you configure a dimension in acquire-zarr, you must specify the chunk size, in pixels, for that dimension.
+The chunk size for a given dimension need not evenly divide the array size for that dimension.
+Such a dimension is said to be <em>ragged</em> in its chunking.</p>
+<p>For example, if you have an array with a size of 1080 pixels in the Y dimension and a chunk size of 256 pixels, the array will be divided into 5 chunks, 4 of which will be of size 256 pixels and the last one will be of size 1080 - 4 * 256 = 56 pixels.</p>
+<h3 id="shard">Shard<a class="headerlink" href="#shard" title="Permanent link">&para;</a></h3>
+<p>A <em>shard</em> is a contiguous group of chunks (a superchunk, if you will) that are stored together in a single object in the Zarr store.
+Sharding is used to optimize data access and storage efficiency, especially for large arrays.
+When you stream data to an array, acquire-zarr will automatically divide the data into chunks as above, and then aggregate those chunks into shards based on the shard size specified in the stream settings.</p>
+<p>When you configure a dimension in acquire-zarr, you must specify the shard size, in units of chunks, for that dimension.
+The shard size for a given dimension need not evenly divide the number of chunks for that dimension.
+For example, if you have an array with 10 chunks in the Y dimension and a shard size of 3 chunks, the array will be divided into 4 shards, 3 of which will contain 3 chunks and the last one will contain 1 chunk.</p>
+<h2 id="compression">Compression<a class="headerlink" href="#compression" title="Permanent link">&para;</a></h2>
+<p>Zarr supports compression of chunks to reduce storage space and improve data transfer speeds.
+When you stream data to an array, acquire-zarr can compress the chunks based on the compression settings specified in the stream settings.
+Because acquire-zarr uses <a href="https://www.blosc.org/pages/blosc-in-depth/">Blosc</a> for compression, it supports multiple compression codecs, including LZ4 and Zstandard.
+You can also specify the compression level, 0-9, where 0 means no compression and 9 means maximum compression, and the shuffle filter, which can be used to improve compression ratios for certain data types.
+(See this article for a discussion of the shuffle filter: <a href="https://www.blosc.org/posts/new-bitshuffle-filter/">New 'bitshuffle' filter</a>.)</p>
+<h2 id="write-behavior">Write behavior<a class="headerlink" href="#write-behavior" title="Permanent link">&para;</a></h2>
+<p>The timing of when data is written to storage depends on the storage backend:</p>
+<ul>
+<li><strong>Filesystem</strong>: Data is written when chunks are complete, allowing for efficient streaming of large datasets.</li>
+<li><strong>S3</strong>: Because S3 objects cannot be appended to, data is written when entire shards are complete. This means you may need to configure larger shards when using S3 to avoid frequent uploads. However, you should take care not to make shards too large, as this can lead to inefficient storage and retrieval.</li>
 </ul>
 
 
@@ -1033,6 +1576,50 @@
 
     <!-- Link to previous and/or next page -->
     
+    
+    
+    <nav class="md-footer__inner md-grid" aria-label="Footer" >
+
+        <!-- Link to previous page -->
+        
+        
+        <a href="../get_started/" class="md-footer__link md-footer__link--prev"
+            aria-label="Previous: Get Started">
+            <div class="md-footer__button md-icon">
+                
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+                <span class="md-footer__direction">
+                    Previous
+                </span>
+                <div class="md-ellipsis">
+                    Get Started
+                </div>
+            </div>
+        </a>
+        
+
+        <!-- Link to next page -->
+        
+        
+        <a href="../examples/" class="md-footer__link md-footer__link--next"
+            aria-label="Next: Examples">
+            <div class="md-footer__title">
+                <span class="md-footer__direction">
+                    Next
+                </span>
+                <div class="md-ellipsis">
+                    Examples
+                </div>
+            </div>
+            <div class="md-footer__button md-icon">
+                
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+        </a>
+        
+    </nav>
     
     
 
@@ -1131,12 +1718,12 @@
     
     
       
-      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.footer", "navigation.indexes", "navigation.tracking", "content.code.copy", "toc.follow"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.footer", "navigation.indexes", "navigation.tracking", "content.code.copy", "toc.follow"], "search": "../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.50899def.min.js"></script>
+      <script src="../assets/javascripts/bundle.50899def.min.js"></script>
       
-        <script src="../../javascripts/version-select.js"></script>
+        <script src="../javascripts/version-select.js"></script>
       
     
   </body>

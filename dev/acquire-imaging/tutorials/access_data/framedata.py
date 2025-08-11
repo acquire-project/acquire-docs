@@ -1,3 +1,4 @@
+# %% [markdown]
 # # Accessing Data during Acquisition
 #
 # This tutorial will provide an example of accessing data from a video source during acquisition.
@@ -6,7 +7,7 @@
 #
 # To start, we'll create a `Runtime` object and configure the streaming process.
 
-# +
+# %%
 import acquire
 
 # Initialize a Runtime object
@@ -35,7 +36,7 @@ config.video[0].max_frame_count = 100 # collect 100 frames
 
 # Update the configuration with the chosen parameters
 config = runtime.set_configuration(config)
-# -
+# %% [markdown]
 # ## Working with `AvailableData` objects
 #
 # During Acquisition, the `AvailableData` object is the streaming interface. We can create an `AvailableData` object by calling `get_available_data` in a `with` statement, and work with the `AvailableData` object while it exists inside of the `with` loop. The data is invalidated after exiting the `with` block, so make a copy of the `AvailableData` object to work with the data outside of the `with` block. In this example, we'll simply use the `AvailableData` object inside of the `with` block.
@@ -46,7 +47,7 @@ config = runtime.set_configuration(config)
 #
 # `VideoFrame` has a `data` method which provides the frame as an `NDArray`. The shape of this NDArray corresponds to the image dimensions used internally by Acquire namely [planes, height, width, channels]. Since we have a single channel, both the first and the last dimensions will be 1. The interior dimensions are height and width, respectively. We can use the `numpy.squeeze` method to grab the desired NDArray image data since the other dimensions are 1. This is equivalent to `image = first_frame[0][:, :, 0]`.
 
-# +
+# %%
 # package for introducing time delays
 import time
 
@@ -82,8 +83,8 @@ with runtime.get_available_data(0) as available_data:
 
 # stop runtime
 runtime.stop()
-# -
 
+# %% [markdown]
 # The output will be:
 # ```
 # (1, 768, 1024, 1)

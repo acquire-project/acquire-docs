@@ -1,3 +1,4 @@
+# %% [markdown]
 # # Writing to Compressed Zarr Files
 #
 # This tutorial will provide an example of writing compressed data to a Zarr file.
@@ -9,7 +10,7 @@
 #
 # To start, we'll create a `Runtime` object and configure the streaming process, selecting `ZarrBlosc1ZstdByteShuffle` as the storage device to enable compressing the data.
 
-# +
+# %%
 import acquire
 
 # Initialize a Runtime object
@@ -41,38 +42,40 @@ config.video[0].storage.settings.filename = "out.zarr"
 
 # Update the configuration with the chosen parameters
 config = runtime.set_configuration(config)
-# -
 
+# %% [markdown]
 # ## Inspect Acquired Data
 #
 # Now that the configuration is set to utilize the `ZarrBlosc1ZstdByteShuffle` storage device, we can acquire data, which will be compressed before it is stored to `out.zarr`. Since we did not specify the size of chunks, the data will be saved as a single chunk that is the size of the image data. You may specify chunk sizes using the `TileShape` class. For example, using `acquire.StorageProperties.chunking.tile.width` to set the width of the chunks.
 
+# %%
 # acquire data
 runtime.start()
 runtime.stop()
 
+# %% [markdown]
 # We'll use the [zarr-python package](https://zarr.readthedocs.io/en/stable/) to read the data in `out.zarr` directory.
 
-# +
+# %%
 # We'll utilize the zarr-python package to read the data
 import zarr
 
 # load from Zarr
 compressed = zarr.open(config.video[0].storage.settings.filename)
-# -
 
+# %% [markdown]
 # We'll print some of the data properties to illustrate how the data was compressed. Since we have not enabled multiscale output, `out.zarr` will only have one top level array`"0"`.
 #
 
-# +
+# %%
 # All of the data is stored in the "0" directory since the data was stored as a single chunk.
 data = compressed["0"]
 
 print(data.compressor.cname)
 print(data.compressor.clevel)
 print(data.compressor.shuffle)
-# -
 
+# %% [markdown]
 # Output:
 #
 # ```

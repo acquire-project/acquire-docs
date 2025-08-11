@@ -1,10 +1,11 @@
+# %% [markdown]
 # # Device Selection
 #
 # This tutorial illustrates the difference between the `select` and `select_one_of` methods in the `DeviceManager` class. `select` chooses the first discovered device of a specific kind, camera or storage device. You can also, optionally, select a specific device by passing the device name as a string to `select`. Whereas, `select_one_of` requires that you specify both the kind of device to select and a list of possible device names. `select_one_of` will iterate through the list and select the first device in the list of names that is discovered on your machine.
 #
 # To start, instantiate `Runtime` and `DeviceManager` objects and subsequently print the discovered devices.
 
-# +
+# %%
 import acquire
 
 # Instantiate a Runtime object
@@ -16,8 +17,8 @@ manager = runtime.device_manager()
 # List devices discovered by DeviceManager
 for device in manager.devices():
     print(device)
-# -
 
+# %% [markdown]
 # Output of the above code is below:
 #
 # ```
@@ -40,7 +41,7 @@ for device in manager.devices():
 #
 # The order of those printed devices matters. Below are two examples of how the `select` method works. In the first, without a specific device name provided, `select` will choose the first device of the specified kind in the list of discovered devices. In the second example, a specific device name is provided, so `select` will grab that device if it was discovered by `Runtime`.
 
-# +
+# %%
 # specify that the device should be a camera and not a storage device
 kind = acquire.DeviceKind.Camera
 
@@ -53,7 +54,7 @@ specific = manager.select(kind, "simulated: empty")
 # print the 2 devices
 print(selected)
 print(specific)
-# -
+# %% [markdown]
 # The output of the code is below:
 # ```
 # <DeviceIdentifier Camera "simulated: uniform random">
@@ -62,7 +63,7 @@ print(specific)
 #
 # The `select_one_of` method allows more flexibility since you provide a list of names of acceptable devices for it to iterate through until a discovered device is located.
 
-# +
+# %%
 # specify that the device should be a camera and not a storage device
 kind = acquire.DeviceKind.Camera
 
@@ -71,7 +72,7 @@ selected = manager.select_one_of(kind, ["Hamamatsu_DCAMSDK4_v22126552",
 
 # print which camera was selected
 print(selected)
-# -
+# %% [markdown]
 # The output of the code is below. The Hamamatsu camera was not discovered by `Runtime`, so `select_one_of` iterates until it finds a device discovered by `Runtime`. In this case, the next item in the list is a simulated camera that was discovered by `Runtime`.
 # ```
 # <DeviceIdentifier Camera "simulated: radial sin">

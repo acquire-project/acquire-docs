@@ -1,3 +1,4 @@
+# %% [markdown]
 # # Storage Device Selection
 #
 # This tutorial describes the storage device options in `Acquire`.
@@ -6,7 +7,7 @@
 #
 # To start, we'll create a `Runtime` object and print the storage device options.
 
-# +
+# %%
 import acquire
 
 # Instantiate a Runtime object
@@ -19,7 +20,7 @@ dm = runtime.device_manager()
 for device in dm.devices():
     if device.kind == acquire.DeviceKind.Storage:
         print(device)
-# -
+# %% [markdown]
 # The output of that script will be:
 #
 # ```
@@ -63,7 +64,7 @@ for device in dm.devices():
 #
 # In the example below, the the `tiff` storage device is selected, and the data from one video source will be streamed to a file `out.tif`.
 
-# +
+# %%
 # get the current configuration
 config = runtime.get_configuration()
 
@@ -72,8 +73,8 @@ config.video[0].storage.identifier = dm.select(acquire.DeviceKind.Storage, "tiff
 
 # Set the data filename to out.tif in your current directory (provide the whole filetree to save to a different directory)
 config.video[0].storage.settings.filename = "out.tif"
-# -
 
+# %% [markdown]
 # Before proceeding, complete the `Camera` setup and call `set_configuration` to save those new configuration settings.
 #
 # [Download this tutorial as a Python script](storage.py){ .md-button .md-button-center }

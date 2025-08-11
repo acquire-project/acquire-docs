@@ -8,7 +8,7 @@
       
       
       
-        <link rel="canonical" href="https://acquire-project.github.io/acquire-docs/acquire_zarr_c_api/annotated/">
+        <link rel="canonical" href="https://acquire-project.github.io/acquire-docs/acquire_zarr_c_api/structZarrArraySettings/">
       
       
       
@@ -18,7 +18,7 @@
     
     
       
-        <title>Class List - Acquire Zarr Streaming</title>
+        <title>Struct ZarrArraySettings - Acquire Zarr Streaming</title>
       
     
     
@@ -76,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#class-list" class="md-skip">
+        <a href="#struct-zarrarraysettings" class="md-skip">
           Skip to content
         </a>
       
@@ -958,6 +958,110 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#public-attributes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Public Attributes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#detailed-description" class="md-nav__link">
+    <span class="md-ellipsis">
+      Detailed Description
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#public-attributes-documentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Public Attributes Documentation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Public Attributes Documentation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#variable-compression_settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      variable compression_settings
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#variable-data_type" class="md-nav__link">
+    <span class="md-ellipsis">
+      variable data_type
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#variable-dimension_count" class="md-nav__link">
+    <span class="md-ellipsis">
+      variable dimension_count
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#variable-dimensions" class="md-nav__link">
+    <span class="md-ellipsis">
+      variable dimensions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#variable-downsampling_method" class="md-nav__link">
+    <span class="md-ellipsis">
+      variable downsampling_method
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#variable-multiscale" class="md-nav__link">
+    <span class="md-ellipsis">
+      variable multiscale
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#variable-output_key" class="md-nav__link">
+    <span class="md-ellipsis">
+      variable output_key
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -975,15 +1079,92 @@
   
 
 
-<h1 id="class-list">Class List<a class="headerlink" href="#class-list" title="Permanent link">&para;</a></h1>
-<p>Here are the classes, structs, unions and interfaces with brief descriptions:</p>
+<h1 id="struct-zarrarraysettings">Struct ZarrArraySettings<a class="headerlink" href="#struct-zarrarraysettings" title="Permanent link">&para;</a></h1>
+<p><a href="../annotated/"><strong>ClassList</strong></a> <strong>&gt;</strong> <a href="./"><strong>ZarrArraySettings</strong></a></p>
+<p><em>Properties of a Zarr array.</em> <a href="#detailed-description">More...</a></p>
 <ul>
-<li><strong>struct</strong> <a href="../structZarrArraySettings/"><strong>ZarrArraySettings</strong></a> <em>Properties of a Zarr array.</em>     </li>
-<li><strong>struct</strong> <a href="../structZarrCompressionSettings/"><strong>ZarrCompressionSettings</strong></a> <em>Compression settings for a Zarr array. @detail The compressor is not the same as the codec. A codec is a specific implementation of a compression algorithm, while a compressor is a library that implements one or more codecs.</em>     </li>
-<li><strong>struct</strong> <a href="../structZarrDimensionProperties/"><strong>ZarrDimensionProperties</strong></a> <em>Properties of a dimension of a Zarr array.</em>     </li>
-<li><strong>struct</strong> <a href="../structZarrS3Settings/"><strong>ZarrS3Settings</strong></a> <em>S3 settings for streaming to Zarr.</em>     </li>
-<li><strong>struct</strong> <a href="../structZarrStreamSettings/"><strong>ZarrStreamSettings</strong></a> <em>The settings for a Zarr stream.</em>     </li>
+<li><code>#include &lt;zarr.types.h&gt;</code></li>
 </ul>
+<h2 id="public-attributes">Public Attributes<a class="headerlink" href="#public-attributes" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">Type</th>
+<th style="text-align: left;">Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;"><a href="../structZarrCompressionSettings/"><strong>ZarrCompressionSettings</strong></a> *</td>
+<td style="text-align: left;"><a href="#variable-compression_settings"><strong>compression_settings</strong></a>  <br></td>
+</tr>
+<tr>
+<td style="text-align: right;">ZarrDataType</td>
+<td style="text-align: left;"><a href="#variable-data_type"><strong>data_type</strong></a>  <br></td>
+</tr>
+<tr>
+<td style="text-align: right;">size_t</td>
+<td style="text-align: left;"><a href="#variable-dimension_count"><strong>dimension_count</strong></a>  <br></td>
+</tr>
+<tr>
+<td style="text-align: right;"><a href="../structZarrDimensionProperties/"><strong>ZarrDimensionProperties</strong></a> *</td>
+<td style="text-align: left;"><a href="#variable-dimensions"><strong>dimensions</strong></a>  <br></td>
+</tr>
+<tr>
+<td style="text-align: right;">ZarrDownsamplingMethod</td>
+<td style="text-align: left;"><a href="#variable-downsampling_method"><strong>downsampling_method</strong></a>  <br></td>
+</tr>
+<tr>
+<td style="text-align: right;">bool</td>
+<td style="text-align: left;"><a href="#variable-multiscale"><strong>multiscale</strong></a>  <br></td>
+</tr>
+<tr>
+<td style="text-align: right;">const char *</td>
+<td style="text-align: left;"><a href="#variable-output_key"><strong>output_key</strong></a>  <br></td>
+</tr>
+</tbody>
+</table>
+<h2 id="detailed-description">Detailed Description<a class="headerlink" href="#detailed-description" title="Permanent link">&para;</a></h2>
+<p><strong>Note:</strong></p>
+<p>The dimensions array may be allocated with ZarrArraySettings_create_dimension_array and freed with ZarrArraySettings_destroy_dimension_array. The order in which you set the dimension properties in the array should match the order of the dimensions from slowest to fastest changing, for example, [Z, Y, X] for a 3D dataset. </p>
+<h2 id="public-attributes-documentation">Public Attributes Documentation<a class="headerlink" href="#public-attributes-documentation" title="Permanent link">&para;</a></h2>
+<h3 id="variable-compression_settings">variable compression_settings<a class="headerlink" href="#variable-compression_settings" title="Permanent link">&para;</a></h3>
+<div class="language-C++ highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">ZarrCompressionSettings</span><span class="o">*</span><span class="w"> </span><span class="n">ZarrArraySettings</span><span class="o">::</span><span class="n">compression_settings</span><span class="p">;</span>
+</span></code></pre></div>
+<hr>
+
+<h3 id="variable-data_type">variable data_type<a class="headerlink" href="#variable-data_type" title="Permanent link">&para;</a></h3>
+<div class="language-C++ highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">ZarrDataType</span><span class="w"> </span><span class="n">ZarrArraySettings</span><span class="o">::</span><span class="n">data_type</span><span class="p">;</span>
+</span></code></pre></div>
+<hr>
+
+<h3 id="variable-dimension_count">variable dimension_count<a class="headerlink" href="#variable-dimension_count" title="Permanent link">&para;</a></h3>
+<div class="language-C++ highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kt">size_t</span><span class="w"> </span><span class="n">ZarrArraySettings</span><span class="o">::</span><span class="n">dimension_count</span><span class="p">;</span>
+</span></code></pre></div>
+<hr>
+
+<h3 id="variable-dimensions">variable dimensions<a class="headerlink" href="#variable-dimensions" title="Permanent link">&para;</a></h3>
+<div class="language-C++ highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n">ZarrDimensionProperties</span><span class="o">*</span><span class="w"> </span><span class="n">ZarrArraySettings</span><span class="o">::</span><span class="n">dimensions</span><span class="p">;</span>
+</span></code></pre></div>
+<hr>
+
+<h3 id="variable-downsampling_method">variable downsampling_method<a class="headerlink" href="#variable-downsampling_method" title="Permanent link">&para;</a></h3>
+<div class="language-C++ highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="n">ZarrDownsamplingMethod</span><span class="w"> </span><span class="n">ZarrArraySettings</span><span class="o">::</span><span class="n">downsampling_method</span><span class="p">;</span>
+</span></code></pre></div>
+<hr>
+
+<h3 id="variable-multiscale">variable multiscale<a class="headerlink" href="#variable-multiscale" title="Permanent link">&para;</a></h3>
+<div class="language-C++ highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kt">bool</span><span class="w"> </span><span class="n">ZarrArraySettings</span><span class="o">::</span><span class="n">multiscale</span><span class="p">;</span>
+</span></code></pre></div>
+<hr>
+
+<h3 id="variable-output_key">variable output_key<a class="headerlink" href="#variable-output_key" title="Permanent link">&para;</a></h3>
+<div class="language-C++ highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="n">ZarrArraySettings</span><span class="o">::</span><span class="n">output_key</span><span class="p">;</span>
+</span></code></pre></div>
+<hr>
+
+<hr />
+<p>The documentation for this class was generated from the following file <code>/home/runner/work/acquire-docs/acquire-docs/acquire-zarr/include/zarr.types.h</code></p>
 
 
 
