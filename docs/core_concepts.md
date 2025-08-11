@@ -83,7 +83,7 @@ my_array.zarr/
 ```
 
 An image in the array at scale 0 is the full resolution image, while at scale `n`, the image is downsampled by a factor of `2^n` in x, y, and, if applicable, z.
-See [Dimensions](#dimensions) below for more information.
+See [Dimensions](#dimensions-chunking-and-sharding) below for more information.
 
 #### Output key
 
