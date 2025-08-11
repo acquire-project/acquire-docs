@@ -1,45 +1,61 @@
-# Python Examples
+# Python examples
 
-Below are code snippets for completing various tasks using the Python API for the Acquire Zarr library.
+Below are examples in Python for working with the Acquire Zarr library.
 Have an example you'd like to share with the community? Submit a
-[GitHub issue](https://github.com/chanzuckerberg/cryoet-data-portal/issues) and include "Example:" in your title.
+[GitHub issue](https://github.com/acquire-project/acquire-zarr/issues/new) and include "Example:" in your title.
 
-??? note "Example: Basic Zarr V2 to filesystem"
-
-    ```python
-    {% include "https://raw.githubusercontent.com/acquire-project/acquire-zarr/refs/heads/main/examples/python/zarrv2-compressed-multiscale-filesystem.py" %}
-    ```
-
-    [Download this example as a Python script](https://github.com/acquire-project/acquire-zarr/blob/main/examples/python/zarrv2-compressed-multiscale-filesystem.py){ .md-button .md-button-center }
-
-??? note "Example: Zarr V2 with ZSTD compression to S3"
+??? note "Example: Basic streaming to filesystem"
 
     ```python
-    {% include "https://raw.githubusercontent.com/acquire-project/acquire-zarr/refs/heads/main/examples/python/zarrv2-compressed-s3.py" %}
+    {% include "https://raw.githubusercontent.com/acquire-project/acquire-zarr/refs/heads/main/examples/python/stream_raw_filesystem.py" %}
     ```
 
-    [Download this example as a Python script](https://github.com/acquire-project/acquire-zarr/blob/main/examples/python/zarrv2-compressed-s3.py){ .md-button .md-button-center }
+    [Download this example](https://github.com/acquire-project/acquire-zarr/blob/main/examples/python/stream_raw_filesystem.py){ .md-button .md-button-center }
 
-??? note "Example: Basic Zarr V2 to filesystem"
+??? note "Example: Multiscale streaming to filesystem"
 
     ```python
-    {% include "https://raw.githubusercontent.com/acquire-project/acquire-zarr/refs/heads/main/examples/python/zarrv2-raw-filesystem.py" %}
+    {% include "https://raw.githubusercontent.com/acquire-project/acquire-zarr/refs/heads/main/examples/python/stream_raw_multiscale_filesystem.py" %}
     ```
 
-    [Download this example as a Python script](https://github.com/acquire-project/acquire-zarr/blob/main/examples/python/zarrv2-raw-filesystem.py){ .md-button .md-button-center }
+    [Download this example](https://github.com/acquire-project/acquire-zarr/blob/main/examples/python/stream_raw_multiscale_filesystem.py){ .md-button .md-button-center }
 
-??? note "Example: Zarr V3 with LZ4 compression to filesystem"
+??? note "Example: Compressed streaming to filesystem"
 
     ```python
-    {% include "https://raw.githubusercontent.com/acquire-project/acquire-zarr/refs/heads/main/examples/python/zarrv3-compressed-filesystem.py" %}
+    {% include "https://raw.githubusercontent.com/acquire-project/acquire-zarr/refs/heads/main/examples/python/stream_compressed_to_filesystem.py" %}
     ```
 
-    [Download this example as a Python script](https://github.com/acquire-project/acquire-zarr/blob/main/examples/python/zarrv3-compressed-filesystem.py){ .md-button .md-button-center }
+    [Download this example](https://github.com/acquire-project/acquire-zarr/blob/main/examples/python/stream_compressed_to_filesystem.py){ .md-button .md-button-center }
 
-??? note "Example: Zarr V3 S3 raw"
+??? note "Example: Basic streaming to S3"
 
     ```python
-    {% include "https://raw.githubusercontent.com/acquire-project/acquire-zarr/refs/heads/main/examples/python/zarrv3-raw-s3.py" %}
+    {% include "https://raw.githubusercontent.com/acquire-project/acquire-zarr/refs/heads/main/examples/python/stream_raw_to_s3.py" %}
     ```
 
-    [Download this example as a Python script](https://github.com/acquire-project/acquire-zarr/blob/main/examples/python/zarrv3-raw-s3.py){ .md-button .md-button-center }
+    [Download this example](https://github.com/acquire-project/acquire-zarr/blob/main/examples/python/stream_raw_to_s3.py){ .md-button .md-button-center }
+
+??? note "Example: Compressed streaming to S3"
+
+    ```python
+    {% include "https://raw.githubusercontent.com/acquire-project/acquire-zarr/refs/heads/main/examples/python/stream_compressed_s3.py" %}
+    ```
+
+    [Download this example](https://github.com/acquire-project/acquire-zarr/blob/main/examples/python/stream_compressed_s3.py){ .md-button .md-button-center }
+
+??? note "Example: Multiscale compressed streaming to S3"
+
+    ```python
+    {% include "https://raw.githubusercontent.com/acquire-project/acquire-zarr/refs/heads/main/examples/python/stream_compressed_multiscale_s3.py" %}
+    ```
+
+    [Download this example](https://github.com/acquire-project/acquire-zarr/blob/main/examples/python/stream_compressed_multiscale_s3.py){ .md-button .md-button-center }
+
+??? note "Example: Streaming multiple arrays to a Zarr store on the filesystem"
+
+    ```python
+    {% include "https://raw.githubusercontent.com/acquire-project/acquire-zarr/refs/heads/main/examples/python/stream_multiarray_to_filesystem.py" %}
+    ```
+
+    [Download this example](https://github.com/acquire-project/acquire-zarr/blob/main/examples/python/stream_multiarray_to_filesystem.py){ .md-button .md-button-center }
